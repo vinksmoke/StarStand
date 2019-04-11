@@ -1,0 +1,37 @@
+c:\users\asus\source\repos\StarStand\StarStand\bin\Debug\StarStand.exe.config
+c:\users\asus\source\repos\StarStand\StarStand\bin\Debug\StarStand.exe
+c:\users\asus\source\repos\StarStand\StarStand\bin\Debug\StarStand.pdb
+c:\users\asus\source\repos\StarStand\StarStand\bin\Debug\Bunifu_UI_v1.52.dll
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.Form1.resources
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.csproj.CopyComplete
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.exe
+c:\users\asus\source\repos\StarStand\StarStand\obj\Debug\StarStand.pdb
+C:\Users\ASUS\Desktop\StarStand\StarStand\bin\Debug\StarStand.exe.config
+C:\Users\ASUS\Desktop\StarStand\StarStand\bin\Debug\StarStand.exe
+C:\Users\ASUS\Desktop\StarStand\StarStand\bin\Debug\StarStand.pdb
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.Form1.resources
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.csproj.CopyComplete
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.exe
+C:\Users\ASUS\Desktop\StarStand\StarStand\obj\Debug\StarStand.pdb
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\bin\Debug\StarStand.exe.config
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\bin\Debug\StarStand.exe
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\bin\Debug\StarStand.pdb
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.Form1.resources
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.exe
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.pdb
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.clientes.resources
+C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.oficina.resources
