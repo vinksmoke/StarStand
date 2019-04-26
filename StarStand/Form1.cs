@@ -34,13 +34,14 @@ namespace StarStand
                 slidingpanel.Height = 622;
                 slidingpanel.Width = 80;
                 
+                
             }
             else
             {
                 slidingpanel.Height = 622;
                 slidingpanel.Width = 225;
             }
-            
+
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace StarStand
             setuserctr(oficina1);
         }
 
+        //Funções
         public void setuserctr(UserControl userctr)
         {
             if(this.panel1.Controls.Count > 0)
@@ -62,8 +64,7 @@ namespace StarStand
 
             userctr.Dock = DockStyle.Fill;
             this.panel1.Controls.Add(userctr);
-            this.panel1.Tag = userctr;
-            userctr.Show();
+            //this.panel1.Tag = userctr; 
         }
     }
 }

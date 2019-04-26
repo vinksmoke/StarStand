@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.slidingpanel = new System.Windows.Forms.Panel();
             this.btnCliente = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnOficina = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,11 +39,11 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCloseProgram = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.oficina1 = new StarStand.oficina();
             this.clientes1 = new StarStand.clientes();
+            this.oficina1 = new StarStand.oficina();
             this.slidingpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -52,11 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // slidingpanel
             // 
@@ -263,13 +257,6 @@
             this.btnCloseProgram.Zoom = 10;
             this.btnCloseProgram.Click += new System.EventHandler(this.btnCloseProgram_Click);
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panelHeader;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.clientes1);
@@ -280,19 +267,28 @@
             this.panel1.Size = new System.Drawing.Size(1007, 622);
             this.panel1.TabIndex = 2;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.panelHeader;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // clientes1
+            // 
+            this.clientes1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clientes1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clientes1.Location = new System.Drawing.Point(0, 0);
+            this.clientes1.Name = "clientes1";
+            this.clientes1.Size = new System.Drawing.Size(1007, 622);
+            this.clientes1.TabIndex = 1;
+            // 
             // oficina1
             // 
             this.oficina1.Location = new System.Drawing.Point(0, 6);
             this.oficina1.Name = "oficina1";
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
             this.oficina1.TabIndex = 0;
-            // 
-            // clientes1
-            // 
-            this.clientes1.Location = new System.Drawing.Point(0, 0);
-            this.clientes1.Name = "clientes1";
-            this.clientes1.Size = new System.Drawing.Size(1007, 622);
-            this.clientes1.TabIndex = 1;
             // 
             // Form1
             // 
@@ -317,8 +313,6 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel slidingpanel;
         private System.Windows.Forms.Panel panelHeader;
         private Bunifu.Framework.UI.BunifuImageButton btnCloseProgram;
@@ -328,11 +322,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnOficina;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
-        private oficina oficina1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private clientes clientes1;
+        private oficina oficina1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

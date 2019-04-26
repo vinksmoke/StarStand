@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="ButtonGerirSeviços.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ButtonGerirSeviços.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALUAAAApCAYAAABz92iRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKYSURBVHhe7dw/aJNBHMbxGxIM1DZGO1QI6OCgYEGHTiII
+        ioOK7oLgokMRcfMfmKIiDg4qUiiim4NQJwUHFxUpWlRKqdYuFquCliJv0yRvEm0ffd4XU0POju17xzN8
+        oMMlXb4Jl0t+Z4IggIhPFLV4R1GLdxS1eEdRi3cUtXhnyahngm94Vb6DgXAvrlW7cfHnOhRgRJYd22OD
+        t8KdGKr04/vsJ2uz9N+oR0qD6KvncHSmHVvfG2wcMVjz0sA8FVl+bI8Nbh4zODzdhgv1LJ6VbljbbYma
+        r4DblQPoDbJYPWT/ByIrLfPC4Mh0B65Xe/B1dqKp4aaoGfSlWh49E2nrE4kkzabRP9uTMI+p4qg9ar5D
+        K2hxDbcl3G+3RM09NLcctgeJJN3BL214WD69GDVPOfihUHtocVXqucGZMIePxeE4ah6R8BOlbbGIK3ZN
+        pvAg7I2j5tkfj0psC0Vc0fXa4EptQxz15fp6dA7bF4q4gluQwkIqjrown4nO/WwLRVzCbx/jqPmHZYGI
+        axS1eEdRi3cUtXhHUYt3FLV4R1GLdxS1eGcx6oVU9G2MbZGISxpRc/5Lo1rig0bUHInhBIFtkYgr+Psl
+        /o4pivpx5Tz2fV5lXSjiim0fDO6Gh+KoOd91rprVvlqcduxHB96U78VR02D5BPZPaVBA3LR9PI3+cHfz
+        jCJHuq6GW5B/a3+QSFJxDLFQ62xccNOImjjfdTZcq4EBcQaDPjWXw1jpUaPjpqhpfO5JdPfHnsmM9UlE
+        kqL7XTp6h/43aGqJmrgVuV85jpPFbPSJUlPmkhSc0OI1eLwO72a4w3qnnjXqv/gK4BFJ36/26FBbZMXN
+        Z6ILS3lxqa1ZWjJqERcpavGOohbvKGrxjqIWzwT4DSgs3+GjfweJAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

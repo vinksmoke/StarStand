@@ -35,3 +35,17 @@ C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.exe
 C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.pdb
 C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.clientes.resources
 C:\Users\ASUS\Desktop\Projeto Stand\StarStand\StarStand\obj\Debug\StarStand.oficina.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\bin\Debug\StarStand.exe.config
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\bin\Debug\StarStand.exe
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\bin\Debug\StarStand.pdb
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.clientes.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.Form1.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.oficina.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.csproj.CopyComplete
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.exe
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.pdb
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.ListBoxPersonal.resources

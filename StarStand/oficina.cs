@@ -16,5 +16,10 @@ namespace StarStand
         {
             InitializeComponent();
         }
+
+        private void BunifuDropdown2_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
     }
 }
