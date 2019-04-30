@@ -12,9 +12,30 @@ namespace StarStand
 {
     public partial class Form1 : Form
     {
+        bool togMoveForm;
+        int MvalX;
+        int MvalY;
         public Form1()
         {
             InitializeComponent();
+        }
+        // Moving form
+        private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            togMoveForm = true;
+            MvalX = e.X;
+            MvalY = e.Y;
+        }
+        private void PanelHeader_MouseUp(object sender, MouseEventArgs e)
+        {
+            togMoveForm = false;
+        }
+        private void PanelHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(togMoveForm==true)
+            {
+                SetDesktopLocation(MousePosition.X - MvalX, MousePosition.Y - MvalY);
+            }
         }
 
         private void btnCloseProgram_Click(object sender, EventArgs e)
@@ -57,14 +78,27 @@ namespace StarStand
         //Funções
         public void setuserctr(UserControl userctr)
         {
-            if(this.panel1.Controls.Count > 0)
+            if(this.panelBody.Controls.Count > 0)
             {
-                this.panel1.Controls.RemoveAt(0);
+                this.panelBody.Controls.RemoveAt(0);
                     }
 
             userctr.Dock = DockStyle.Fill;
-            this.panel1.Controls.Add(userctr);
+            this.panelBody.Controls.Add(userctr);
             //this.panel1.Tag = userctr; 
         }
+
+        public void placeholder(TextBox textbox,string textToPlaceHolder)
+        {
+            if (textbox.Text == "")
+            {
+                textbox.Text = textToPlaceHolder;
+            }
+            if(textbox.Text == textToPlaceHolder)
+            {
+                textbox.Text = "";
+            }
+        }
+
     }
 }

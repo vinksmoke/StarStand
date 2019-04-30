@@ -49,3 +49,4 @@ C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\St
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.exe
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.pdb
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.ListBoxPersonal.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.GerirClientes.resources

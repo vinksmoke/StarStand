@@ -21,5 +21,22 @@ namespace StarStand
         {
 
         }
+
+        private void ListBoxPersonal2_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void placeholder(TextBox textbox, string textToPlaceHolder)
+        {
+            if (textbox.Text == "")
+            {
+                textbox.Text = textToPlaceHolder;
+            }
+            if (textbox.Text == textToPlaceHolder)
+            {
+                textbox.Text = "";
+            }
+        }
     }
 }

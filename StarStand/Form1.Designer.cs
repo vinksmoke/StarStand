@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.slidingpanel = new System.Windows.Forms.Panel();
             this.btnCliente = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -39,9 +38,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCloseProgram = new Bunifu.Framework.UI.BunifuImageButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panelBody = new System.Windows.Forms.Panel();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
             this.slidingpanel.SuspendLayout();
@@ -49,7 +46,7 @@
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelBody.SuspendLayout();
             this.SuspendLayout();
             // 
             // slidingpanel
@@ -228,6 +225,9 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1232, 37);
             this.panelHeader.TabIndex = 1;
+            this.panelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
+            this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
+            this.panelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
             // btnMinimize
             // 
@@ -257,22 +257,15 @@
             this.btnCloseProgram.Zoom = 10;
             this.btnCloseProgram.Click += new System.EventHandler(this.btnCloseProgram_Click);
             // 
-            // panel1
+            // panelBody
             // 
-            this.panel1.Controls.Add(this.clientes1);
-            this.panel1.Controls.Add(this.oficina1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(225, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1007, 622);
-            this.panel1.TabIndex = 2;
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panelHeader;
-            this.bunifuDragControl1.Vertical = true;
+            this.panelBody.Controls.Add(this.clientes1);
+            this.panelBody.Controls.Add(this.oficina1);
+            this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBody.Location = new System.Drawing.Point(225, 37);
+            this.panelBody.Name = "panelBody";
+            this.panelBody.Size = new System.Drawing.Size(1007, 622);
+            this.panelBody.TabIndex = 2;
             // 
             // clientes1
             // 
@@ -296,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1232, 659);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelBody);
             this.Controls.Add(this.slidingpanel);
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -307,7 +300,7 @@
             this.panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panelBody.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -322,11 +315,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnOficina;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel panelBody;
         private clientes clientes1;
         private oficina oficina1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
