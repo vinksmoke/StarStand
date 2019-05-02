@@ -73,13 +73,13 @@
             // 
             // lblSetText
             // 
-            this.lblSetText.AutoSize = true;
             this.lblSetText.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSetText.Location = new System.Drawing.Point(23, 15);
+            this.lblSetText.Location = new System.Drawing.Point(0, 0);
             this.lblSetText.Name = "lblSetText";
-            this.lblSetText.Size = new System.Drawing.Size(82, 21);
+            this.lblSetText.Size = new System.Drawing.Size(125, 50);
             this.lblSetText.TabIndex = 0;
             this.lblSetText.Text = "Set Text";
+            this.lblSetText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ListBoxPersonal
             // 
@@ -90,7 +90,6 @@
             this.Name = "ListBoxPersonal";
             this.Size = new System.Drawing.Size(201, 266);
             this.panelHead.ResumeLayout(false);
-            this.panelHead.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -68,11 +68,15 @@ namespace StarStand
         private void btnCliente_Click(object sender, EventArgs e)
         {
             setuserctr(clientes1);
+            btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnCliente.Normalcolor = Color.Maroon;
         }
 
         private void btnOficina_Click(object sender, EventArgs e)
         {
             setuserctr(oficina1);
+            btnOficina.Normalcolor = Color.Maroon;
+            btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
         }
 
         //Funções

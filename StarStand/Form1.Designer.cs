@@ -41,6 +41,7 @@
             this.panelBody = new System.Windows.Forms.Panel();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.slidingpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -69,7 +70,7 @@
             this.btnCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCliente.BorderRadius = 0;
-            this.btnCliente.ButtonText = "          Cliente";
+            this.btnCliente.ButtonText = "   Cliente";
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCliente.DisabledColor = System.Drawing.Color.Gray;
             this.btnCliente.Iconcolor = System.Drawing.Color.Transparent;
@@ -92,10 +93,10 @@
             this.btnCliente.selected = false;
             this.btnCliente.Size = new System.Drawing.Size(225, 80);
             this.btnCliente.TabIndex = 9;
-            this.btnCliente.Text = "          Cliente";
+            this.btnCliente.Text = "   Cliente";
             this.btnCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Textcolor = System.Drawing.Color.White;
-            this.btnCliente.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnOficina
@@ -104,7 +105,7 @@
             this.btnOficina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnOficina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnOficina.BorderRadius = 0;
-            this.btnOficina.ButtonText = "         Oficina";
+            this.btnOficina.ButtonText = "    Oficina";
             this.btnOficina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOficina.DisabledColor = System.Drawing.Color.Gray;
             this.btnOficina.Iconcolor = System.Drawing.Color.Transparent;
@@ -127,10 +128,10 @@
             this.btnOficina.selected = false;
             this.btnOficina.Size = new System.Drawing.Size(225, 81);
             this.btnOficina.TabIndex = 8;
-            this.btnOficina.Text = "         Oficina";
+            this.btnOficina.Text = "    Oficina";
             this.btnOficina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOficina.Textcolor = System.Drawing.Color.White;
-            this.btnOficina.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOficina.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOficina.Click += new System.EventHandler(this.btnOficina_Click);
             // 
             // btnAluguer
@@ -139,7 +140,7 @@
             this.btnAluguer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnAluguer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAluguer.BorderRadius = 0;
-            this.btnAluguer.ButtonText = "         Aluguer";
+            this.btnAluguer.ButtonText = "   Aluguer";
             this.btnAluguer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAluguer.DisabledColor = System.Drawing.Color.Gray;
             this.btnAluguer.Iconcolor = System.Drawing.Color.Transparent;
@@ -162,10 +163,10 @@
             this.btnAluguer.selected = false;
             this.btnAluguer.Size = new System.Drawing.Size(225, 87);
             this.btnAluguer.TabIndex = 7;
-            this.btnAluguer.Text = "         Aluguer";
+            this.btnAluguer.Text = "   Aluguer";
             this.btnAluguer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAluguer.Textcolor = System.Drawing.Color.White;
-            this.btnAluguer.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAluguer.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnVendas
             // 
@@ -173,7 +174,7 @@
             this.btnVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnVendas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVendas.BorderRadius = 0;
-            this.btnVendas.ButtonText = "         Vendas";
+            this.btnVendas.ButtonText = "   Vendas";
             this.btnVendas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVendas.DisabledColor = System.Drawing.Color.Gray;
             this.btnVendas.Iconcolor = System.Drawing.Color.Transparent;
@@ -196,10 +197,10 @@
             this.btnVendas.selected = false;
             this.btnVendas.Size = new System.Drawing.Size(225, 78);
             this.btnVendas.TabIndex = 6;
-            this.btnVendas.Text = "         Vendas";
+            this.btnVendas.Text = "   Vendas";
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.Textcolor = System.Drawing.Color.White;
-            this.btnVendas.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuImageButton1
             // 
@@ -218,6 +219,7 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelHeader.Controls.Add(this.labelTitulo);
             this.panelHeader.Controls.Add(this.btnMinimize);
             this.panelHeader.Controls.Add(this.btnCloseProgram);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -283,6 +285,18 @@
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
             this.oficina1.TabIndex = 0;
             // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.White;
+            this.labelTitulo.Location = new System.Drawing.Point(3, 9);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(102, 24);
+            this.labelTitulo.TabIndex = 3;
+            this.labelTitulo.Text = "StarStand";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +312,7 @@
             this.slidingpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).EndInit();
             this.panelBody.ResumeLayout(false);
@@ -318,6 +333,7 @@
         private System.Windows.Forms.Panel panelBody;
         private clientes clientes1;
         private oficina oficina1;
+        private System.Windows.Forms.Label labelTitulo;
     }
 }
 
