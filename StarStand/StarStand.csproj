@@ -66,11 +66,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerirCarros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirCarros.Designer.cs">
+      <DependentUpon>GerirCarros.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerirClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GerirClientes.Designer.cs">
       <DependentUpon>GerirClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirServicos.Designer.cs">
+      <DependentUpon>GerirServicos.cs</DependentUpon>
     </Compile>
     <Compile Include="oficina.cs">
       <SubType>UserControl</SubType>
@@ -86,14 +98,32 @@
     <Compile Include="ListBoxPersonal.Designer.cs">
       <DependentUpon>ListBoxPersonal.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpDown.Designer.cs">
+      <DependentUpon>UpDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Venda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Venda.Designer.cs">
+      <DependentUpon>Venda.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GerirCarros.resx">
+      <DependentUpon>GerirCarros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GerirClientes.resx">
       <DependentUpon>GerirClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirServicos.resx">
+      <DependentUpon>GerirServicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="oficina.resx">
       <DependentUpon>oficina.cs</DependentUpon>
@@ -109,6 +139,12 @@
     </Compile>
     <EmbeddedResource Include="ListBoxPersonal.resx">
       <DependentUpon>ListBoxPersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpDown.resx">
+      <DependentUpon>UpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venda.resx">
+      <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

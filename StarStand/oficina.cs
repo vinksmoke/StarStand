@@ -17,16 +17,22 @@ namespace StarStand
             InitializeComponent();
         }
 
-        private void BunifuDropdown2_onItemSelected(object sender, EventArgs e)
-        {
 
+        //Clientes
+        private void BtnAddClientes_Click(object sender, EventArgs e)
+        {
+            GerirClientes frm = new GerirClientes();
+            frm.ShowDialog();
         }
 
-        private void ListBoxPersonal2_Load(object sender, EventArgs e)
+        //Carros
+        private void BtnAddCarros_Click(object sender, EventArgs e)
         {
-            
+            GerirCarros frm = new GerirCarros();
+            frm.ShowDialog();
         }
 
+        //Funçôes
         public void placeholder(TextBox textbox, string textToPlaceHolder)
         {
             if (textbox.Text == "")
@@ -38,5 +44,7 @@ namespace StarStand
                 textbox.Text = "";
             }
         }
+
+      
     }
 }

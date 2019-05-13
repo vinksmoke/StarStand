@@ -37,16 +37,17 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnCloseProgram = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.labelTitulo = new System.Windows.Forms.Label();
             this.panelBody = new System.Windows.Forms.Panel();
+            this.venda1 = new StarStand.Venda();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
-            this.labelTitulo = new System.Windows.Forms.Label();
             this.slidingpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.panelBody.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,6 +168,7 @@
             this.btnAluguer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAluguer.Textcolor = System.Drawing.Color.White;
             this.btnAluguer.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAluguer.Click += new System.EventHandler(this.BtnAluguer_Click);
             // 
             // btnVendas
             // 
@@ -201,6 +203,7 @@
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.Textcolor = System.Drawing.Color.White;
             this.btnVendas.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.Click += new System.EventHandler(this.BtnVendas_Click);
             // 
             // bunifuImageButton1
             // 
@@ -219,9 +222,9 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelHeader.Controls.Add(this.labelTitulo);
             this.panelHeader.Controls.Add(this.btnMinimize);
-            this.panelHeader.Controls.Add(this.btnCloseProgram);
+            this.panelHeader.Controls.Add(this.btnClose);
+            this.panelHeader.Controls.Add(this.labelTitulo);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
@@ -233,34 +236,49 @@
             // 
             // btnMinimize
             // 
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(1153, 3);
+            this.btnMinimize.Location = new System.Drawing.Point(1152, 3);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(33, 31);
+            this.btnMinimize.Size = new System.Drawing.Size(31, 30);
             this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabIndex = 6;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Zoom = 10;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click_1);
             // 
-            // btnCloseProgram
+            // btnClose
             // 
-            this.btnCloseProgram.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCloseProgram.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseProgram.Image")));
-            this.btnCloseProgram.ImageActive = null;
-            this.btnCloseProgram.Location = new System.Drawing.Point(1192, 3);
-            this.btnCloseProgram.Name = "btnCloseProgram";
-            this.btnCloseProgram.Size = new System.Drawing.Size(28, 31);
-            this.btnCloseProgram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCloseProgram.TabIndex = 0;
-            this.btnCloseProgram.TabStop = false;
-            this.btnCloseProgram.Zoom = 10;
-            this.btnCloseProgram.Click += new System.EventHandler(this.btnCloseProgram_Click);
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(1189, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 30);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 5;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.White;
+            this.labelTitulo.Location = new System.Drawing.Point(3, 9);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Size = new System.Drawing.Size(102, 24);
+            this.labelTitulo.TabIndex = 3;
+            this.labelTitulo.Text = "StarStand";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelBody
             // 
+            this.panelBody.Controls.Add(this.venda1);
             this.panelBody.Controls.Add(this.clientes1);
             this.panelBody.Controls.Add(this.oficina1);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -268,6 +286,15 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(1007, 622);
             this.panelBody.TabIndex = 2;
+            // 
+            // venda1
+            // 
+            this.venda1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("venda1.BackgroundImage")));
+            this.venda1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.venda1.Location = new System.Drawing.Point(0, 0);
+            this.venda1.Name = "venda1";
+            this.venda1.Size = new System.Drawing.Size(849, 412);
+            this.venda1.TabIndex = 2;
             // 
             // clientes1
             // 
@@ -284,18 +311,6 @@
             this.oficina1.Name = "oficina1";
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
             this.oficina1.TabIndex = 0;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.Color.White;
-            this.labelTitulo.Location = new System.Drawing.Point(3, 9);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(102, 24);
-            this.labelTitulo.TabIndex = 3;
-            this.labelTitulo.Text = "StarStand";
-            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -314,7 +329,7 @@
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseProgram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.panelBody.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -323,8 +338,6 @@
         #endregion
         private System.Windows.Forms.Panel slidingpanel;
         private System.Windows.Forms.Panel panelHeader;
-        private Bunifu.Framework.UI.BunifuImageButton btnCloseProgram;
-        private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private Bunifu.Framework.UI.BunifuFlatButton btnAluguer;
         private Bunifu.Framework.UI.BunifuFlatButton btnVendas;
         private Bunifu.Framework.UI.BunifuFlatButton btnCliente;
@@ -334,6 +347,9 @@
         private clientes clientes1;
         private oficina oficina1;
         private System.Windows.Forms.Label labelTitulo;
+        private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
+        private Bunifu.Framework.UI.BunifuImageButton btnClose;
+        private Venda venda1;
     }
 }
 

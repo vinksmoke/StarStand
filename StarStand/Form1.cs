@@ -18,6 +18,7 @@ namespace StarStand
         public Form1()
         {
             InitializeComponent();
+            setuserctr(clientes1);
         }
         // Moving form
         private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -38,16 +39,18 @@ namespace StarStand
             }
         }
 
-        private void btnCloseProgram_Click(object sender, EventArgs e)
+        //Close/Minimize
+        private void BtnMinimize_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
 
+        //Sidebar
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             if (slidingpanel.Height == 622 & slidingpanel.Width == 225)
@@ -65,19 +68,42 @@ namespace StarStand
 
         }
 
+
+
+        //Menus
         private void btnCliente_Click(object sender, EventArgs e)
         {
             setuserctr(clientes1);
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.Maroon;
+            btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnAluguer.Normalcolor = Color.FromArgb(14, 25, 32);
         }
-
         private void btnOficina_Click(object sender, EventArgs e)
         {
             setuserctr(oficina1);
             btnOficina.Normalcolor = Color.Maroon;
             btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnAluguer.Normalcolor = Color.FromArgb(14, 25, 32);
         }
+        private void BtnVendas_Click(object sender, EventArgs e)
+        {
+            setuserctr(venda1);
+            btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnVendas.Normalcolor = Color.Maroon;
+            btnAluguer.Normalcolor = Color.FromArgb(14, 25, 32);
+        }
+        private void BtnAluguer_Click(object sender, EventArgs e)
+        {
+            setuserctr(venda1);
+            btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnAluguer.Normalcolor = Color.Maroon;
+        }
+
 
         //Funções
         public void setuserctr(UserControl userctr)
@@ -85,24 +111,13 @@ namespace StarStand
             if(this.panelBody.Controls.Count > 0)
             {
                 this.panelBody.Controls.RemoveAt(0);
-                    }
+            }
 
             userctr.Dock = DockStyle.Fill;
             this.panelBody.Controls.Add(userctr);
             //this.panel1.Tag = userctr; 
         }
 
-        public void placeholder(TextBox textbox,string textToPlaceHolder)
-        {
-            if (textbox.Text == "")
-            {
-                textbox.Text = textToPlaceHolder;
-            }
-            if(textbox.Text == textToPlaceHolder)
-            {
-                textbox.Text = "";
-            }
-        }
-
+     
     }
 }
