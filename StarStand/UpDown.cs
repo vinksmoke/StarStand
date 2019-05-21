@@ -19,11 +19,7 @@ namespace StarStand
 
         private void TextBoxValue_Leave(object sender, EventArgs e)
         {
-            float num;
-            if (!float.TryParse(textBoxValue.Text,out num))
-            {
-                MessageBox.Show("Os numero nao é real");
-            }
+           // if(int.TryParse(textBoxValue.Text,out ))
         }
     }
 }

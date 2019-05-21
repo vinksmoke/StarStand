@@ -45,7 +45,6 @@
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.upDown1 = new StarStand.UpDown();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.bunifuCards1.SuspendLayout();
@@ -112,7 +111,6 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.LawnGreen;
-            this.bunifuCards1.Controls.Add(this.upDown1);
             this.bunifuCards1.Controls.Add(this.panelPeças);
             this.bunifuCards1.Controls.Add(this.bunifuSeparator1);
             this.bunifuCards1.Controls.Add(this.bunifuSwitch1);
@@ -274,13 +272,6 @@
             this.label4.TabIndex = 37;
             this.label4.Text = "Unidades:";
             // 
-            // upDown1
-            // 
-            this.upDown1.Location = new System.Drawing.Point(150, 101);
-            this.upDown1.Name = "upDown1";
-            this.upDown1.Size = new System.Drawing.Size(186, 23);
-            this.upDown1.TabIndex = 36;
-            // 
             // GerirServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +312,5 @@
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private System.Windows.Forms.Label label4;
-        private UpDown upDown1;
     }
 }

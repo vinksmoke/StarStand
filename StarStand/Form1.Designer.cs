@@ -121,7 +121,7 @@
             this.btnOficina.IconVisible = true;
             this.btnOficina.IconZoom = 90D;
             this.btnOficina.IsTab = false;
-            this.btnOficina.Location = new System.Drawing.Point(-3, 243);
+            this.btnOficina.Location = new System.Drawing.Point(0, 243);
             this.btnOficina.Name = "btnOficina";
             this.btnOficina.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnOficina.OnHovercolor = System.Drawing.Color.Maroon;
@@ -191,13 +191,13 @@
             this.btnVendas.IconVisible = true;
             this.btnVendas.IconZoom = 90D;
             this.btnVendas.IsTab = false;
-            this.btnVendas.Location = new System.Drawing.Point(-3, 414);
+            this.btnVendas.Location = new System.Drawing.Point(0, 414);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnVendas.OnHovercolor = System.Drawing.Color.Maroon;
             this.btnVendas.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVendas.selected = false;
-            this.btnVendas.Size = new System.Drawing.Size(225, 78);
+            this.btnVendas.Size = new System.Drawing.Size(222, 78);
             this.btnVendas.TabIndex = 6;
             this.btnVendas.Text = "   Vendas";
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,12 +293,13 @@
             this.venda1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.venda1.Location = new System.Drawing.Point(0, 0);
             this.venda1.Name = "venda1";
-            this.venda1.Size = new System.Drawing.Size(849, 412);
+            this.venda1.Size = new System.Drawing.Size(1007, 622);
             this.venda1.TabIndex = 2;
             // 
             // clientes1
             // 
             this.clientes1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.clientes1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.clientes1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clientes1.Location = new System.Drawing.Point(0, 0);
             this.clientes1.Name = "clientes1";
@@ -307,6 +308,7 @@
             // 
             // oficina1
             // 
+            this.oficina1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.oficina1.Location = new System.Drawing.Point(0, 6);
             this.oficina1.Name = "oficina1";
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
@@ -323,7 +325,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = resources.GetString("$this.Text");
             this.slidingpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelHeader.ResumeLayout(false);

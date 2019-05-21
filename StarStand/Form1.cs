@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace StarStand
 {
@@ -18,6 +19,7 @@ namespace StarStand
         public Form1()
         {
             InitializeComponent();
+     
             setuserctr(clientes1);
         }
         // Moving form

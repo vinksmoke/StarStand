@@ -121,18 +121,18 @@
   <data name="ButtonGerirSeviços.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKaSURBVHhe7dxLaxNRGMZxP4l3xQsqCCIoCKVSbLULFdwJ
-        rgSliBTtJTW21sYSqlEUvHwARRd240pEQRBBFy7EVTfFNpeZSTQDbb3ro88MTg05dtnOOTyLH3Rxkm7+
-        CScnec+yMAwh4hJFLc5R1OIcRS3OUdTiHEUtzlkw6qBax6PnAbpveDiWK6Ozp4iWE+9FFh3bY4NdhQrG
-        nwYoeXVjs/TfqJ+9ruLA2T8Rn6ti0/As1l/6jNVj37H8GkQWHdtjgxtH5rAnW0PHmSIePAmM7TZFzVdA
-        7y0PezM+Vl3+YfwHIkttZeEnWs7XcDxfweT0x4aGG6Jm0IcHSth2ccb4RCJpsyH3CYeyZUxMzofdEDXf
-        oRW02IbbEu63m6LmHppbDtODRNJu91CImw/9+ah5ysEPhdpDi61WFH6ho7eMdxMf4qh5RMJPlKbFIrbY
-        PhiicM+Po+bZH49KTAtFbLE2/xVHsqU46oP9RazJfzMuFLEFtyCtXVNx1G2npqJzP9NCEZvw28coav5h
-        WiBiG0UtzlHU4hxFLc5R1OIcRS3OUdTiHEUtzkmi5rcw/DbGtEjEJknUnP/SqJa4IImaIzGcIDAtErEF
-        f7/E3zFFUd8Z97BzMDQuFLHF5gszyNz24qg539XeU9K+WqzWOhDg8ctqHDVdve9j17DercVOW3OzOH3d
-        a5xR5EjX0ZEy1o1+MT5IJK04htjZV0ouuEmiJs537e8ra2BArMGg92U8vHhTSzpuiJpeva1Fd3/sGKob
-        n0QkLbaMzkXv0P8GTU1RE7ciY3d9tPV70SdKTZlLWnBCi9fg8Tq8k1cqxjv1jFH/xVcAj0jau6ejQ22R
-        pcbRQ15YyotLTc3SglGL2EhRi3MUtThHUYtzFLU4JsRv4FCySkg2Zn4AAAAASUVORK5CYII=
+        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
 </value>
   </data>
   <data name="bunifuImageButton6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -1,17 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="starBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-  <EntityContainer Name="starBDContainer" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="UtilizadoresSet" EntityType="starBD.Utilizadores" />
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="StarBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="StarBDContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UtilizadoresSet" EntityType="StarBD.Utilizadores" />
+    <EntitySet Name="carrosSet" EntityType="StarBD.carros" />
+    <AssociationSet Name="Utilizadorescarros" Association="StarBD.Utilizadorescarros">
+      <End Role="Utilizadores" EntitySet="UtilizadoresSet" />
+      <End Role="carros" EntitySet="carrosSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Utilizadores">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdUtilizador" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUtilizador" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" />
-    <Property Name="NIF" Type="Int32" Nullable="false" />
+    <Property Name="NIF" Type="String" Nullable="false" />
+    <Property Name="Morada" Type="String" Nullable="false" />
     <Property Name="Telefone" Type="String" Nullable="false" />
     <Property Name="Email" Type="String" Nullable="false" />
-    <Property Name="Morada" Type="String" Nullable="false" />
+    <NavigationProperty Name="carros" Relationship="StarBD.Utilizadorescarros" FromRole="Utilizadores" ToRole="carros" />
   </EntityType>
+  <EntityType Name="carros">
+    <Key>
+      <PropertyRef Name="IdCarro" />
+    </Key>
+    <Property Name="IdCarro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Marca" Type="String" Nullable="false" />
+    <Property Name="Modelo" Type="String" Nullable="false" />
+    <Property Name="Matricula" Type="String" Nullable="false" />
+    <NavigationProperty Name="Utilizadores" Relationship="StarBD.Utilizadorescarros" FromRole="carros" ToRole="Utilizadores" />
+  </EntityType>
+  <Association Name="Utilizadorescarros">
+    <End Type="StarBD.Utilizadores" Role="Utilizadores" Multiplicity="1" />
+    <End Type="StarBD.carros" Role="carros" Multiplicity="*" />
+  </Association>
 </Schema>

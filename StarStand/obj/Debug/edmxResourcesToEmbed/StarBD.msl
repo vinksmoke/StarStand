@@ -1,17 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="starBDStoreContainer" CdmEntityContainer="starBDContainer">
+  <EntityContainerMapping StorageEntityContainer="StarBDStoreContainer" CdmEntityContainer="StarBDContainer">
     <EntitySetMapping Name="UtilizadoresSet">
-      <EntityTypeMapping TypeName="IsTypeOf(starBD.Utilizadores)">
+      <EntityTypeMapping TypeName="IsTypeOf(StarBD.Utilizadores)">
         <MappingFragment StoreEntitySet="UtilizadoresSet">
-          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUtilizador" ColumnName="IdUtilizador" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="NIF" ColumnName="NIF" />
+          <ScalarProperty Name="Morada" ColumnName="Morada" />
           <ScalarProperty Name="Telefone" ColumnName="Telefone" />
           <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Morada" ColumnName="Morada" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="carrosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarBD.carros)">
+        <MappingFragment StoreEntitySet="carrosSet">
+          <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Utilizadorescarros" TypeName="StarBD.Utilizadorescarros" StoreEntitySet="carrosSet">
+      <EndProperty Name="Utilizadores">
+        <ScalarProperty Name="IdUtilizador" ColumnName="Utilizadores_IdUtilizador" />
+      </EndProperty>
+      <EndProperty Name="carros">
+        <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

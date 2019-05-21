@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aluguer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="aluguer.Designer.cs">
+      <DependentUpon>aluguer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,21 +113,6 @@
     <Compile Include="ListBoxPersonal.Designer.cs">
       <DependentUpon>ListBoxPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="starBD.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="starBD.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.tt</DependentUpon>
-    </Compile>
-    <Compile Include="starBD.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.edmx</DependentUpon>
-    </Compile>
     <Compile Include="UpDown.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +125,9 @@
     <Compile Include="Venda.Designer.cs">
       <DependentUpon>Venda.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="aluguer.resx">
+      <DependentUpon>aluguer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="clientes.resx">
       <DependentUpon>clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,7 +164,6 @@
     <EmbeddedResource Include="Venda.resx">
       <DependentUpon>Venda.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,29 +174,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="starBD.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>starBD.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="starBD.edmx.diagram">
-      <DependentUpon>starBD.edmx</DependentUpon>
-    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="starBD.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>starBD.Context.cs</LastGenOutput>
-      <DependentUpon>starBD.edmx</DependentUpon>
-    </Content>
-    <Content Include="starBD.edmx.sql" />
-    <Content Include="starBD.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>starBD.cs</LastGenOutput>
-      <DependentUpon>starBD.edmx</DependentUpon>
-    </Content>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

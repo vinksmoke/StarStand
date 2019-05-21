@@ -1,17 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="starBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="starBDStoreContainer">
-    <EntitySet Name="UtilizadoresSet" EntityType="starBD.Store.UtilizadoresSet" store:Type="Tables" Schema="dbo" />
+<Schema Namespace="StarBD.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="StarBDStoreContainer">
+    <EntitySet Name="UtilizadoresSet" EntityType="StarBD.Store.UtilizadoresSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="carrosSet" EntityType="StarBD.Store.carrosSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Utilizadorescarros" Association="StarBD.Store.Utilizadorescarros">
+      <End Role="Utilizadores" EntitySet="UtilizadoresSet" />
+      <End Role="carros" EntitySet="carrosSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="UtilizadoresSet">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="IdUtilizador" />
     </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUtilizador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NIF" Type="int" Nullable="false" />
+    <Property Name="NIF" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Telefone" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
+  <EntityType Name="carrosSet">
+    <Key>
+      <PropertyRef Name="IdCarro" />
+    </Key>
+    <Property Name="IdCarro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Marca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Matricula" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Utilizadores_IdUtilizador" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Utilizadorescarros">
+    <End Role="Utilizadores" Type="StarBD.Store.UtilizadoresSet" Multiplicity="1" />
+    <End Role="carros" Type="StarBD.Store.carrosSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Utilizadores">
+        <PropertyRef Name="IdUtilizador" />
+      </Principal>
+      <Dependent Role="carros">
+        <PropertyRef Name="Utilizadores_IdUtilizador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
