@@ -12,15 +12,11 @@ namespace StarStand
     using System;
     using System.Collections.Generic;
     
-    public partial class Venda
+    public partial class CarroVenda : Carros
     {
-        public int IdVenda { get; set; }
-        public string Valor { get; set; }
-        public string Estado { get; set; }
-        public string Data { get; set; }
-        public int UtilizadoresIdUtilizador { get; set; }
+        public int IdCarroVenda { get; set; }
+        public string Extras { get; set; }
     
-        public virtual Utilizadores Utilizadores { get; set; }
-        public virtual CarroVenda CarroVenda { get; set; }
+        public virtual Venda Venda { get; set; }
     }
 }

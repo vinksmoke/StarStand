@@ -13,16 +13,65 @@ namespace StarStand
 {
     public partial class clientes : UserControl
     {
+        starBDContainer bd = new starBDContainer();
         public clientes()
         {
             InitializeComponent();
-  
+            lerdados();
         }
 
-        private void BtnAddClientes_Click(object sender, EventArgs e)
+        private void btnAddClientes_Click(object sender, EventArgs e)
         {
-            GerirClientes frm = new GerirClientes();
-            frm.ShowDialog();
+            acessGerirClientes();
         }
+
+        private void btnEditClientes_Click(object sender, EventArgs e)
+        {
+            
+
+            int index = dgv_Clientes.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
+            Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
+            acessGerirClientes(user);
+            lerdados();
+
+        }
+        private void btnRemoveClientes_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewCell oneCell in dgv_Clientes.SelectedCells)
+            {
+                if (oneCell.Selected)
+                    dgv_Clientes.Rows.RemoveAt(oneCell.RowIndex);
+            }
+            lerdados();
+        }
+
+
+
+        public void acessGerirClientes(Utilizadores user)
+        {
+            GerirClientes frm = new GerirClientes(user);
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                lerdados();
+            }
+        }
+        public void acessGerirClientes()
+        {
+            GerirClientes frm = new GerirClientes(null);
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                lerdados();
+            }
+        }
+        public void lerdados()
+        {
+            (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
+            utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
+        }
+
+       
     }
 }

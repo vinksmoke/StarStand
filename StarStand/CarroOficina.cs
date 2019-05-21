@@ -12,15 +12,20 @@ namespace StarStand
     using System;
     using System.Collections.Generic;
     
-    public partial class Venda
+    public partial class CarroOficina : Carros
     {
-        public int IdVenda { get; set; }
-        public string Valor { get; set; }
-        public string Estado { get; set; }
-        public string Data { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CarroOficina()
+        {
+            this.HistoricoServicos = new HashSet<HistoricoServicos>();
+        }
+    
+        public int IdCarroOficina { get; set; }
+        public double Kms { get; set; }
         public int UtilizadoresIdUtilizador { get; set; }
     
         public virtual Utilizadores Utilizadores { get; set; }
-        public virtual CarroVenda CarroVenda { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HistoricoServicos> HistoricoServicos { get; set; }
     }
 }

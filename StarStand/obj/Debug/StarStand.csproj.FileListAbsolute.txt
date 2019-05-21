@@ -78,27 +78,51 @@ C:\Users\ASUS\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlSer
 C:\Users\ASUS\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.aluguer.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\StarStand.exe.config
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\StarStand.exe
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\StarStand.pdb
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\EntityFramework.dll
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\EntityFramework.xml
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.aluguer.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.clientes.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.Form1.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirCarros.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirClientes.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirServicos.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.oficina.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.Properties.Resources.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.ListBoxPersonal.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.UpDown.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.Venda.resources
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CopyComplete
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.exe
-C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand-yar32\StarStand\obj\Debug\StarStand.pdb
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\StarStand.exe.config
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\StarStand.exe
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\StarStand.pdb
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.USaluguer.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.clientes.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.Form1.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirCarros.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirClientes.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirServicos.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.oficina.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.ListBoxPersonal.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.UpDown.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.USVenda.resources
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CopyComplete
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.exe
+C:\Users\ASUS\Documents\StarStand-yar32\StarStand\obj\Debug\StarStand.pdb
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirClientes.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.USaluguer.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.clientes.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.Form1.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirCarros.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirServicos.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.oficina.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.Properties.Resources.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.ListBoxPersonal.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.UpDown.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.USVenda.resources
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.GenerateResource.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CoreCompileInputs.cache
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.exe
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.pdb
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\StarStand.exe.config
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\StarStand.exe
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\StarStand.pdb
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\EntityFramework.dll
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\EntityFramework.xml
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CopyComplete

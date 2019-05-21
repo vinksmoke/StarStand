@@ -40,7 +40,7 @@
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panelBody = new System.Windows.Forms.Panel();
-            this.venda1 = new StarStand.Venda();
+            this.venda1 = new StarStand.USVenda();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
             this.slidingpanel.SuspendLayout();
@@ -325,7 +325,7 @@
             this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = resources.GetString("$this.Text");
+            this.Text = "Form1";
             this.slidingpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panelHeader.ResumeLayout(false);
@@ -351,7 +351,7 @@
         private System.Windows.Forms.Label labelTitulo;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Venda venda1;
+        private USVenda venda1;
     }
 }
 

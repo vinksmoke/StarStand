@@ -21,7 +21,7 @@ namespace StarStand
         //Clientes
         private void BtnAddClientes_Click(object sender, EventArgs e)
         {
-            GerirClientes frm = new GerirClientes();
+            GerirClientes frm = new GerirClientes(null);
             frm.ShowDialog();
         }
 
