@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="StarStandBD" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="StarStandBDContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UtilizadoresSet" EntityType="StarStandBD.Utilizadores" />
+  </EntityContainer>
+  <EntityType Name="Utilizadores">
+    <Key>
+      <PropertyRef Name="IdUtilizadores" />
+    </Key>
+    <Property Name="IdUtilizadores" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="NIF" Type="Int32" Nullable="false" />
+    <Property Name="Telefone" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Morada" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>
