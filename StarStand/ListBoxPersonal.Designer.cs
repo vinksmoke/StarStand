@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.list = new System.Windows.Forms.ListBox();
             this.panelHead = new System.Windows.Forms.Panel();
             this.lblSetText = new System.Windows.Forms.Label();
             this.panelHead.SuspendLayout();
             this.SuspendLayout();
             // 
-            // listBox1
+            // list
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Items.AddRange(new object[] {
+            this.list.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.list.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.list.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.list.FormattingEnabled = true;
+            this.list.ItemHeight = 22;
+            this.list.Items.AddRange(new object[] {
             ",lçknlagnvºaf",
             "´çakdnbanfºba",
             "ãdsf",
@@ -57,10 +57,10 @@
             "opa",
             "res",
             "sagerhadçhfogn"});
-            this.listBox1.Location = new System.Drawing.Point(0, 50);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(201, 216);
-            this.listBox1.TabIndex = 0;
+            this.list.Location = new System.Drawing.Point(0, 50);
+            this.list.Name = "list";
+            this.list.Size = new System.Drawing.Size(201, 216);
+            this.list.TabIndex = 0;
             // 
             // panelHead
             // 
@@ -85,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.list);
             this.Controls.Add(this.panelHead);
             this.Name = "ListBoxPersonal";
             this.Size = new System.Drawing.Size(201, 266);
@@ -95,9 +95,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panelHead;
         private System.Windows.Forms.Label lblSetText;
+        public System.Windows.Forms.ListBox list;
     }
 }

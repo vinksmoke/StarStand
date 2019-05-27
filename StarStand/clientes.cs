@@ -13,11 +13,10 @@ namespace StarStand
 {
     public partial class clientes : UserControl
     {
-        starBDContainer bd = new starBDContainer();
+        starBDContainer bd;
         public clientes()
         {
             InitializeComponent();
-            lerdados();
         }
 
         private void btnAddClientes_Click(object sender, EventArgs e)
@@ -33,8 +32,6 @@ namespace StarStand
             DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
             Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
             acessGerirClientes(user);
-            lerdados();
-
         }
         private void btnRemoveClientes_Click(object sender, EventArgs e)
         {
@@ -68,6 +65,7 @@ namespace StarStand
         }
         public void lerdados()
         {
+            bd = new starBDContainer();
             (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
             utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
         }

@@ -75,6 +75,7 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>starBD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extends\ExtendUtilizador.cs" />
     <Compile Include="GerirClientes.cs">
       <SubType>Form</SubType>
     </Compile>

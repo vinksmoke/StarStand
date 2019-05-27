@@ -71,9 +71,9 @@
             this.panelRightClientes.Controls.Add(this.btnEditClientes);
             this.panelRightClientes.Controls.Add(this.btnAddClientes);
             this.panelRightClientes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRightClientes.Location = new System.Drawing.Point(708, 0);
+            this.panelRightClientes.Location = new System.Drawing.Point(812, 0);
             this.panelRightClientes.Name = "panelRightClientes";
-            this.panelRightClientes.Size = new System.Drawing.Size(306, 621);
+            this.panelRightClientes.Size = new System.Drawing.Size(202, 621);
             this.panelRightClientes.TabIndex = 1;
             // 
             // btnRemoveClientes
@@ -123,7 +123,9 @@
             // 
             // dgv_Clientes
             // 
+            this.dgv_Clientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Clientes.AutoGenerateColumns = false;
+            this.dgv_Clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Clientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_Clientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;

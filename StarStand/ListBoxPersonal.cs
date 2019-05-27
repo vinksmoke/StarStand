@@ -30,8 +30,8 @@ namespace StarStand
         }
         public Color bgcolorList
         {
-            get { return listBox1.BackColor; }
-            set { listBox1.BackColor = value; }
+            get { return list.BackColor; }
+            set { list.BackColor = value; }
         }
         public ListBoxPersonal()
         {

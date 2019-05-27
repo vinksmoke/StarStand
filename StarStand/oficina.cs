@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace StarStand
 {
     public partial class oficina : UserControl
     {
+        starBDContainer bd;
         public oficina()
         {
             InitializeComponent();
+           
+            
         }
 
 
@@ -22,7 +26,40 @@ namespace StarStand
         private void BtnAddClientes_Click(object sender, EventArgs e)
         {
             GerirClientes frm = new GerirClientes(null);
-            frm.ShowDialog();
+            if(frm.ShowDialog()==DialogResult.OK);
+            {
+                lerdadosclientes();
+            }
+        }
+        private void BtnEditClientes_Click(object sender, EventArgs e)
+        {
+            if(listBoxClientes.list.SelectedIndex != -1)
+            {
+                Utilizadores user = listBoxClientes.list.SelectedItem as Utilizadores;
+                GerirClientes frm = new GerirClientes(user);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    lerdadosclientes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tem de selecionar um cliente");
+            }
+        }
+        private void BtnRemoveClientes_Click(object sender, EventArgs e)
+        {
+            if (listBoxClientes.list.SelectedIndex != -1)
+            {
+                Utilizadores user = listBoxClientes.list.SelectedItem as Utilizadores;
+                bd.Entry(user).State = EntityState.Deleted;
+                bd.SaveChanges();
+                lerdadosclientes();
+            }
+            else
+            {
+                MessageBox.Show("Tem de selecionar um cliente");
+            }
         }
 
         //Carros
@@ -32,7 +69,13 @@ namespace StarStand
             frm.ShowDialog();
         }
 
+
         //Funçôes
+        public void lerdadosclientes()
+        {
+            bd = new starBDContainer();
+            listBoxClientes.list.DataSource = bd.UtilizadoresSet.ToList(); 
+        }
         public void placeholder(TextBox textbox, string textToPlaceHolder)
         {
             if (textbox.Text == "")
@@ -45,6 +88,6 @@ namespace StarStand
             }
         }
 
-      
+        
     }
 }

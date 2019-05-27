@@ -35,8 +35,6 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBoxPersonal2 = new StarStand.ListBoxPersonal();
-            this.listBoxPersonal1 = new StarStand.ListBoxPersonal();
             this.btnAddClientes = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnRemoveClientes = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditClientes = new Bunifu.Framework.UI.BunifuImageButton();
@@ -44,9 +42,11 @@
             this.btnAddCarros = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton5 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton8 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.listBoxPersonal3 = new StarStand.ListBoxPersonal();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.listBoxPersonal3 = new StarStand.ListBoxPersonal();
+            this.listBoxPersonal2 = new StarStand.ListBoxPersonal();
+            this.listBoxClientes = new StarStand.ListBoxPersonal();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddClientes)).BeginInit();
@@ -154,28 +154,6 @@
             this.label1.Text = "Adicionar Serviços";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBoxPersonal2
-            // 
-            this.listBoxPersonal2.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.listBoxPersonal2.bgcolorList = System.Drawing.Color.Silver;
-            this.listBoxPersonal2.Location = new System.Drawing.Point(482, 51);
-            this.listBoxPersonal2.Name = "listBoxPersonal2";
-            this.listBoxPersonal2.Size = new System.Drawing.Size(223, 568);
-            this.listBoxPersonal2.TabIndex = 16;
-            this.listBoxPersonal2.titleColor = System.Drawing.Color.Black;
-            this.listBoxPersonal2.titulo = "Historico de serviços";
-            // 
-            // listBoxPersonal1
-            // 
-            this.listBoxPersonal1.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.listBoxPersonal1.bgcolorList = System.Drawing.Color.Silver;
-            this.listBoxPersonal1.Location = new System.Drawing.Point(24, 51);
-            this.listBoxPersonal1.Name = "listBoxPersonal1";
-            this.listBoxPersonal1.Size = new System.Drawing.Size(223, 568);
-            this.listBoxPersonal1.TabIndex = 9;
-            this.listBoxPersonal1.titleColor = System.Drawing.Color.Black;
-            this.listBoxPersonal1.titulo = "Clientes";
-            // 
             // btnAddClientes
             // 
             this.btnAddClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
@@ -189,6 +167,7 @@
             this.btnAddClientes.TabIndex = 27;
             this.btnAddClientes.TabStop = false;
             this.btnAddClientes.Zoom = 10;
+            this.btnAddClientes.Click += new System.EventHandler(this.BtnAddClientes_Click);
             // 
             // btnRemoveClientes
             // 
@@ -203,6 +182,7 @@
             this.btnRemoveClientes.TabIndex = 28;
             this.btnRemoveClientes.TabStop = false;
             this.btnRemoveClientes.Zoom = 10;
+            this.btnRemoveClientes.Click += new System.EventHandler(this.BtnRemoveClientes_Click);
             // 
             // btnEditClientes
             // 
@@ -217,6 +197,7 @@
             this.btnEditClientes.TabIndex = 29;
             this.btnEditClientes.TabStop = false;
             this.btnEditClientes.Zoom = 10;
+            this.btnEditClientes.Click += new System.EventHandler(this.BtnEditClientes_Click);
             // 
             // bunifuImageButton2
             // 
@@ -275,17 +256,6 @@
             this.bunifuImageButton8.TabStop = false;
             this.bunifuImageButton8.Zoom = 10;
             // 
-            // listBoxPersonal3
-            // 
-            this.listBoxPersonal3.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.listBoxPersonal3.bgcolorList = System.Drawing.Color.Silver;
-            this.listBoxPersonal3.Location = new System.Drawing.Point(253, 51);
-            this.listBoxPersonal3.Name = "listBoxPersonal3";
-            this.listBoxPersonal3.Size = new System.Drawing.Size(223, 568);
-            this.listBoxPersonal3.TabIndex = 22;
-            this.listBoxPersonal3.titleColor = System.Drawing.Color.Black;
-            this.listBoxPersonal3.titulo = "Carros";
-            // 
             // bunifuImageButton1
             // 
             this.bunifuImageButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
@@ -314,6 +284,39 @@
             this.bunifuImageButton4.TabStop = false;
             this.bunifuImageButton4.Zoom = 10;
             // 
+            // listBoxPersonal3
+            // 
+            this.listBoxPersonal3.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.listBoxPersonal3.bgcolorList = System.Drawing.Color.Silver;
+            this.listBoxPersonal3.Location = new System.Drawing.Point(253, 51);
+            this.listBoxPersonal3.Name = "listBoxPersonal3";
+            this.listBoxPersonal3.Size = new System.Drawing.Size(223, 568);
+            this.listBoxPersonal3.TabIndex = 22;
+            this.listBoxPersonal3.titleColor = System.Drawing.Color.Black;
+            this.listBoxPersonal3.titulo = "Carros";
+            // 
+            // listBoxPersonal2
+            // 
+            this.listBoxPersonal2.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.listBoxPersonal2.bgcolorList = System.Drawing.Color.Silver;
+            this.listBoxPersonal2.Location = new System.Drawing.Point(482, 51);
+            this.listBoxPersonal2.Name = "listBoxPersonal2";
+            this.listBoxPersonal2.Size = new System.Drawing.Size(223, 568);
+            this.listBoxPersonal2.TabIndex = 16;
+            this.listBoxPersonal2.titleColor = System.Drawing.Color.Black;
+            this.listBoxPersonal2.titulo = "Historico de serviços";
+            // 
+            // listBoxClientes
+            // 
+            this.listBoxClientes.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.listBoxClientes.bgcolorList = System.Drawing.Color.Silver;
+            this.listBoxClientes.Location = new System.Drawing.Point(24, 51);
+            this.listBoxClientes.Name = "listBoxClientes";
+            this.listBoxClientes.Size = new System.Drawing.Size(223, 568);
+            this.listBoxClientes.TabIndex = 9;
+            this.listBoxClientes.titleColor = System.Drawing.Color.Black;
+            this.listBoxClientes.titulo = "Clientes";
+            // 
             // oficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,7 +334,7 @@
             this.Controls.Add(this.listBoxPersonal3);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.listBoxPersonal2);
-            this.Controls.Add(this.listBoxPersonal1);
+            this.Controls.Add(this.listBoxClientes);
             this.Controls.Add(this.ButtonGerirSeviços);
             this.Name = "oficina";
             this.Size = new System.Drawing.Size(1007, 622);
@@ -353,7 +356,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuThinButton2 ButtonGerirSeviços;
-        private ListBoxPersonal listBoxPersonal1;
+        private ListBoxPersonal listBoxClientes;
         private ListBoxPersonal listBoxPersonal2;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;

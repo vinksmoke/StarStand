@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace StarStand
 {
@@ -19,6 +20,7 @@ namespace StarStand
         {
             InitializeComponent();
             setuserctr(clientes1);
+            clientes1.lerdados();      
         }
         // Moving form
         private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -74,6 +76,7 @@ namespace StarStand
         private void btnCliente_Click(object sender, EventArgs e)
         {
             setuserctr(clientes1);
+            clientes1.lerdados();
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.Maroon;
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
@@ -82,6 +85,7 @@ namespace StarStand
         private void btnOficina_Click(object sender, EventArgs e)
         {
             setuserctr(oficina1);
+            oficina1.lerdadosclientes();
             btnOficina.Normalcolor = Color.Maroon;
             btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
