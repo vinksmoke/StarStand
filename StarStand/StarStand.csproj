@@ -159,6 +159,12 @@
     <Compile Include="UpDown.Designer.cs">
       <DependentUpon>UpDown.cs</DependentUpon>
     </Compile>
+    <Compile Include="USGerirCarros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="USGerirCarros.Designer.cs">
+      <DependentUpon>USGerirCarros.cs</DependentUpon>
+    </Compile>
     <Compile Include="USVenda.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpDown.resx">
       <DependentUpon>UpDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USGerirCarros.resx">
+      <DependentUpon>USGerirCarros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="USVenda.resx">
       <DependentUpon>USVenda.cs</DependentUpon>

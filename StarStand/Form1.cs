@@ -121,7 +121,5 @@ namespace StarStand
             this.panelBody.Controls.Add(userctr);
             //this.panel1.Tag = userctr; 
         }
-
-     
     }
 }

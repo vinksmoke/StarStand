@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelClientes = new System.Windows.Forms.Label();
             this.panelRightClientes = new System.Windows.Forms.Panel();
             this.btnRemoveClientes = new Bunifu.Framework.UI.BunifuImageButton();
@@ -55,10 +56,11 @@
             // 
             // labelClientes
             // 
+            this.labelClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelClientes.AutoSize = true;
             this.labelClientes.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClientes.ForeColor = System.Drawing.Color.Maroon;
-            this.labelClientes.Location = new System.Drawing.Point(3, 11);
+            this.labelClientes.Location = new System.Drawing.Point(70, 10);
             this.labelClientes.Name = "labelClientes";
             this.labelClientes.Size = new System.Drawing.Size(184, 42);
             this.labelClientes.TabIndex = 0;
@@ -71,20 +73,21 @@
             this.panelRightClientes.Controls.Add(this.btnEditClientes);
             this.panelRightClientes.Controls.Add(this.btnAddClientes);
             this.panelRightClientes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRightClientes.Location = new System.Drawing.Point(812, 0);
+            this.panelRightClientes.Location = new System.Drawing.Point(804, 0);
             this.panelRightClientes.Name = "panelRightClientes";
-            this.panelRightClientes.Size = new System.Drawing.Size(202, 621);
+            this.panelRightClientes.Size = new System.Drawing.Size(210, 621);
             this.panelRightClientes.TabIndex = 1;
             // 
             // btnRemoveClientes
             // 
+            this.btnRemoveClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRemoveClientes.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveClientes.Image")));
             this.btnRemoveClientes.ImageActive = null;
-            this.btnRemoveClientes.Location = new System.Drawing.Point(116, 375);
+            this.btnRemoveClientes.Location = new System.Drawing.Point(65, 424);
             this.btnRemoveClientes.Name = "btnRemoveClientes";
-            this.btnRemoveClientes.Size = new System.Drawing.Size(73, 73);
+            this.btnRemoveClientes.Size = new System.Drawing.Size(76, 73);
             this.btnRemoveClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRemoveClientes.TabIndex = 31;
             this.btnRemoveClientes.TabStop = false;
@@ -93,13 +96,14 @@
             // 
             // btnEditClientes
             // 
+            this.btnEditClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditClientes.BackColor = System.Drawing.Color.Transparent;
             this.btnEditClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnEditClientes.Image")));
             this.btnEditClientes.ImageActive = null;
-            this.btnEditClientes.Location = new System.Drawing.Point(116, 259);
+            this.btnEditClientes.Location = new System.Drawing.Point(65, 278);
             this.btnEditClientes.Name = "btnEditClientes";
-            this.btnEditClientes.Size = new System.Drawing.Size(73, 73);
+            this.btnEditClientes.Size = new System.Drawing.Size(76, 73);
             this.btnEditClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditClientes.TabIndex = 30;
             this.btnEditClientes.TabStop = false;
@@ -108,13 +112,14 @@
             // 
             // btnAddClientes
             // 
+            this.btnAddClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddClientes.BackColor = System.Drawing.Color.Transparent;
             this.btnAddClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClientes.Image")));
             this.btnAddClientes.ImageActive = null;
-            this.btnAddClientes.Location = new System.Drawing.Point(116, 154);
+            this.btnAddClientes.Location = new System.Drawing.Point(65, 131);
             this.btnAddClientes.Name = "btnAddClientes";
-            this.btnAddClientes.Size = new System.Drawing.Size(73, 73);
+            this.btnAddClientes.Size = new System.Drawing.Size(76, 73);
             this.btnAddClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAddClientes.TabIndex = 28;
             this.btnAddClientes.TabStop = false;
@@ -154,10 +159,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Clientes.EnableHeadersVisualStyles = false;
-            this.dgv_Clientes.Location = new System.Drawing.Point(53, 71);
+            this.dgv_Clientes.Location = new System.Drawing.Point(46, 70);
             this.dgv_Clientes.Name = "dgv_Clientes";
             this.dgv_Clientes.RowHeadersVisible = false;
-            this.dgv_Clientes.Size = new System.Drawing.Size(603, 499);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Clientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Clientes.Size = new System.Drawing.Size(719, 499);
             this.dgv_Clientes.TabIndex = 32;
             // 
             // idUtilizadorDataGridViewTextBoxColumn

@@ -43,6 +43,7 @@
             this.venda1 = new StarStand.USVenda();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
+            this.btnGerirCarros = new Bunifu.Framework.UI.BunifuFlatButton();
             this.slidingpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -54,6 +55,7 @@
             // slidingpanel
             // 
             this.slidingpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
+            this.slidingpanel.Controls.Add(this.btnGerirCarros);
             this.slidingpanel.Controls.Add(this.btnCliente);
             this.slidingpanel.Controls.Add(this.btnOficina);
             this.slidingpanel.Controls.Add(this.btnAluguer);
@@ -121,7 +123,7 @@
             this.btnOficina.IconVisible = true;
             this.btnOficina.IconZoom = 90D;
             this.btnOficina.IsTab = false;
-            this.btnOficina.Location = new System.Drawing.Point(0, 243);
+            this.btnOficina.Location = new System.Drawing.Point(0, 252);
             this.btnOficina.Name = "btnOficina";
             this.btnOficina.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnOficina.OnHovercolor = System.Drawing.Color.Maroon;
@@ -156,7 +158,7 @@
             this.btnAluguer.IconVisible = true;
             this.btnAluguer.IconZoom = 90D;
             this.btnAluguer.IsTab = false;
-            this.btnAluguer.Location = new System.Drawing.Point(0, 330);
+            this.btnAluguer.Location = new System.Drawing.Point(0, 339);
             this.btnAluguer.Name = "btnAluguer";
             this.btnAluguer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnAluguer.OnHovercolor = System.Drawing.Color.Maroon;
@@ -191,13 +193,13 @@
             this.btnVendas.IconVisible = true;
             this.btnVendas.IconZoom = 90D;
             this.btnVendas.IsTab = false;
-            this.btnVendas.Location = new System.Drawing.Point(0, 414);
+            this.btnVendas.Location = new System.Drawing.Point(0, 432);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
             this.btnVendas.OnHovercolor = System.Drawing.Color.Maroon;
             this.btnVendas.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVendas.selected = false;
-            this.btnVendas.Size = new System.Drawing.Size(222, 78);
+            this.btnVendas.Size = new System.Drawing.Size(225, 78);
             this.btnVendas.TabIndex = 6;
             this.btnVendas.Text = "   Vendas";
             this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,6 +316,40 @@
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
             this.oficina1.TabIndex = 0;
             // 
+            // btnGerirCarros
+            // 
+            this.btnGerirCarros.Activecolor = System.Drawing.Color.Maroon;
+            this.btnGerirCarros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
+            this.btnGerirCarros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGerirCarros.BorderRadius = 0;
+            this.btnGerirCarros.ButtonText = "   Gerir Carros";
+            this.btnGerirCarros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerirCarros.DisabledColor = System.Drawing.Color.Gray;
+            this.btnGerirCarros.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnGerirCarros.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnGerirCarros.Iconimage")));
+            this.btnGerirCarros.Iconimage_right = null;
+            this.btnGerirCarros.Iconimage_right_Selected = null;
+            this.btnGerirCarros.Iconimage_Selected = null;
+            this.btnGerirCarros.IconMarginLeft = 0;
+            this.btnGerirCarros.IconMarginRight = 0;
+            this.btnGerirCarros.IconRightVisible = true;
+            this.btnGerirCarros.IconRightZoom = 0D;
+            this.btnGerirCarros.IconVisible = true;
+            this.btnGerirCarros.IconZoom = 90D;
+            this.btnGerirCarros.IsTab = false;
+            this.btnGerirCarros.Location = new System.Drawing.Point(0, 516);
+            this.btnGerirCarros.Name = "btnGerirCarros";
+            this.btnGerirCarros.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(25)))), ((int)(((byte)(32)))));
+            this.btnGerirCarros.OnHovercolor = System.Drawing.Color.Maroon;
+            this.btnGerirCarros.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnGerirCarros.selected = false;
+            this.btnGerirCarros.Size = new System.Drawing.Size(225, 78);
+            this.btnGerirCarros.TabIndex = 11;
+            this.btnGerirCarros.Text = "   Gerir Carros";
+            this.btnGerirCarros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerirCarros.Textcolor = System.Drawing.Color.White;
+            this.btnGerirCarros.TextFont = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +388,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private USVenda venda1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnGerirCarros;
     }
 }
 

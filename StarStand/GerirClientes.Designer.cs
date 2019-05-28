@@ -58,6 +58,9 @@
             this.PanelHeader.Quality = 10;
             this.PanelHeader.Size = new System.Drawing.Size(356, 44);
             this.PanelHeader.TabIndex = 16;
+            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
+            this.PanelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
+            this.PanelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
             // BtnClose
             // 
@@ -138,7 +141,9 @@
             this.textboxEmail.Size = new System.Drawing.Size(236, 44);
             this.textboxEmail.TabIndex = 14;
             this.textboxEmail.Text = "Email";
-            this.textboxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxEmail.Enter += new System.EventHandler(this.TextBoxEmail_Enter);
+            this.textboxEmail.Leave += new System.EventHandler(this.TextBoxEmail_Leave);
             // 
             // textboxTelemovel
             // 
@@ -158,7 +163,9 @@
             this.textboxTelemovel.Size = new System.Drawing.Size(236, 44);
             this.textboxTelemovel.TabIndex = 13;
             this.textboxTelemovel.Text = "Telemovel";
-            this.textboxTelemovel.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxTelemovel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxTelemovel.Enter += new System.EventHandler(this.TextBoxTelemovel_Enter);
+            this.textboxTelemovel.Leave += new System.EventHandler(this.TextBoxTelemovel_Leave);
             // 
             // textboxNIF
             // 
@@ -178,7 +185,10 @@
             this.textboxNIF.Size = new System.Drawing.Size(236, 44);
             this.textboxNIF.TabIndex = 12;
             this.textboxNIF.Text = "NIF";
-            this.textboxNIF.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxNIF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxNIF.OnValueChanged += new System.EventHandler(this.textboxNIF_OnValueChanged);
+            this.textboxNIF.Enter += new System.EventHandler(this.TextBoxNIF_Enter);
+            this.textboxNIF.Leave += new System.EventHandler(this.TextBoxNIF_Leave);
             // 
             // textboxMorada
             // 
@@ -198,7 +208,9 @@
             this.textboxMorada.Size = new System.Drawing.Size(236, 44);
             this.textboxMorada.TabIndex = 11;
             this.textboxMorada.Text = "Morada";
-            this.textboxMorada.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxMorada.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxMorada.Enter += new System.EventHandler(this.TextBoxMorada_Enter);
+            this.textboxMorada.Leave += new System.EventHandler(this.TextBoxMorada_Leave);
             // 
             // textboxNome
             // 
@@ -218,7 +230,9 @@
             this.textboxNome.Size = new System.Drawing.Size(236, 44);
             this.textboxNome.TabIndex = 10;
             this.textboxNome.Text = "Nome";
-            this.textboxNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textboxNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxNome.Enter += new System.EventHandler(this.TexBoxNome_Enter);
+            this.textboxNome.Leave += new System.EventHandler(this.TextBoxNome_Leave);
             // 
             // GerirClientes
             // 

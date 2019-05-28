@@ -35,11 +35,11 @@ namespace StarStand
         }
         private void btnRemoveClientes_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewCell oneCell in dgv_Clientes.SelectedCells)
-            {
-                if (oneCell.Selected)
-                    dgv_Clientes.Rows.RemoveAt(oneCell.RowIndex);
-            }
+            int index = dgv_Clientes.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
+            Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
+            bd.Entry(user).State = EntityState.Deleted;
+            bd.SaveChanges();
             lerdados();
         }
 

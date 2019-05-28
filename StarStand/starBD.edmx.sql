@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/20/2019 15:47:40
--- Generated from EDMX file: C:\Users\ASUS\Documents\StarStand-yar32\StarStand\starBD.edmx
+-- Date Created: 05/28/2019 11:34:26
+-- Generated from EDMX file: C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand-yar32\StarStand\starBD.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -38,16 +38,6 @@ CREATE TABLE [dbo].[UtilizadoresSet] (
 );
 GO
 
--- Creating table 'CarrosSet'
-CREATE TABLE [dbo].[CarrosSet] (
-    [IdCarro] int IDENTITY(1,1) NOT NULL,
-    [Marca] nvarchar(max)  NOT NULL,
-    [Modelo] nvarchar(max)  NOT NULL,
-    [Matricula] nvarchar(max)  NOT NULL,
-    [Combustivel] nvarchar(max)  NOT NULL
-);
-GO
-
 -- Creating table 'VendaSet'
 CREATE TABLE [dbo].[VendaSet] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
@@ -65,6 +55,16 @@ CREATE TABLE [dbo].[PecasSet] (
     [Valor] float  NOT NULL,
     [Stock] int  NOT NULL,
     [ServicoIdServicos] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'HistoricoServicosSet'
+CREATE TABLE [dbo].[HistoricoServicosSet] (
+    [IdHistoricoServicos] int IDENTITY(1,1) NOT NULL,
+    [DataSaida] nvarchar(max)  NOT NULL,
+    [CarroOficinaIdCarroOficina] nvarchar(max)  NOT NULL,
+    [CarroOficina_IdCarro] int  NOT NULL,
+    [Servicos_IdServicos] int  NOT NULL
 );
 GO
 
@@ -89,38 +89,35 @@ CREATE TABLE [dbo].[AluguerSet] (
 );
 GO
 
--- Creating table 'CarrosSet_CarroOficina'
-CREATE TABLE [dbo].[CarrosSet_CarroOficina] (
-    [IdCarroOficina] int IDENTITY(1,1) NOT NULL,
-    [Kms] float  NOT NULL,
-    [UtilizadoresIdUtilizador] int  NOT NULL,
+-- Creating table 'CarrosSet'
+CREATE TABLE [dbo].[CarrosSet] (
+    [IdCarro] int IDENTITY(1,1) NOT NULL,
+    [Marca] nvarchar(max)  NOT NULL,
+    [Modelo] nvarchar(max)  NOT NULL,
+    [Matricula] nvarchar(max)  NOT NULL,
+    [Combustivel] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'CarrosSet_CarroAluguer'
+CREATE TABLE [dbo].[CarrosSet_CarroAluguer] (
+    [Estado] nvarchar(max)  NOT NULL,
     [IdCarro] int  NOT NULL
 );
 GO
 
 -- Creating table 'CarrosSet_CarroVenda'
 CREATE TABLE [dbo].[CarrosSet_CarroVenda] (
-    [IdCarroVenda] int IDENTITY(1,1) NOT NULL,
     [Extras] nvarchar(max)  NOT NULL,
     [IdCarro] int  NOT NULL
 );
 GO
 
--- Creating table 'CarrosSet_CarroAluguer'
-CREATE TABLE [dbo].[CarrosSet_CarroAluguer] (
-    [IdCarroAluguer] int IDENTITY(1,1) NOT NULL,
-    [Estado] nvarchar(max)  NOT NULL,
+-- Creating table 'CarrosSet_CarroOficina'
+CREATE TABLE [dbo].[CarrosSet_CarroOficina] (
+    [Kms] float  NOT NULL,
+    [UtilizadoresIdUtilizador] int  NOT NULL,
     [IdCarro] int  NOT NULL
-);
-GO
-
--- Creating table 'ServicosSet_HistoricoServicos'
-CREATE TABLE [dbo].[ServicosSet_HistoricoServicos] (
-    [IdHistoricoServicos] int IDENTITY(1,1) NOT NULL,
-    [DataSaida] nvarchar(max)  NOT NULL,
-    [CarroOficinaIdCarroOficina] nvarchar(max)  NOT NULL,
-    [IdServicos] int  NOT NULL,
-    [CarroOficina_IdCarro] int  NOT NULL
 );
 GO
 
@@ -141,12 +138,6 @@ ADD CONSTRAINT [PK_UtilizadoresSet]
     PRIMARY KEY CLUSTERED ([IdUtilizador] ASC);
 GO
 
--- Creating primary key on [IdCarro] in table 'CarrosSet'
-ALTER TABLE [dbo].[CarrosSet]
-ADD CONSTRAINT [PK_CarrosSet]
-    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
-GO
-
 -- Creating primary key on [IdVenda] in table 'VendaSet'
 ALTER TABLE [dbo].[VendaSet]
 ADD CONSTRAINT [PK_VendaSet]
@@ -157,6 +148,12 @@ GO
 ALTER TABLE [dbo].[PecasSet]
 ADD CONSTRAINT [PK_PecasSet]
     PRIMARY KEY CLUSTERED ([IdPecas] ASC);
+GO
+
+-- Creating primary key on [IdHistoricoServicos] in table 'HistoricoServicosSet'
+ALTER TABLE [dbo].[HistoricoServicosSet]
+ADD CONSTRAINT [PK_HistoricoServicosSet]
+    PRIMARY KEY CLUSTERED ([IdHistoricoServicos] ASC);
 GO
 
 -- Creating primary key on [IdServicos] in table 'ServicosSet'
@@ -171,15 +168,9 @@ ADD CONSTRAINT [PK_AluguerSet]
     PRIMARY KEY CLUSTERED ([IdAluguer] ASC);
 GO
 
--- Creating primary key on [IdCarro] in table 'CarrosSet_CarroOficina'
-ALTER TABLE [dbo].[CarrosSet_CarroOficina]
-ADD CONSTRAINT [PK_CarrosSet_CarroOficina]
-    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
-GO
-
--- Creating primary key on [IdCarro] in table 'CarrosSet_CarroVenda'
-ALTER TABLE [dbo].[CarrosSet_CarroVenda]
-ADD CONSTRAINT [PK_CarrosSet_CarroVenda]
+-- Creating primary key on [IdCarro] in table 'CarrosSet'
+ALTER TABLE [dbo].[CarrosSet]
+ADD CONSTRAINT [PK_CarrosSet]
     PRIMARY KEY CLUSTERED ([IdCarro] ASC);
 GO
 
@@ -189,10 +180,16 @@ ADD CONSTRAINT [PK_CarrosSet_CarroAluguer]
     PRIMARY KEY CLUSTERED ([IdCarro] ASC);
 GO
 
--- Creating primary key on [IdServicos] in table 'ServicosSet_HistoricoServicos'
-ALTER TABLE [dbo].[ServicosSet_HistoricoServicos]
-ADD CONSTRAINT [PK_ServicosSet_HistoricoServicos]
-    PRIMARY KEY CLUSTERED ([IdServicos] ASC);
+-- Creating primary key on [IdCarro] in table 'CarrosSet_CarroVenda'
+ALTER TABLE [dbo].[CarrosSet_CarroVenda]
+ADD CONSTRAINT [PK_CarrosSet_CarroVenda]
+    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
+GO
+
+-- Creating primary key on [IdCarro] in table 'CarrosSet_CarroOficina'
+ALTER TABLE [dbo].[CarrosSet_CarroOficina]
+ADD CONSTRAINT [PK_CarrosSet_CarroOficina]
+    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
 GO
 
 -- Creating primary key on [Servicos_IdServicos], [Pecas1_IdPecas] in table 'ServicosPecas'
@@ -235,19 +232,19 @@ ON [dbo].[AluguerSet]
     ([UtilizadoresIdUtilizador]);
 GO
 
--- Creating foreign key on [UtilizadoresIdUtilizador] in table 'CarrosSet_CarroOficina'
-ALTER TABLE [dbo].[CarrosSet_CarroOficina]
-ADD CONSTRAINT [FK_UtilizadoresCarroOficina]
-    FOREIGN KEY ([UtilizadoresIdUtilizador])
-    REFERENCES [dbo].[UtilizadoresSet]
-        ([IdUtilizador])
+-- Creating foreign key on [CarroAluguer_IdCarro] in table 'AluguerSet'
+ALTER TABLE [dbo].[AluguerSet]
+ADD CONSTRAINT [FK_CarroAluguerAluguer]
+    FOREIGN KEY ([CarroAluguer_IdCarro])
+    REFERENCES [dbo].[CarrosSet_CarroAluguer]
+        ([IdCarro])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
--- Creating non-clustered index for FOREIGN KEY 'FK_UtilizadoresCarroOficina'
-CREATE INDEX [IX_FK_UtilizadoresCarroOficina]
-ON [dbo].[CarrosSet_CarroOficina]
-    ([UtilizadoresIdUtilizador]);
+-- Creating non-clustered index for FOREIGN KEY 'FK_CarroAluguerAluguer'
+CREATE INDEX [IX_FK_CarroAluguerAluguer]
+ON [dbo].[AluguerSet]
+    ([CarroAluguer_IdCarro]);
 GO
 
 -- Creating foreign key on [CarroVenda_IdCarro] in table 'VendaSet'
@@ -263,21 +260,6 @@ GO
 CREATE INDEX [IX_FK_VendaCarroVenda]
 ON [dbo].[VendaSet]
     ([CarroVenda_IdCarro]);
-GO
-
--- Creating foreign key on [CarroAluguer_IdCarro] in table 'AluguerSet'
-ALTER TABLE [dbo].[AluguerSet]
-ADD CONSTRAINT [FK_CarroAluguerAluguer]
-    FOREIGN KEY ([CarroAluguer_IdCarro])
-    REFERENCES [dbo].[CarrosSet_CarroAluguer]
-        ([IdCarro])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_CarroAluguerAluguer'
-CREATE INDEX [IX_FK_CarroAluguerAluguer]
-ON [dbo].[AluguerSet]
-    ([CarroAluguer_IdCarro]);
 GO
 
 -- Creating foreign key on [Servicos_IdServicos] in table 'ServicosPecas'
@@ -304,8 +286,8 @@ ON [dbo].[ServicosPecas]
     ([Pecas1_IdPecas]);
 GO
 
--- Creating foreign key on [CarroOficina_IdCarro] in table 'ServicosSet_HistoricoServicos'
-ALTER TABLE [dbo].[ServicosSet_HistoricoServicos]
+-- Creating foreign key on [CarroOficina_IdCarro] in table 'HistoricoServicosSet'
+ALTER TABLE [dbo].[HistoricoServicosSet]
 ADD CONSTRAINT [FK_CarroOficinaHistoricoServicos]
     FOREIGN KEY ([CarroOficina_IdCarro])
     REFERENCES [dbo].[CarrosSet_CarroOficina]
@@ -315,13 +297,43 @@ GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_CarroOficinaHistoricoServicos'
 CREATE INDEX [IX_FK_CarroOficinaHistoricoServicos]
-ON [dbo].[ServicosSet_HistoricoServicos]
+ON [dbo].[HistoricoServicosSet]
     ([CarroOficina_IdCarro]);
 GO
 
--- Creating foreign key on [IdCarro] in table 'CarrosSet_CarroOficina'
+-- Creating foreign key on [UtilizadoresIdUtilizador] in table 'CarrosSet_CarroOficina'
 ALTER TABLE [dbo].[CarrosSet_CarroOficina]
-ADD CONSTRAINT [FK_CarroOficina_inherits_Carros]
+ADD CONSTRAINT [FK_UtilizadoresCarroOficina]
+    FOREIGN KEY ([UtilizadoresIdUtilizador])
+    REFERENCES [dbo].[UtilizadoresSet]
+        ([IdUtilizador])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_UtilizadoresCarroOficina'
+CREATE INDEX [IX_FK_UtilizadoresCarroOficina]
+ON [dbo].[CarrosSet_CarroOficina]
+    ([UtilizadoresIdUtilizador]);
+GO
+
+-- Creating foreign key on [Servicos_IdServicos] in table 'HistoricoServicosSet'
+ALTER TABLE [dbo].[HistoricoServicosSet]
+ADD CONSTRAINT [FK_ServicosHistoricoServicos]
+    FOREIGN KEY ([Servicos_IdServicos])
+    REFERENCES [dbo].[ServicosSet]
+        ([IdServicos])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ServicosHistoricoServicos'
+CREATE INDEX [IX_FK_ServicosHistoricoServicos]
+ON [dbo].[HistoricoServicosSet]
+    ([Servicos_IdServicos]);
+GO
+
+-- Creating foreign key on [IdCarro] in table 'CarrosSet_CarroAluguer'
+ALTER TABLE [dbo].[CarrosSet_CarroAluguer]
+ADD CONSTRAINT [FK_CarroAluguer_inherits_Carros]
     FOREIGN KEY ([IdCarro])
     REFERENCES [dbo].[CarrosSet]
         ([IdCarro])
@@ -337,21 +349,12 @@ ADD CONSTRAINT [FK_CarroVenda_inherits_Carros]
     ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
--- Creating foreign key on [IdCarro] in table 'CarrosSet_CarroAluguer'
-ALTER TABLE [dbo].[CarrosSet_CarroAluguer]
-ADD CONSTRAINT [FK_CarroAluguer_inherits_Carros]
+-- Creating foreign key on [IdCarro] in table 'CarrosSet_CarroOficina'
+ALTER TABLE [dbo].[CarrosSet_CarroOficina]
+ADD CONSTRAINT [FK_CarroOficina_inherits_Carros]
     FOREIGN KEY ([IdCarro])
     REFERENCES [dbo].[CarrosSet]
         ([IdCarro])
-    ON DELETE CASCADE ON UPDATE NO ACTION;
-GO
-
--- Creating foreign key on [IdServicos] in table 'ServicosSet_HistoricoServicos'
-ALTER TABLE [dbo].[ServicosSet_HistoricoServicos]
-ADD CONSTRAINT [FK_HistoricoServicos_inherits_Servicos]
-    FOREIGN KEY ([IdServicos])
-    REFERENCES [dbo].[ServicosSet]
-        ([IdServicos])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
 
