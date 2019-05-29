@@ -13,7 +13,7 @@ namespace StarStand
 {
     public partial class oficina : UserControl
     {
-        starBDContainer bd;
+        StarDBContainer1 bd;
         public oficina()
         {
             InitializeComponent();
@@ -73,8 +73,8 @@ namespace StarStand
         //Funçôes
         public void lerdadosclientes()
         {
-            bd = new starBDContainer();
-            listBoxClientes.list.DataSource = bd.UtilizadoresSet.ToList(); 
+            bd = new StarDBContainer1();
+            listBoxClientes.list.DataSource = bd.UtilizadoresSet.ToList();
         }
         public void placeholder(TextBox textbox, string textToPlaceHolder)
         {
@@ -87,7 +87,5 @@ namespace StarStand
                 textbox.Text = "";
             }
         }
-
-        
     }
 }

@@ -13,7 +13,7 @@ namespace StarStand
 {
     public partial class clientes : UserControl
     {
-        starBDContainer bd;
+        StarDBContainer1 bd;
         public clientes()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace StarStand
         }
         public void lerdados()
         {
-            bd = new starBDContainer();
+            bd = new StarDBContainer1();
             (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
             utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
         }

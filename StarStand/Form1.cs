@@ -101,7 +101,8 @@ namespace StarStand
         }
         private void BtnAluguer_Click(object sender, EventArgs e)
         {
-            setuserctr(venda1);
+            setuserctr(uSaluguer1);
+            uSaluguer1.lerdadosclientes();
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);

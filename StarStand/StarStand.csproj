@@ -61,19 +61,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aluguer.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="CarroAluguer.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="CarroOficina.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Carros.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="CarroVenda.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Extends\ExtendUtilizador.cs" />
     <Compile Include="GerirClientes.cs">
@@ -83,28 +83,28 @@
       <DependentUpon>GerirClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="HistoricoServicos.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Pecas.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Servicos.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="starBD.Context.cs">
+    <Compile Include="StarDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.Context.tt</DependentUpon>
+      <DependentUpon>StarDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="starBD.cs">
+    <Compile Include="StarDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="starBD.Designer.cs">
+    <Compile Include="StarDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>starBD.edmx</DependentUpon>
+      <DependentUpon>StarDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="USaluguer.cs">
       <SubType>UserControl</SubType>
@@ -172,10 +172,10 @@
       <DependentUpon>USVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilizadores.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Venda.cs">
-      <DependentUpon>starBD.tt</DependentUpon>
+      <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GerirClientes.resx">
       <DependentUpon>GerirClientes.cs</DependentUpon>
@@ -230,12 +230,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="starBD.edmx">
+    <EntityDeploy Include="StarDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>starBD.Designer.cs</LastGenOutput>
+      <LastGenOutput>StarDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="starBD.edmx.diagram">
-      <DependentUpon>starBD.edmx</DependentUpon>
+    <None Include="StarDB.edmx.diagram">
+      <DependentUpon>StarDB.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -246,16 +246,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="starBD.Context.tt">
+    <Content Include="StarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>starBD.Context.cs</LastGenOutput>
-      <DependentUpon>starBD.edmx</DependentUpon>
+      <LastGenOutput>StarDB.Context.cs</LastGenOutput>
+      <DependentUpon>StarDB.edmx</DependentUpon>
     </Content>
-    <Content Include="starBD.edmx.sql" />
-    <Content Include="starBD.tt">
+    <Content Include="StarDB.edmx.sql" />
+    <Content Include="StarDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>starBD.cs</LastGenOutput>
-      <DependentUpon>starBD.edmx</DependentUpon>
+      <LastGenOutput>StarDB.cs</LastGenOutput>
+      <DependentUpon>StarDB.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -159,12 +159,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Clientes.EnableHeadersVisualStyles = false;
-            this.dgv_Clientes.Location = new System.Drawing.Point(46, 70);
+            this.dgv_Clientes.Location = new System.Drawing.Point(24, 70);
             this.dgv_Clientes.Name = "dgv_Clientes";
             this.dgv_Clientes.RowHeadersVisible = false;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgv_Clientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Clientes.Size = new System.Drawing.Size(719, 499);
+            this.dgv_Clientes.Size = new System.Drawing.Size(755, 499);
             this.dgv_Clientes.TabIndex = 32;
             // 
             // idUtilizadorDataGridViewTextBoxColumn

@@ -12,9 +12,22 @@ namespace StarStand
 {
     public partial class USaluguer : UserControl
     {
+        StarDBContainer1 bd;
         public USaluguer()
         {
             InitializeComponent();
+        }
+
+        public void lerdadosclientes()
+        {
+            bd = new StarDBContainer1();
+            listboxClientes.list.DataSource = bd.UtilizadoresSet.ToList();
+        }
+
+        private void listboxClientes_Load(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

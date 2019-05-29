@@ -1,17 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+  <EntityContainerMapping StorageEntityContainer="StarDBStoreContainer" CdmEntityContainer="StarDBContainer1">
     <EntitySetMapping Name="UtilizadoresSet">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Utilizadores)">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Utilizadores)">
         <MappingFragment StoreEntitySet="UtilizadoresSet">
-          <ScalarProperty Name="IdUtilizadores" ColumnName="IdUtilizadores" />
+          <ScalarProperty Name="IdUtilizador" ColumnName="IdUtilizador" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="NIF" ColumnName="NIF" />
-          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
           <ScalarProperty Name="Morada" ColumnName="Morada" />
-          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Telemovel" ColumnName="Telemovel" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CarrosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Carros)">
+        <MappingFragment StoreEntitySet="CarrosSet">
+          <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Combustivel" ColumnName="Combustivel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.CarroOficina)">
+        <MappingFragment StoreEntitySet="CarrosSet_CarroOficina">
+          <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+          <ScalarProperty Name="Kms" ColumnName="Kms" />
+          <ScalarProperty Name="UtilizadoresIdUtilizador" ColumnName="UtilizadoresIdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.CarroAluguer)">
+        <MappingFragment StoreEntitySet="CarrosSet_CarroAluguer">
+          <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.CarroVenda)">
+        <MappingFragment StoreEntitySet="CarrosSet_CarroVenda">
+          <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
+          <ScalarProperty Name="Extras" ColumnName="Extras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VendaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Venda)">
+        <MappingFragment StoreEntitySet="VendaSet">
+          <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="UtilizadoresIdUtilizador" ColumnName="UtilizadoresIdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PecasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Pecas)">
+        <MappingFragment StoreEntitySet="PecasSet">
+          <ScalarProperty Name="IdPecas" ColumnName="IdPecas" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="ServicoIdServicos" ColumnName="ServicoIdServicos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Servicos)">
+        <MappingFragment StoreEntitySet="ServicosSet">
+          <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Pecas" ColumnName="Pecas" />
+          <ScalarProperty Name="ValorHora" ColumnName="ValorHora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.HistoricoServicos)">
+        <MappingFragment StoreEntitySet="ServicosSet_HistoricoServicos">
+          <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
+          <ScalarProperty Name="DataSaida" ColumnName="DataSaida" />
+          <ScalarProperty Name="CarroOficinaIdCarroOficina" ColumnName="CarroOficinaIdCarroOficina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AluguerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Aluguer)">
+        <MappingFragment StoreEntitySet="AluguerSet">
+          <ScalarProperty Name="IdAluguer" ColumnName="IdAluguer" />
+          <ScalarProperty Name="DataInicio" ColumnName="DataInicio" />
+          <ScalarProperty Name="DataFim" ColumnName="DataFim" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Kms" ColumnName="Kms" />
+          <ScalarProperty Name="UtilizadoresIdUtilizador" ColumnName="UtilizadoresIdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CarroAluguerAluguer" TypeName="StarDB.CarroAluguerAluguer" StoreEntitySet="AluguerSet">
+      <EndProperty Name="CarroAluguer">
+        <ScalarProperty Name="IdCarro" ColumnName="CarroAluguer_IdCarro" />
+      </EndProperty>
+      <EndProperty Name="Aluguer">
+        <ScalarProperty Name="IdAluguer" ColumnName="IdAluguer" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="VendaCarroVenda" TypeName="StarDB.VendaCarroVenda" StoreEntitySet="VendaSet">
+      <EndProperty Name="CarroVenda">
+        <ScalarProperty Name="IdCarro" ColumnName="CarroVenda_IdCarro" />
+      </EndProperty>
+      <EndProperty Name="Venda">
+        <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ServicosPecas" TypeName="StarDB.ServicosPecas" StoreEntitySet="ServicosPecas">
+      <EndProperty Name="Servicos">
+        <ScalarProperty Name="IdServicos" ColumnName="Servicos_IdServicos" />
+      </EndProperty>
+      <EndProperty Name="Pecas">
+        <ScalarProperty Name="IdPecas" ColumnName="Pecas1_IdPecas" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CarroOficinaHistoricoServicos" TypeName="StarDB.CarroOficinaHistoricoServicos" StoreEntitySet="ServicosSet_HistoricoServicos">
+      <EndProperty Name="CarroOficina">
+        <ScalarProperty Name="IdCarro" ColumnName="CarroOficina_IdCarro" />
+      </EndProperty>
+      <EndProperty Name="HistoricoServicos">
+        <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
