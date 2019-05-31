@@ -17,7 +17,7 @@ namespace StarStand
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CarroOficina()
         {
-            this.HistoricoServicos = new HashSet<HistoricoServicos>();
+            this.Servicos = new HashSet<Servicos>();
         }
     
         public double Kms { get; set; }
@@ -25,6 +25,6 @@ namespace StarStand
     
         public virtual Utilizadores Utilizadores { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HistoricoServicos> HistoricoServicos { get; set; }
+        public virtual ICollection<Servicos> Servicos { get; set; }
     }
 }

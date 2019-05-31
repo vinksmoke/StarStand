@@ -46,12 +46,18 @@
             this.btnRemoveCarros = new Bunifu.Framework.UI.BunifuImageButton();
             this.listboxCarros = new StarStand.ListBoxPersonal();
             this.listboxClientes = new StarStand.ListBoxPersonal();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCards1.SuspendLayout();
             this.panelPeças.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCarros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditCarros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCarros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -248,11 +254,56 @@
             this.listboxClientes.titulo = "Clientes";
             this.listboxClientes.Load += new System.EventHandler(this.listboxClientes_Load);
             // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(875, 47);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(31, 33);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 32;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(912, 47);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(31, 33);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 33;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton3
+            // 
+            this.bunifuImageButton3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.bunifuImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
+            this.bunifuImageButton3.ImageActive = null;
+            this.bunifuImageButton3.Location = new System.Drawing.Point(949, 47);
+            this.bunifuImageButton3.Name = "bunifuImageButton3";
+            this.bunifuImageButton3.Size = new System.Drawing.Size(31, 33);
+            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton3.TabIndex = 34;
+            this.bunifuImageButton3.TabStop = false;
+            this.bunifuImageButton3.Zoom = 10;
+            // 
             // USaluguer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.Controls.Add(this.bunifuImageButton3);
+            this.Controls.Add(this.bunifuImageButton2);
+            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.btnRemoveCarros);
             this.Controls.Add(this.btnEditCarros);
             this.Controls.Add(this.btnAddCarros);
@@ -268,6 +319,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCarros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditCarros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCarros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +345,8 @@
         private Bunifu.Framework.UI.BunifuImageButton btnAddCarros;
         private Bunifu.Framework.UI.BunifuImageButton btnEditCarros;
         private Bunifu.Framework.UI.BunifuImageButton btnRemoveCarros;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
     }
 }

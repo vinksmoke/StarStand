@@ -42,7 +42,7 @@ namespace StarStand
             bd.SaveChanges();
             lerdados();
         }
-
+        
 
 
         public void acessGerirClientes(Utilizadores user)
@@ -69,7 +69,5 @@ namespace StarStand
             (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
             utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
         }
-
-       
     }
 }

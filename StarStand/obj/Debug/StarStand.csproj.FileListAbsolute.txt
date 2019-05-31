@@ -151,3 +151,4 @@ C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.csproj.CopyComp
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.exe
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.pdb
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.USGerirCarros.resources
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirAlugados.resources

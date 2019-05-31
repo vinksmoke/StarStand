@@ -76,16 +76,19 @@
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Extends\ExtendUtilizador.cs" />
+    <Compile Include="GerirAlugados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirAlugados.Designer.cs">
+      <DependentUpon>GerirAlugados.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerirClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GerirClientes.Designer.cs">
       <DependentUpon>GerirClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="HistoricoServicos.cs">
-      <DependentUpon>StarDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pecas.cs">
+    <Compile Include="Parcela.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Servicos.cs">
@@ -177,6 +180,9 @@
     <Compile Include="Venda.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GerirAlugados.resx">
+      <DependentUpon>GerirAlugados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GerirClientes.resx">
       <DependentUpon>GerirClientes.cs</DependentUpon>
     </EmbeddedResource>

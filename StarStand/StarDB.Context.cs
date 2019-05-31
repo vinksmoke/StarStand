@@ -28,7 +28,7 @@ namespace StarStand
         public virtual DbSet<Utilizadores> UtilizadoresSet { get; set; }
         public virtual DbSet<Carros> CarrosSet { get; set; }
         public virtual DbSet<Venda> VendaSet { get; set; }
-        public virtual DbSet<Pecas> PecasSet { get; set; }
+        public virtual DbSet<Parcela> ParcelaSet { get; set; }
         public virtual DbSet<Servicos> ServicosSet { get; set; }
         public virtual DbSet<Aluguer> AluguerSet { get; set; }
     }
