@@ -16,8 +16,8 @@ namespace StarStand
     {
         public int IdParcela { get; set; }
         public double Valor { get; set; }
-        public int Descrição { get; set; }
-        public string ServicoIdServicos { get; set; }
+        public string Descrição { get; set; }
+        public int ServicoIdServicos { get; set; }
     
         public virtual Servicos Servicos { get; set; }
     }

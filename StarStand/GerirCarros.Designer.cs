@@ -35,7 +35,7 @@
             this.textBoxMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextBoxModelo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextboxMatricula = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSubmeter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.textboxCombustivel = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
@@ -153,39 +153,40 @@
             this.TextboxMatricula.Enter += new System.EventHandler(this.TextboxMatricula_Enter);
             this.TextboxMatricula.Leave += new System.EventHandler(this.TextboxMatricula_Leave);
             // 
-            // bunifuFlatButton1
+            // btnSubmeter
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.ForestGreen;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Inserir";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(12, 272);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.ForestGreen;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Green;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(259, 48);
-            this.bunifuFlatButton1.TabIndex = 4;
-            this.bunifuFlatButton1.Text = "Inserir";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmeter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSubmeter.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSubmeter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSubmeter.BorderRadius = 0;
+            this.btnSubmeter.ButtonText = "Inserir";
+            this.btnSubmeter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmeter.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSubmeter.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSubmeter.Iconimage = null;
+            this.btnSubmeter.Iconimage_right = null;
+            this.btnSubmeter.Iconimage_right_Selected = null;
+            this.btnSubmeter.Iconimage_Selected = null;
+            this.btnSubmeter.IconMarginLeft = 0;
+            this.btnSubmeter.IconMarginRight = 0;
+            this.btnSubmeter.IconRightVisible = true;
+            this.btnSubmeter.IconRightZoom = 0D;
+            this.btnSubmeter.IconVisible = true;
+            this.btnSubmeter.IconZoom = 90D;
+            this.btnSubmeter.IsTab = false;
+            this.btnSubmeter.Location = new System.Drawing.Point(12, 272);
+            this.btnSubmeter.Name = "btnSubmeter";
+            this.btnSubmeter.Normalcolor = System.Drawing.Color.ForestGreen;
+            this.btnSubmeter.OnHovercolor = System.Drawing.Color.Green;
+            this.btnSubmeter.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSubmeter.selected = false;
+            this.btnSubmeter.Size = new System.Drawing.Size(259, 48);
+            this.btnSubmeter.TabIndex = 4;
+            this.btnSubmeter.Text = "Inserir";
+            this.btnSubmeter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSubmeter.Textcolor = System.Drawing.Color.White;
+            this.btnSubmeter.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmeter.Click += new System.EventHandler(this.BtnSubmeter_Click);
             // 
             // textboxCombustivel
             // 
@@ -215,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 355);
             this.Controls.Add(this.textboxCombustivel);
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnSubmeter);
             this.Controls.Add(this.TextboxMatricula);
             this.Controls.Add(this.TextBoxModelo);
             this.Controls.Add(this.textBoxMarca);
@@ -237,7 +238,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBoxMarca;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxModelo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxMatricula;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSubmeter;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textboxCombustivel;
     }
 }

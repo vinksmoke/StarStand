@@ -25,7 +25,7 @@ namespace StarStand
         int MvalY;
 
 
-        StarDBContainer1 bd = new StarDBContainer1();
+        StarDBContainer bd = new StarDBContainer();
         int idUser;
 
         public virtual int MaxLength { get; set; }
@@ -265,8 +265,6 @@ namespace StarStand
         //NIF
         private void textboxNIF_OnValueChanged(object sender, EventArgs e)
         {
-            const int maxlen = 9;
-
             string tString = textboxNIF.Text;
             if (tString.Trim() == "") return;
             for (int i = 0; i < tString.Length; i++)

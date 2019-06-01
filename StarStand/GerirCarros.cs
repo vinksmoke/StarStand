@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,16 +20,60 @@ namespace StarStand
         bool togMoveForm;
         int MvalX;
         int MvalY;
-        public GerirCarros()
+
+        StarDBContainer bd = new StarDBContainer();
+        int idUtilizador;
+        CarroOficina Globalcarro;
+        public GerirCarros (int idUser,CarroOficina carro)
         {
             InitializeComponent();
+            idUtilizador = idUser;
+            if(carro!=null)
+            {
+                textBoxMarca.Text=carro.Marca;
+                TextBoxModelo.Text = carro.Modelo;
+                TextboxMatricula.Text= carro.Matricula;
+                textboxCombustivel.Text = carro.Combustivel;
+                btnSubmeter.Text = "Editar";
+                Globalcarro = carro;
+            }
+            
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        private void BtnSubmeter_Click(object sender, EventArgs e)
+        {
+            
+            if(Globalcarro!= null)
+            {
+                Utilizadores user = bd.UtilizadoresSet.Single(Utilizadores => Utilizadores.IdUtilizador == idUtilizador);
+                CarroOficina carro = user.CarroOficina.Single(carros => carros.IdCarro == Globalcarro.IdCarro);
+                carro.Marca = textBoxMarca.Text.Trim();
+                carro.Modelo = TextBoxModelo.Text.Trim();
+                carro.Matricula = TextboxMatricula.Text.Trim();
+                carro.Combustivel = textboxCombustivel.Text.Trim();
+                bd.Entry(carro).State = EntityState.Modified;
+            }
+            else
+            {
+                
+                CarroOficina carro = new CarroOficina();
+                carro.Marca = textBoxMarca.Text.Trim();
+                carro.Modelo = TextBoxModelo.Text.Trim();
+                carro.Matricula = TextboxMatricula.Text.Trim();
+                carro.Combustivel = textboxCombustivel.Text.Trim();
+                carro.Kms = 1;
+                carro.UtilizadoresIdUtilizador = idUtilizador;
+                bd.CarrosSet.Add(carro);
+            }
+           
+            bd.SaveChanges();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
 
 
 
@@ -102,5 +147,7 @@ namespace StarStand
                 SetDesktopLocation(MousePosition.X - MvalX, MousePosition.Y - MvalY);
             }
         }
+
+     
     }
 }

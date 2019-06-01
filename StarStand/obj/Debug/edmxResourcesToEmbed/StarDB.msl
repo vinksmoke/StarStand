@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="StarDBStoreContainer" CdmEntityContainer="StarDBContainer1">
+  <EntityContainerMapping StorageEntityContainer="StarDBStoreContainer" CdmEntityContainer="StarDBContainer">
     <EntitySetMapping Name="UtilizadoresSet">
       <EntityTypeMapping TypeName="IsTypeOf(StarDB.Utilizadores)">
         <MappingFragment StoreEntitySet="UtilizadoresSet">
@@ -54,33 +54,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PecasSet">
-      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Pecas)">
-        <MappingFragment StoreEntitySet="PecasSet">
-          <ScalarProperty Name="IdPecas" ColumnName="IdPecas" />
-          <ScalarProperty Name="Valor" ColumnName="Valor" />
-          <ScalarProperty Name="Stock" ColumnName="Stock" />
-          <ScalarProperty Name="ServicoIdServicos" ColumnName="ServicoIdServicos" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="ServicosSet">
-      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Servicos)">
-        <MappingFragment StoreEntitySet="ServicosSet">
-          <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
-          <ScalarProperty Name="Nome" ColumnName="Nome" />
-          <ScalarProperty Name="Pecas" ColumnName="Pecas" />
-          <ScalarProperty Name="ValorHora" ColumnName="ValorHora" />
-        </MappingFragment>
-      </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(StarDB.HistoricoServicos)">
-        <MappingFragment StoreEntitySet="ServicosSet_HistoricoServicos">
-          <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
-          <ScalarProperty Name="DataSaida" ColumnName="DataSaida" />
-          <ScalarProperty Name="CarroOficinaIdCarroOficina" ColumnName="CarroOficinaIdCarroOficina" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="AluguerSet">
       <EntityTypeMapping TypeName="IsTypeOf(StarDB.Aluguer)">
         <MappingFragment StoreEntitySet="AluguerSet">
@@ -90,6 +63,26 @@
           <ScalarProperty Name="Valor" ColumnName="Valor" />
           <ScalarProperty Name="Kms" ColumnName="Kms" />
           <ScalarProperty Name="UtilizadoresIdUtilizador" ColumnName="UtilizadoresIdUtilizador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParcelaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Parcela)">
+        <MappingFragment StoreEntitySet="ParcelaSet">
+          <ScalarProperty Name="IdParcela" ColumnName="IdParcela" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Descrição" ColumnName="Descrição" />
+          <ScalarProperty Name="ServicoIdServicos" ColumnName="ServicoIdServicos" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServicosSet">
+      <EntityTypeMapping TypeName="IsTypeOf(StarDB.Servicos)">
+        <MappingFragment StoreEntitySet="ServicosSet">
+          <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
+          <ScalarProperty Name="DataSaida" ColumnName="DataSaida" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -109,20 +102,20 @@
         <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="ServicosPecas" TypeName="StarDB.ServicosPecas" StoreEntitySet="ServicosPecas">
-      <EndProperty Name="Servicos">
-        <ScalarProperty Name="IdServicos" ColumnName="Servicos_IdServicos" />
-      </EndProperty>
-      <EndProperty Name="Pecas">
-        <ScalarProperty Name="IdPecas" ColumnName="Pecas1_IdPecas" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="CarroOficinaHistoricoServicos" TypeName="StarDB.CarroOficinaHistoricoServicos" StoreEntitySet="ServicosSet_HistoricoServicos">
+    <AssociationSetMapping Name="CarroOficinaServicos" TypeName="StarDB.CarroOficinaServicos" StoreEntitySet="ServicosSet">
       <EndProperty Name="CarroOficina">
         <ScalarProperty Name="IdCarro" ColumnName="CarroOficina_IdCarro" />
       </EndProperty>
-      <EndProperty Name="HistoricoServicos">
+      <EndProperty Name="Servicos">
         <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ServicosParcela" TypeName="StarDB.ServicosParcela" StoreEntitySet="ParcelaSet">
+      <EndProperty Name="Servicos">
+        <ScalarProperty Name="IdServicos" ColumnName="Servicos_IdServicos" />
+      </EndProperty>
+      <EndProperty Name="Parcela">
+        <ScalarProperty Name="IdParcela" ColumnName="IdParcela" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

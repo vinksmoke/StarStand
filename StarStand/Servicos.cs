@@ -17,16 +17,16 @@ namespace StarStand
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Servicos()
         {
-            this.Pecas1 = new HashSet<Parcela>();
+            this.Parcela = new HashSet<Parcela>();
         }
     
         public int IdServicos { get; set; }
         public string Nome { get; set; }
-        public bool DataEntrada { get; set; }
-        public double DataSaida { get; set; }
+        public System.DateTime DataEntrada { get; set; }
+        public System.DateTime DataSaida { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Parcela> Pecas1 { get; set; }
         public virtual CarroOficina CarroOficina { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Parcela> Parcela { get; set; }
     }
 }

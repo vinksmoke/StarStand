@@ -12,6 +12,7 @@ namespace StarStand
 {
     public partial class ListBoxPersonal : UserControl
     {
+        public event EventHandler ChangeSeletedIndex;
         public string titulo
         {
             get { return lblSetText.Text; }
@@ -36,6 +37,15 @@ namespace StarStand
         public ListBoxPersonal()
         {
             InitializeComponent();
+            this.list.SelectedIndexChanged += new System.EventHandler(this.List_SelectedIndexChanged);
+        }
+
+        private void List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ChangeSeletedIndex != null)
+            {
+                ChangeSeletedIndex(sender, e);
+            }
         }
     }
 }

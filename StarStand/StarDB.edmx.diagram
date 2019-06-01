@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="adf8f7f22b8b4f00a19f4afdf702b5a4" Name="Diagram1" ZoomLevel="113" >
-        <EntityTypeShape EntityType="StarDB.Utilizadores" Width="1.5" PointX="5.5" PointY="4" />
-        <EntityTypeShape EntityType="StarDB.Carros" Width="1.5" PointX="13" PointY="6.5" />
-        <EntityTypeShape EntityType="StarDB.Venda" Width="1.5" PointX="7.75" PointY="2.875" />
-        <EntityTypeShape EntityType="StarDB.CarroAluguer" Width="1.5" PointX="9.875" PointY="6.625" />
-        <EntityTypeShape EntityType="StarDB.CarroVenda" Width="1.5" PointX="10" PointY="3.375" />
-        <EntityTypeShape EntityType="StarDB.Parcela" Width="1.5" PointX="14.125" PointY="11.375" />
-        <EntityTypeShape EntityType="StarDB.Servicos" Width="1.5" PointX="10.875" PointY="11" />
-        <EntityTypeShape EntityType="StarDB.Aluguer" Width="1.5" PointX="7.75" PointY="6.125" />
-        <EntityTypeShape EntityType="StarDB.CarroOficina" Width="1.5" PointX="8" PointY="9.25" />
+      <Diagram DiagramId="4cbc0ec2a40e40568a389e31ac0532b5" Name="Diagram1" ZoomLevel="109" >
+        <EntityTypeShape EntityType="StarDB.Utilizadores" Width="1.5" PointX="2" PointY="3.5" />
+        <EntityTypeShape EntityType="StarDB.Carros" Width="1.5" PointX="10" PointY="3.375" />
+        <EntityTypeShape EntityType="StarDB.Venda" Width="1.5" PointX="4.25" PointY="2.5" />
+        <EntityTypeShape EntityType="StarDB.CarroAluguer" Width="1.5" PointX="7.125" PointY="6" />
+        <EntityTypeShape EntityType="StarDB.CarroVenda" Width="1.5" PointX="6.5" PointY="3" />
+        <EntityTypeShape EntityType="StarDB.Aluguer" Width="1.5" PointX="4.375" PointY="5.75" />
+        <EntityTypeShape EntityType="StarDB.CarroOficina" Width="1.5" PointX="9.25" PointY="7.375" />
+        <EntityTypeShape EntityType="StarDB.Parcela" Width="1.5" PointX="10" PointY="9.25" />
+        <EntityTypeShape EntityType="StarDB.Servicos" Width="1.5" PointX="7.25" PointY="9.125" />
         <AssociationConnector Association="StarDB.UtilizadoresVenda" />
         <AssociationConnector Association="StarDB.UtilizadoresAluguer" />
         <AssociationConnector Association="StarDB.UtilizadoresCarroOficina" />
         <AssociationConnector Association="StarDB.CarroAluguerAluguer" />
         <AssociationConnector Association="StarDB.VendaCarroVenda" />
-        <AssociationConnector Association="StarDB.ServicosPecas" />
-        <InheritanceConnector EntityType="StarDB.CarroOficina" />
-        <InheritanceConnector EntityType="StarDB.CarroAluguer" />
+        <AssociationConnector Association="StarDB.CarroOficinaServicos" />
         <InheritanceConnector EntityType="StarDB.CarroVenda" />
-        <AssociationConnector Association="StarDB.ServicosCarroOficina" />
+        <InheritanceConnector EntityType="StarDB.CarroAluguer" />
+        <InheritanceConnector EntityType="StarDB.CarroOficina" />
+        <AssociationConnector Association="StarDB.ServicosParcela" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

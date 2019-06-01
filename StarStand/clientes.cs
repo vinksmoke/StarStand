@@ -13,7 +13,7 @@ namespace StarStand
 {
     public partial class clientes : UserControl
     {
-        StarDBContainer1 bd;
+        StarDBContainer bd;
         public clientes()
         {
             InitializeComponent();
@@ -38,8 +38,8 @@ namespace StarStand
             int index = dgv_Clientes.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
             Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
-            bd.Entry(user).State = EntityState.Deleted;
-            bd.SaveChanges();
+            //bd.Entry(user).State = EntityState.Deleted;
+            //bd.SaveChanges();
             lerdados();
         }
         
@@ -65,8 +65,8 @@ namespace StarStand
         }
         public void lerdados()
         {
-            bd = new StarDBContainer1();
-            (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
+            bd = new StarDBContainer();
+           (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
             utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
         }
     }

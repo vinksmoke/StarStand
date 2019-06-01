@@ -75,6 +75,7 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extends\ExtendCarroOficina.cs" />
     <Compile Include="Extends\ExtendUtilizador.cs" />
     <Compile Include="GerirAlugados.cs">
       <SubType>Form</SubType>
@@ -225,6 +226,7 @@
     <EmbeddedResource Include="USVenda.resx">
       <DependentUpon>USVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Utilizadores.datasource" />
     <None Include="Properties\Settings.settings">
@@ -243,9 +245,6 @@
     <None Include="StarDB.edmx.diagram">
       <DependentUpon>StarDB.edmx</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -13,10 +13,10 @@ namespace StarStand
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StarDBContainer1 : DbContext
+    public partial class StarDBContainer : DbContext
     {
-        public StarDBContainer1()
-            : base("name=StarDBContainer1")
+        public StarDBContainer()
+            : base("name=StarDBContainer")
         {
         }
     
@@ -28,8 +28,8 @@ namespace StarStand
         public virtual DbSet<Utilizadores> UtilizadoresSet { get; set; }
         public virtual DbSet<Carros> CarrosSet { get; set; }
         public virtual DbSet<Venda> VendaSet { get; set; }
+        public virtual DbSet<Aluguer> AluguerSet { get; set; }
         public virtual DbSet<Parcela> ParcelaSet { get; set; }
         public virtual DbSet<Servicos> ServicosSet { get; set; }
-        public virtual DbSet<Aluguer> AluguerSet { get; set; }
     }
 }

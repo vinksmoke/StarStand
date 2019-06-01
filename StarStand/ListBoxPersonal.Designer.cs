@@ -61,6 +61,7 @@
             this.list.Name = "list";
             this.list.Size = new System.Drawing.Size(201, 216);
             this.list.TabIndex = 0;
+            this.list.SelectedIndexChanged += new System.EventHandler(this.List_SelectedIndexChanged);
             // 
             // panelHead
             // 

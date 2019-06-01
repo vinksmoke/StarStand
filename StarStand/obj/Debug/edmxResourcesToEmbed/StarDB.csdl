@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="StarDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-  <EntityContainer Name="StarDBContainer1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="StarDBContainer" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="UtilizadoresSet" EntityType="StarDB.Utilizadores" />
     <EntitySet Name="CarrosSet" EntityType="StarDB.Carros" />
     <EntitySet Name="VendaSet" EntityType="StarDB.Venda" />
-    <EntitySet Name="PecasSet" EntityType="StarDB.Pecas" />
-    <EntitySet Name="ServicosSet" EntityType="StarDB.Servicos" />
     <EntitySet Name="AluguerSet" EntityType="StarDB.Aluguer" />
+    <EntitySet Name="ParcelaSet" EntityType="StarDB.Parcela" />
+    <EntitySet Name="ServicosSet" EntityType="StarDB.Servicos" />
     <AssociationSet Name="UtilizadoresVenda" Association="StarDB.UtilizadoresVenda">
       <End Role="Utilizadores" EntitySet="UtilizadoresSet" />
       <End Role="Venda" EntitySet="VendaSet" />
@@ -27,13 +27,13 @@
       <End Role="Venda" EntitySet="VendaSet" />
       <End Role="CarroVenda" EntitySet="CarrosSet" />
     </AssociationSet>
-    <AssociationSet Name="ServicosPecas" Association="StarDB.ServicosPecas">
-      <End Role="Servicos" EntitySet="ServicosSet" />
-      <End Role="Pecas" EntitySet="PecasSet" />
-    </AssociationSet>
-    <AssociationSet Name="CarroOficinaHistoricoServicos" Association="StarDB.CarroOficinaHistoricoServicos">
+    <AssociationSet Name="CarroOficinaServicos" Association="StarDB.CarroOficinaServicos">
       <End Role="CarroOficina" EntitySet="CarrosSet" />
-      <End Role="HistoricoServicos" EntitySet="ServicosSet" />
+      <End Role="Servicos" EntitySet="ServicosSet" />
+    </AssociationSet>
+    <AssociationSet Name="ServicosParcela" Association="StarDB.ServicosParcela">
+      <End Role="Servicos" EntitySet="ServicosSet" />
+      <End Role="Parcela" EntitySet="ParcelaSet" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Utilizadores">
@@ -80,31 +80,6 @@
     <Property Name="Extras" Type="String" Nullable="false" />
     <NavigationProperty Name="Venda" Relationship="StarDB.VendaCarroVenda" FromRole="CarroVenda" ToRole="Venda" />
   </EntityType>
-  <EntityType Name="Pecas">
-    <Key>
-      <PropertyRef Name="IdPecas" />
-    </Key>
-    <Property Name="IdPecas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Valor" Type="Double" Nullable="false" />
-    <Property Name="Stock" Type="Int32" Nullable="false" />
-    <Property Name="ServicoIdServicos" Type="String" Nullable="false" />
-    <NavigationProperty Name="Servicos" Relationship="StarDB.ServicosPecas" FromRole="Pecas" ToRole="Servicos" />
-  </EntityType>
-  <EntityType Name="HistoricoServicos" BaseType="StarDB.Servicos">
-    <Property Name="DataSaida" Type="String" Nullable="false" />
-    <Property Name="CarroOficinaIdCarroOficina" Type="String" Nullable="false" />
-    <NavigationProperty Name="CarroOficina" Relationship="StarDB.CarroOficinaHistoricoServicos" FromRole="HistoricoServicos" ToRole="CarroOficina" />
-  </EntityType>
-  <EntityType Name="Servicos">
-    <Key>
-      <PropertyRef Name="IdServicos" />
-    </Key>
-    <Property Name="IdServicos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Nome" Type="String" Nullable="false" />
-    <Property Name="Pecas" Type="Boolean" Nullable="false" />
-    <Property Name="ValorHora" Type="Double" Nullable="false" />
-    <NavigationProperty Name="Pecas1" Relationship="StarDB.ServicosPecas" FromRole="Servicos" ToRole="Pecas" />
-  </EntityType>
   <EntityType Name="Aluguer">
     <Key>
       <PropertyRef Name="IdAluguer" />
@@ -122,7 +97,28 @@
     <Property Name="Kms" Type="Double" Nullable="false" />
     <Property Name="UtilizadoresIdUtilizador" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Utilizadores" Relationship="StarDB.UtilizadoresCarroOficina" FromRole="CarroOficina" ToRole="Utilizadores" />
-    <NavigationProperty Name="HistoricoServicos" Relationship="StarDB.CarroOficinaHistoricoServicos" FromRole="CarroOficina" ToRole="HistoricoServicos" />
+    <NavigationProperty Name="Servicos" Relationship="StarDB.CarroOficinaServicos" FromRole="CarroOficina" ToRole="Servicos" />
+  </EntityType>
+  <EntityType Name="Parcela">
+    <Key>
+      <PropertyRef Name="IdParcela" />
+    </Key>
+    <Property Name="IdParcela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Valor" Type="Double" Nullable="false" />
+    <Property Name="Descrição" Type="String" Nullable="false" />
+    <Property Name="ServicoIdServicos" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Servicos" Relationship="StarDB.ServicosParcela" FromRole="Parcela" ToRole="Servicos" />
+  </EntityType>
+  <EntityType Name="Servicos">
+    <Key>
+      <PropertyRef Name="IdServicos" />
+    </Key>
+    <Property Name="IdServicos" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" Nullable="false" />
+    <Property Name="DataEntrada" Type="DateTime" Nullable="false" />
+    <Property Name="DataSaida" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="CarroOficina" Relationship="StarDB.CarroOficinaServicos" FromRole="Servicos" ToRole="CarroOficina" />
+    <NavigationProperty Name="Parcela" Relationship="StarDB.ServicosParcela" FromRole="Servicos" ToRole="Parcela" />
   </EntityType>
   <Association Name="UtilizadoresVenda">
     <End Type="StarDB.Utilizadores" Role="Utilizadores" Multiplicity="1" />
@@ -168,12 +164,12 @@
     <End Type="StarDB.Venda" Role="Venda" Multiplicity="1" />
     <End Type="StarDB.CarroVenda" Role="CarroVenda" Multiplicity="1" />
   </Association>
-  <Association Name="ServicosPecas">
-    <End Type="StarDB.Servicos" Role="Servicos" Multiplicity="*" />
-    <End Type="StarDB.Pecas" Role="Pecas" Multiplicity="*" />
-  </Association>
-  <Association Name="CarroOficinaHistoricoServicos">
+  <Association Name="CarroOficinaServicos">
     <End Type="StarDB.CarroOficina" Role="CarroOficina" Multiplicity="1" />
-    <End Type="StarDB.HistoricoServicos" Role="HistoricoServicos" Multiplicity="*" />
+    <End Type="StarDB.Servicos" Role="Servicos" Multiplicity="*" />
+  </Association>
+  <Association Name="ServicosParcela">
+    <End Type="StarDB.Servicos" Role="Servicos" Multiplicity="1" />
+    <End Type="StarDB.Parcela" Role="Parcela" Multiplicity="*" />
   </Association>
 </Schema>
