@@ -38,8 +38,8 @@ namespace StarStand
             int index = dgv_Clientes.CurrentCell.RowIndex;
             DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
             Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
-            //bd.Entry(user).State = EntityState.Deleted;
-            //bd.SaveChanges();
+            bd.Entry(user).State = EntityState.Deleted;
+            bd.SaveChanges();
             lerdados();
         }
         

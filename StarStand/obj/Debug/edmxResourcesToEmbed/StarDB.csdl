@@ -75,6 +75,7 @@
   <EntityType Name="CarroAluguer" BaseType="StarDB.Carros">
     <Property Name="Estado" Type="String" Nullable="false" />
     <NavigationProperty Name="Aluguer" Relationship="StarDB.CarroAluguerAluguer" FromRole="CarroAluguer" ToRole="Aluguer" />
+    <Property Name="ValorBase" Type="Decimal" Nullable="false" />
   </EntityType>
   <EntityType Name="CarroVenda" BaseType="StarDB.Carros">
     <Property Name="Extras" Type="String" Nullable="false" />
@@ -86,12 +87,13 @@
     </Key>
     <Property Name="IdAluguer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DataInicio" Type="DateTime" Nullable="false" />
-    <Property Name="DataFim" Type="DateTime" Nullable="false" />
-    <Property Name="Valor" Type="Decimal" Nullable="false" />
-    <Property Name="Kms" Type="Decimal" Nullable="false" />
+    <Property Name="DataFim" Type="DateTime" Nullable="true" />
+    <Property Name="Valor" Type="Decimal" Nullable="true" />
+    <Property Name="Kms" Type="Decimal" Nullable="true" />
     <Property Name="UtilizadoresIdUtilizador" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Utilizadores" Relationship="StarDB.UtilizadoresAluguer" FromRole="Aluguer" ToRole="Utilizadores" />
     <NavigationProperty Name="CarroAluguer" Relationship="StarDB.CarroAluguerAluguer" FromRole="Aluguer" ToRole="CarroAluguer" />
+    <Property Name="CarroAluguerId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="CarroOficina" BaseType="StarDB.Carros">
     <Property Name="Kms" Type="Decimal" Nullable="false" />
@@ -160,6 +162,14 @@
   <Association Name="CarroAluguerAluguer">
     <End Type="StarDB.CarroAluguer" Role="CarroAluguer" Multiplicity="1" />
     <End Type="StarDB.Aluguer" Role="Aluguer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarroAluguer">
+        <PropertyRef Name="IdCarro" />
+      </Principal>
+      <Dependent Role="Aluguer">
+        <PropertyRef Name="CarroAluguerId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
   <Association Name="VendaCarroVenda">
     <End Type="StarDB.Venda" Role="Venda" Multiplicity="1" />

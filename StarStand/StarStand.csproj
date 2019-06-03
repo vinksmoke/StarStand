@@ -75,6 +75,7 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extends\ExtendCarroAluguer.cs" />
     <Compile Include="Extends\ExtendCarroOficina.cs" />
     <Compile Include="Extends\ExtendParcela.cs" />
     <Compile Include="Extends\ExtendServicos.cs" />

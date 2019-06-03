@@ -21,6 +21,7 @@ namespace StarStand
         }
     
         public string Estado { get; set; }
+        public decimal ValorBase { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Aluguer> Aluguer { get; set; }

@@ -89,11 +89,11 @@
     </Key>
     <Property Name="IdAluguer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DataInicio" Type="datetime" Nullable="false" />
-    <Property Name="DataFim" Type="datetime" Nullable="false" />
-    <Property Name="Valor" Type="decimal" Nullable="false" />
-    <Property Name="Kms" Type="decimal" Nullable="false" />
+    <Property Name="DataFim" Type="datetime" Nullable="true" />
+    <Property Name="Valor" Type="decimal" Nullable="true" />
+    <Property Name="Kms" Type="decimal" Nullable="true" />
     <Property Name="UtilizadoresIdUtilizador" Type="int" Nullable="false" />
-    <Property Name="CarroAluguer_IdCarro" Type="int" Nullable="false" />
+    <Property Name="CarroAluguerId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ParcelaSet">
     <Key>
@@ -127,6 +127,7 @@
       <PropertyRef Name="IdCarro" />
     </Key>
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValorBase" Type="decimal" Nullable="false" />
     <Property Name="IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="CarrosSet_CarroVenda">
@@ -180,7 +181,7 @@
         <PropertyRef Name="IdCarro" />
       </Principal>
       <Dependent Role="Aluguer">
-        <PropertyRef Name="CarroAluguer_IdCarro" />
+        <PropertyRef Name="CarroAluguerId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -34,6 +34,7 @@
         <MappingFragment StoreEntitySet="CarrosSet_CarroAluguer">
           <ScalarProperty Name="IdCarro" ColumnName="IdCarro" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="ValorBase" ColumnName="ValorBase" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(StarDB.CarroVenda)">
@@ -63,6 +64,7 @@
           <ScalarProperty Name="Valor" ColumnName="Valor" />
           <ScalarProperty Name="Kms" ColumnName="Kms" />
           <ScalarProperty Name="UtilizadoresIdUtilizador" ColumnName="UtilizadoresIdUtilizador" />
+          <ScalarProperty Name="CarroAluguerId" ColumnName="CarroAluguerId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -87,14 +89,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="CarroAluguerAluguer" TypeName="StarDB.CarroAluguerAluguer" StoreEntitySet="AluguerSet">
-      <EndProperty Name="CarroAluguer">
-        <ScalarProperty Name="IdCarro" ColumnName="CarroAluguer_IdCarro" />
-      </EndProperty>
-      <EndProperty Name="Aluguer">
-        <ScalarProperty Name="IdAluguer" ColumnName="IdAluguer" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="VendaCarroVenda" TypeName="StarDB.VendaCarroVenda" StoreEntitySet="VendaSet">
       <EndProperty Name="CarroVenda">
         <ScalarProperty Name="IdCarro" ColumnName="CarroVenda_IdCarro" />

@@ -16,10 +16,11 @@ namespace StarStand
     {
         public int IdAluguer { get; set; }
         public System.DateTime DataInicio { get; set; }
-        public System.DateTime DataFim { get; set; }
-        public decimal Valor { get; set; }
-        public decimal Kms { get; set; }
+        public Nullable<System.DateTime> DataFim { get; set; }
+        public Nullable<decimal> Valor { get; set; }
+        public Nullable<decimal> Kms { get; set; }
         public int UtilizadoresIdUtilizador { get; set; }
+        public int CarroAluguerId { get; set; }
     
         public virtual Utilizadores Utilizadores { get; set; }
         public virtual CarroAluguer CarroAluguer { get; set; }

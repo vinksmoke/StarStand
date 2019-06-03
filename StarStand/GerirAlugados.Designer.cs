@@ -32,11 +32,11 @@
             this.PanelHeader = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.BtnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.textboxNome = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnSubmeter = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.textboxModelo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textboxMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnInserir = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.comboboxCombustivel = new System.Windows.Forms.ComboBox();
+            this.textboxValorBase = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.SuspendLayout();
@@ -55,17 +55,20 @@
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Quality = 10;
-            this.PanelHeader.Size = new System.Drawing.Size(318, 44);
+            this.PanelHeader.Size = new System.Drawing.Size(361, 44);
             this.PanelHeader.TabIndex = 17;
+            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
+            this.PanelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
+            this.PanelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
             // BtnClose
             // 
             this.BtnClose.BackColor = System.Drawing.Color.Transparent;
             this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
             this.BtnClose.ImageActive = null;
-            this.BtnClose.Location = new System.Drawing.Point(269, 6);
+            this.BtnClose.Location = new System.Drawing.Point(314, 6);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(39, 34);
+            this.BtnClose.Size = new System.Drawing.Size(45, 34);
             this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnClose.TabIndex = 6;
             this.BtnClose.TabStop = false;
@@ -78,136 +81,134 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(14, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(148, 25);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Carros Alugados";
             // 
-            // textboxNome
+            // textboxModelo
             // 
-            this.textboxNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textboxNome.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textboxNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textboxNome.HintForeColor = System.Drawing.Color.Empty;
-            this.textboxNome.HintText = "";
-            this.textboxNome.isPassword = false;
-            this.textboxNome.LineFocusedColor = System.Drawing.Color.Blue;
-            this.textboxNome.LineIdleColor = System.Drawing.Color.Gray;
-            this.textboxNome.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.textboxNome.LineThickness = 3;
-            this.textboxNome.Location = new System.Drawing.Point(41, 196);
-            this.textboxNome.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxNome.Name = "textboxNome";
-            this.textboxNome.Size = new System.Drawing.Size(236, 44);
-            this.textboxNome.TabIndex = 18;
-            this.textboxNome.Text = "Kms";
-            this.textboxNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxModelo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textboxModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textboxModelo.HintForeColor = System.Drawing.Color.Empty;
+            this.textboxModelo.HintText = "";
+            this.textboxModelo.isPassword = false;
+            this.textboxModelo.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textboxModelo.LineIdleColor = System.Drawing.Color.Gray;
+            this.textboxModelo.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textboxModelo.LineThickness = 3;
+            this.textboxModelo.Location = new System.Drawing.Point(45, 144);
+            this.textboxModelo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textboxModelo.Name = "textboxModelo";
+            this.textboxModelo.Size = new System.Drawing.Size(275, 44);
+            this.textboxModelo.TabIndex = 20;
+            this.textboxModelo.Text = "Modelo";
+            this.textboxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox1
+            // textboxMarca
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(41, 248);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox1.TabIndex = 19;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxMarca.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textboxMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textboxMarca.HintForeColor = System.Drawing.Color.Empty;
+            this.textboxMarca.HintText = "";
+            this.textboxMarca.isPassword = false;
+            this.textboxMarca.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textboxMarca.LineIdleColor = System.Drawing.Color.Gray;
+            this.textboxMarca.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textboxMarca.LineThickness = 3;
+            this.textboxMarca.Location = new System.Drawing.Point(45, 92);
+            this.textboxMarca.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textboxMarca.Name = "textboxMarca";
+            this.textboxMarca.Size = new System.Drawing.Size(275, 44);
+            this.textboxMarca.TabIndex = 21;
+            this.textboxMarca.Text = "Marca";
+            this.textboxMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox2
+            // btnInserir
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(41, 144);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox2.TabIndex = 20;
-            this.bunifuMaterialTextbox2.Text = "Modelo";
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnInserir.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnInserir.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnInserir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInserir.BorderRadius = 0;
+            this.btnInserir.ButtonText = "Inserir";
+            this.btnInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInserir.DisabledColor = System.Drawing.Color.Gray;
+            this.btnInserir.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnInserir.Iconimage = null;
+            this.btnInserir.Iconimage_right = null;
+            this.btnInserir.Iconimage_right_Selected = null;
+            this.btnInserir.Iconimage_Selected = null;
+            this.btnInserir.IconMarginLeft = 0;
+            this.btnInserir.IconMarginRight = 0;
+            this.btnInserir.IconRightVisible = true;
+            this.btnInserir.IconRightZoom = 0D;
+            this.btnInserir.IconVisible = true;
+            this.btnInserir.IconZoom = 90D;
+            this.btnInserir.IsTab = false;
+            this.btnInserir.Location = new System.Drawing.Point(41, 303);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Normalcolor = System.Drawing.Color.ForestGreen;
+            this.btnInserir.OnHovercolor = System.Drawing.Color.Green;
+            this.btnInserir.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnInserir.selected = false;
+            this.btnInserir.Size = new System.Drawing.Size(280, 48);
+            this.btnInserir.TabIndex = 22;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInserir.Textcolor = System.Drawing.Color.White;
+            this.btnInserir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // bunifuMaterialTextbox3
+            // comboboxCombustivel
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(41, 92);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(236, 44);
-            this.bunifuMaterialTextbox3.TabIndex = 21;
-            this.bunifuMaterialTextbox3.Text = "Marca";
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboboxCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboboxCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxCombustivel.FormattingEnabled = true;
+            this.comboboxCombustivel.Items.AddRange(new object[] {
+            "Gasolina",
+            "Diesel",
+            "GPL"});
+            this.comboboxCombustivel.Location = new System.Drawing.Point(45, 258);
+            this.comboboxCombustivel.Name = "comboboxCombustivel";
+            this.comboboxCombustivel.Size = new System.Drawing.Size(277, 24);
+            this.comboboxCombustivel.TabIndex = 23;
+            this.comboboxCombustivel.Text = "Combustível";
             // 
-            // btnSubmeter
+            // textboxValorBase
             // 
-            this.btnSubmeter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnSubmeter.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnSubmeter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSubmeter.BorderRadius = 0;
-            this.btnSubmeter.ButtonText = "Inserir";
-            this.btnSubmeter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubmeter.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSubmeter.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSubmeter.Iconimage = null;
-            this.btnSubmeter.Iconimage_right = null;
-            this.btnSubmeter.Iconimage_right_Selected = null;
-            this.btnSubmeter.Iconimage_Selected = null;
-            this.btnSubmeter.IconMarginLeft = 0;
-            this.btnSubmeter.IconMarginRight = 0;
-            this.btnSubmeter.IconRightVisible = true;
-            this.btnSubmeter.IconRightZoom = 0D;
-            this.btnSubmeter.IconVisible = true;
-            this.btnSubmeter.IconZoom = 90D;
-            this.btnSubmeter.IsTab = false;
-            this.btnSubmeter.Location = new System.Drawing.Point(29, 318);
-            this.btnSubmeter.Name = "btnSubmeter";
-            this.btnSubmeter.Normalcolor = System.Drawing.Color.ForestGreen;
-            this.btnSubmeter.OnHovercolor = System.Drawing.Color.Green;
-            this.btnSubmeter.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSubmeter.selected = false;
-            this.btnSubmeter.Size = new System.Drawing.Size(259, 48);
-            this.btnSubmeter.TabIndex = 22;
-            this.btnSubmeter.Text = "Inserir";
-            this.btnSubmeter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSubmeter.Textcolor = System.Drawing.Color.White;
-            this.btnSubmeter.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxValorBase.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxValorBase.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textboxValorBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textboxValorBase.HintForeColor = System.Drawing.Color.Empty;
+            this.textboxValorBase.HintText = "";
+            this.textboxValorBase.isPassword = false;
+            this.textboxValorBase.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textboxValorBase.LineIdleColor = System.Drawing.Color.Gray;
+            this.textboxValorBase.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textboxValorBase.LineThickness = 3;
+            this.textboxValorBase.Location = new System.Drawing.Point(45, 196);
+            this.textboxValorBase.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textboxValorBase.Name = "textboxValorBase";
+            this.textboxValorBase.Size = new System.Drawing.Size(275, 44);
+            this.textboxValorBase.TabIndex = 24;
+            this.textboxValorBase.Text = "Valor Base";
+            this.textboxValorBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // GerirAlugados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 389);
-            this.Controls.Add(this.btnSubmeter);
-            this.Controls.Add(this.bunifuMaterialTextbox3);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
-            this.Controls.Add(this.textboxNome);
+            this.ClientSize = new System.Drawing.Size(361, 368);
+            this.Controls.Add(this.textboxValorBase);
+            this.Controls.Add(this.comboboxCombustivel);
+            this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.textboxMarca);
+            this.Controls.Add(this.textboxModelo);
             this.Controls.Add(this.PanelHeader);
+            this.Font = new System.Drawing.Font("Symbol", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GerirAlugados";
             this.Text = "GerirAlugados";
@@ -223,10 +224,10 @@
         private Bunifu.Framework.UI.BunifuGradientPanel PanelHeader;
         private Bunifu.Framework.UI.BunifuImageButton BtnClose;
         private System.Windows.Forms.Label lblTitulo;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxNome;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSubmeter;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxModelo;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxMarca;
+        private Bunifu.Framework.UI.BunifuFlatButton btnInserir;
+        private System.Windows.Forms.ComboBox comboboxCombustivel;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxValorBase;
     }
 }
