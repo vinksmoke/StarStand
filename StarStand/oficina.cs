@@ -13,6 +13,10 @@ namespace StarStand
 {
     public partial class oficina : UserControl
     {
+        const string SERVICOSAIDA = "Dar Saida";
+        const string NOMESERVICO = "Nome do Serviço";
+        const string ValorParcela = "Valor";
+
         StarDBContainer bd;
         public oficina()
         {
@@ -66,11 +70,20 @@ namespace StarStand
                 MessageBox.Show("Tem de selecionar um cliente");
             }
         }
+        private void TextboxFiltrarClientes_OnTextChange(object sender, EventArgs e)
+        {
+            /*Utilizadores user = new Utilizadores();
+            bd.UtilizadoresSet.Where(nif => nif.NIF ==int.Parse("%" + textboxFiltrarClientes.text + "%"));*/
+
+        }
         private void ListBoxClientes_ChangeSeletedIndex(object sender, EventArgs e)
         {
             Utilizadores user = listBoxClientes.list.SelectedItem as Utilizadores;
             lerdadosCarros(user);
+            listBoxCarros.list.SelectedIndex = -1;
+            listBoxServicos.list.DataSource = null;
         }
+      
 
         //Carros
         private void BtnAddCarros_Click(object sender, EventArgs e)
@@ -126,11 +139,170 @@ namespace StarStand
                 MessageBox.Show("Tem de selecionar um cliente");
             }
         }
+        private void ListBoxCarros_ChangeSeletedIndex(object sender, EventArgs e)
+        {
+            CarroOficina carro = listBoxCarros.list.SelectedItem as CarroOficina;
+            if(listBoxCarros.list.SelectedIndex!=-1)
+                lerdadosServicos(carro);
+
+            listBoxServicos.list.SelectedIndex = -1;
+        }
+
         //Serviços
         private void ButtonGerirSeviços_Click(object sender, EventArgs e)
         {
             GerirServicos frm = new GerirServicos();
             frm.ShowDialog();
+        }
+
+        private void BtnEditarServico_Click(object sender, EventArgs e)
+        {
+            Servicos servicos = listBoxServicos.list.SelectedItem as Servicos;
+            btnServico.ButtonText = SERVICOSAIDA;
+            btnServico.IdleFillColor = Color.DarkOrange;
+            btnServico.IdleLineColor = Color.Orange;
+            textBoxNomeServico.Enabled = false;
+            textBoxNomeServico.Text = servicos.Nome;
+            btnCancelar.Visible = true;
+            labelData.Text = "Data de Saida";
+            panelParcela.Visible = true;
+            lerdadosParcela(servicos);
+        }
+        private void BtnEliminarServicos_Click(object sender, EventArgs e)
+        {
+            CarroOficina carro;
+            int selectedIndexCarro = listBoxCarros.list.SelectedIndex;
+            int selectedIndexCliente = listBoxClientes.list.SelectedIndex;
+            Utilizadores user;
+
+            Servicos servico = listBoxServicos.list.SelectedItem as Servicos;
+            Servicos servico_apgar = (Servicos)bd.ServicosSet.Find(servico.IdServicos);
+            bd.ServicosSet.Remove(servico_apgar);
+            bd.SaveChanges();
+
+            lerdadosclientes();
+            listBoxClientes.list.SelectedIndex = selectedIndexCliente;
+            user = listBoxClientes.list.SelectedItem as Utilizadores;
+            lerdadosCarros(user);
+            listBoxCarros.list.SelectedIndex = selectedIndexCarro;
+            carro = listBoxCarros.list.SelectedItem as CarroOficina;
+            lerdadosServicos(carro);
+        }
+        private void BtnServico_Click(object sender, EventArgs e)
+        {
+            if (listBoxCarros.list.SelectedIndex != -1)
+            {
+                CarroOficina carro = listBoxCarros.list.SelectedItem as CarroOficina;
+                int selectedIndexCarro = listBoxCarros.list.SelectedIndex;
+                int selectedIndexCliente = listBoxClientes.list.SelectedIndex;
+                Utilizadores user;
+                Servicos servico = new Servicos();
+                if (btnServico.ButtonText != SERVICOSAIDA)
+                {
+                    if (textBoxNomeServico.Text == NOMESERVICO || textBoxNomeServico.Text == "")
+                    {
+                        return;
+                    }
+                    servico.Nome = textBoxNomeServico.Text.Trim();
+                    servico.DataEntrada = Datapicker.Value;
+                    servico.DataSaida = null;
+                    servico.CarroIdCarro = carro.IdCarro;
+                    bd.ServicosSet.Add(servico);
+
+                }
+                else
+                {
+                    servico = listBoxServicos.list.SelectedItem as Servicos;
+                    servico = bd.ServicosSet.Single(id => id.IdServicos == servico.IdServicos);
+                    if (servico != null)
+                    {
+                        servico.DataSaida = Datapicker.Value;
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+                }
+                bd.SaveChanges();
+                lerdadosclientes();
+                listBoxClientes.list.SelectedIndex = selectedIndexCliente;
+                user = listBoxClientes.list.SelectedItem as Utilizadores;
+                lerdadosCarros(user);
+                listBoxCarros.list.SelectedIndex = selectedIndexCarro;
+                carro = listBoxCarros.list.SelectedItem as CarroOficina;
+                lerdadosServicos(carro);
+            }
+
+
+        }
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            listBoxServicos.list.SelectedIndex = -1;
+            btnServico.ButtonText = "Criar serviço";
+            btnServico.IdleFillColor = Color.DarkCyan;
+            btnServico.IdleLineColor = Color.FromArgb(128, 255, 255);
+            textBoxNomeServico.Enabled = false;
+            textBoxNomeServico.Text = NOMESERVICO; 
+            btnCancelar.Visible = false;
+            labelData.Text = "Data de Entrada";
+            panelParcela.Visible = false;
+        }
+        private void ListBoxServicos_ChangeSeletedIndex(object sender, EventArgs e)
+        {
+            if(listBoxServicos.list.SelectedIndex!=-1)
+            {
+                Servicos servico = listBoxServicos.list.SelectedItem as Servicos;
+                if (servico.DataSaida != null)
+                {
+                    btnFaturar.Enabled = true;
+                }
+                else
+                {
+                    btnFaturar.Enabled = false;
+                }
+            }
+           
+        }
+
+
+        //Parcelas
+        private void BtnAdicionarParcela_Click(object sender, EventArgs e)
+        {
+            
+            Utilizadores user = listBoxClientes.list.SelectedItem as Utilizadores;
+            CarroOficina carro = listBoxCarros.list.SelectedItem as CarroOficina;
+            Servicos servico = listBoxServicos.list.SelectedItem as Servicos;
+            Parcela parcela = new Parcela();
+           
+            parcela.Descrição = textBoxDescricao.Text;
+            parcela.Valor =decimal.Parse(textBoxValorParcela.Text.Replace(".",","));
+            parcela.ServicoIdServicos = servico.IdServicos;
+            bd.ParcelaSet.Add(parcela);
+            bd.SaveChanges();
+
+            
+            lerdadosclientes();
+            lerdadosCarros(user);
+            lerdadosServicos(carro);
+            lerdadosParcela(servico);
+        }
+        private void BtnEliminarParcela_Click(object sender, EventArgs e)
+        {
+            Utilizadores user = listBoxClientes.list.SelectedItem as Utilizadores;
+            CarroOficina carro = listBoxCarros.list.SelectedItem as CarroOficina;
+            Servicos servico = listBoxServicos.list.SelectedItem as Servicos;
+
+            Parcela parcela = listBoxParcela.list.SelectedItem as Parcela;
+            Parcela parcela_apagar = (Parcela)bd.ParcelaSet.Find(parcela.IdParcela);
+            bd.ParcelaSet.Remove(parcela_apagar);
+            bd.SaveChanges();
+
+         
+            lerdadosclientes();
+            lerdadosCarros(user);
+            lerdadosServicos(carro);
+            lerdadosParcela(servico);
         }
         //Funçôes
         public void lerdadosclientes()
@@ -141,20 +313,77 @@ namespace StarStand
         public void lerdadosCarros(Utilizadores user)
         {
             bd = new StarDBContainer();
-            listBoxCarros.list.DataSource = user.CarroOficina.ToList();   
+            listBoxCarros.list.DataSource = user.CarroOficina.ToList();
         }
-        public void placeholder(TextBox textbox, string textToPlaceHolder)
+        public void lerdadosServicos(CarroOficina carro)
         {
-            if (textbox.Text == "")
+           
+            
+            bd = new StarDBContainer();
+            //listBoxServicos.list.DataSource = null;
+            listBoxServicos.list.DataSource = carro.Servicos.ToList();
+        }
+        public void lerdadosParcela(Servicos servico)
+        {
+            bd.Dispose();
+            bd = new StarDBContainer();
+            try
             {
-                textbox.Text = textToPlaceHolder;
+                textBoxTotalParcela.Text = bd.ParcelaSet.Where(id => id.ServicoIdServicos == servico.IdServicos).Sum(tb => tb.Valor).ToString();
             }
-            if (textbox.Text == textToPlaceHolder)
+            catch(Exception ex)
             {
-                textbox.Text = "";
+                textBoxTotalParcela.Text = "0€";
+            }
+            listBoxParcela.list.DataSource = null;
+            listBoxParcela.list.DataSource = servico.Parcela.ToList();
+        }
+
+
+        private void TextBoxNomeServico_Enter(object sender, EventArgs e)
+        {
+            if(textBoxNomeServico.Text==NOMESERVICO)
+            {
+                textBoxNomeServico.Text = "";
             }
         }
 
-       
+        private void TextBoxNomeServico_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNomeServico.Text == "")
+            {
+                textBoxNomeServico.Text = NOMESERVICO;
+            }
+        }
+        private void TextBoxValorParcela_Enter(object sender, EventArgs e)
+        {
+            if(textBoxValorParcela.Text==ValorParcela)
+            {
+                textBoxValorParcela.Text = "";
+            }
+        }
+        private void TextBoxValorParcela_Leave(object sender, EventArgs e)
+        {
+            if (textBoxValorParcela.Text == "")
+            {
+                textBoxValorParcela.Text = ValorParcela;
+            }
+        }
+        private void BunifuSeparator1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFaturar_Click(object sender, EventArgs e)
+        {
+            if(listBoxServicos.list.SelectedIndex!=-1)
+            {
+                //uardar no ficeiro texto 
+            }
+            else
+            {
+                MessageBox.Show("Tem de selecionar o serviço que quere faturar");
+            }
+        }
     }
 }

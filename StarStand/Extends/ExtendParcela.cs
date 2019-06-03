@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace StarStand
 {
-    public partial class Servicos
+    public partial class Parcela
     {
         public override string ToString()
         {
-            if (DataSaida == null )
-                return Nome + "(" + DataEntrada + ")";
-            else
-                return Nome + "(Concluido)";
+            return "(" + Valor + "€)" + Descrição;
         }
     }
 }

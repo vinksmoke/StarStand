@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="StarDB.CarroAluguer" Width="1.5" PointX="7.125" PointY="6" />
         <EntityTypeShape EntityType="StarDB.CarroVenda" Width="1.5" PointX="6.5" PointY="3" />
         <EntityTypeShape EntityType="StarDB.Aluguer" Width="1.5" PointX="4.375" PointY="5.75" />
-        <EntityTypeShape EntityType="StarDB.CarroOficina" Width="1.5" PointX="9.25" PointY="7.375" />
+        <EntityTypeShape EntityType="StarDB.CarroOficina" Width="1.5" PointX="4.625" PointY="9.125" />
         <EntityTypeShape EntityType="StarDB.Parcela" Width="1.5" PointX="10" PointY="9.25" />
         <EntityTypeShape EntityType="StarDB.Servicos" Width="1.5" PointX="7.25" PointY="9.125" />
         <AssociationConnector Association="StarDB.UtilizadoresVenda" />
@@ -19,11 +19,11 @@
         <AssociationConnector Association="StarDB.UtilizadoresCarroOficina" />
         <AssociationConnector Association="StarDB.CarroAluguerAluguer" />
         <AssociationConnector Association="StarDB.VendaCarroVenda" />
-        <AssociationConnector Association="StarDB.CarroOficinaServicos" />
         <InheritanceConnector EntityType="StarDB.CarroVenda" />
         <InheritanceConnector EntityType="StarDB.CarroAluguer" />
         <InheritanceConnector EntityType="StarDB.CarroOficina" />
         <AssociationConnector Association="StarDB.ServicosParcela" />
+        <AssociationConnector Association="StarDB.CarroOficinaServicos" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

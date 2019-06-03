@@ -20,7 +20,7 @@ namespace StarStand
             this.Servicos = new HashSet<Servicos>();
         }
     
-        public double Kms { get; set; }
+        public decimal Kms { get; set; }
         public int UtilizadoresIdUtilizador { get; set; }
     
         public virtual Utilizadores Utilizadores { get; set; }

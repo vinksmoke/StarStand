@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/01/2019 01:35:57
+-- Date Created: 06/02/2019 15:01:41
 -- Generated from EDMX file: C:\Users\yaros\Desktop\StarStand-yar32\StarStand\StarDB.edmx
 -- --------------------------------------------------
 
@@ -32,8 +32,8 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_VendaCarroVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_VendaCarroVenda];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ServicosPecas]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ParcelaSet] DROP CONSTRAINT [FK_ServicosPecas];
+IF OBJECT_ID(N'[dbo].[FK_ServicosParcela]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ParcelaSet] DROP CONSTRAINT [FK_ServicosParcela];
 GO
 IF OBJECT_ID(N'[dbo].[FK_CarroOficinaServicos]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ServicosSet] DROP CONSTRAINT [FK_CarroOficinaServicos];
@@ -108,9 +108,9 @@ GO
 -- Creating table 'VendaSet'
 CREATE TABLE [dbo].[VendaSet] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
-    [Valor] nvarchar(max)  NOT NULL,
+    [Valor] decimal(18,0)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
-    [Data] nvarchar(max)  NOT NULL,
+    [Data] datetime  NOT NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL,
     [CarroVenda_IdCarro] int  NOT NULL
 );
@@ -121,8 +121,8 @@ CREATE TABLE [dbo].[AluguerSet] (
     [IdAluguer] int IDENTITY(1,1) NOT NULL,
     [DataInicio] datetime  NOT NULL,
     [DataFim] datetime  NOT NULL,
-    [Valor] float  NOT NULL,
-    [Kms] float  NOT NULL,
+    [Valor] decimal(18,0)  NOT NULL,
+    [Kms] decimal(18,0)  NOT NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL,
     [CarroAluguer_IdCarro] int  NOT NULL
 );
@@ -131,10 +131,9 @@ GO
 -- Creating table 'ParcelaSet'
 CREATE TABLE [dbo].[ParcelaSet] (
     [IdParcela] int IDENTITY(1,1) NOT NULL,
-    [Valor] float  NOT NULL,
+    [Valor] decimal(18,0)  NOT NULL,
     [Descrição] nvarchar(max)  NOT NULL,
-    [ServicoIdServicos] int  NOT NULL,
-    [Servicos_IdServicos] int  NOT NULL
+    [ServicoIdServicos] int  NOT NULL
 );
 GO
 
@@ -143,14 +142,14 @@ CREATE TABLE [dbo].[ServicosSet] (
     [IdServicos] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
     [DataEntrada] datetime  NOT NULL,
-    [DataSaida] datetime  NOT NULL,
-    [CarroOficina_IdCarro] int  NOT NULL
+    [DataSaida] datetime  NULL,
+    [CarroIdCarro] int  NOT NULL
 );
 GO
 
 -- Creating table 'CarrosSet_CarroOficina'
 CREATE TABLE [dbo].[CarrosSet_CarroOficina] (
-    [Kms] float  NOT NULL,
+    [Kms] decimal(18,0)  NOT NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL,
     [IdCarro] int  NOT NULL
 );
@@ -307,25 +306,10 @@ ON [dbo].[VendaSet]
     ([CarroVenda_IdCarro]);
 GO
 
--- Creating foreign key on [CarroOficina_IdCarro] in table 'ServicosSet'
-ALTER TABLE [dbo].[ServicosSet]
-ADD CONSTRAINT [FK_CarroOficinaServicos]
-    FOREIGN KEY ([CarroOficina_IdCarro])
-    REFERENCES [dbo].[CarrosSet_CarroOficina]
-        ([IdCarro])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_CarroOficinaServicos'
-CREATE INDEX [IX_FK_CarroOficinaServicos]
-ON [dbo].[ServicosSet]
-    ([CarroOficina_IdCarro]);
-GO
-
--- Creating foreign key on [Servicos_IdServicos] in table 'ParcelaSet'
+-- Creating foreign key on [ServicoIdServicos] in table 'ParcelaSet'
 ALTER TABLE [dbo].[ParcelaSet]
 ADD CONSTRAINT [FK_ServicosParcela]
-    FOREIGN KEY ([Servicos_IdServicos])
+    FOREIGN KEY ([ServicoIdServicos])
     REFERENCES [dbo].[ServicosSet]
         ([IdServicos])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -334,7 +318,22 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_ServicosParcela'
 CREATE INDEX [IX_FK_ServicosParcela]
 ON [dbo].[ParcelaSet]
-    ([Servicos_IdServicos]);
+    ([ServicoIdServicos]);
+GO
+
+-- Creating foreign key on [CarroIdCarro] in table 'ServicosSet'
+ALTER TABLE [dbo].[ServicosSet]
+ADD CONSTRAINT [FK_CarroOficinaServicos]
+    FOREIGN KEY ([CarroIdCarro])
+    REFERENCES [dbo].[CarrosSet_CarroOficina]
+        ([IdCarro])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CarroOficinaServicos'
+CREATE INDEX [IX_FK_CarroOficinaServicos]
+ON [dbo].[ServicosSet]
+    ([CarroIdCarro]);
 GO
 
 -- Creating foreign key on [IdCarro] in table 'CarrosSet_CarroOficina'

@@ -23,10 +23,11 @@ namespace StarStand
         public int IdServicos { get; set; }
         public string Nome { get; set; }
         public System.DateTime DataEntrada { get; set; }
-        public System.DateTime DataSaida { get; set; }
+        public Nullable<System.DateTime> DataSaida { get; set; }
+        public int CarroIdCarro { get; set; }
     
-        public virtual CarroOficina CarroOficina { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Parcela> Parcela { get; set; }
+        public virtual CarroOficina CarroOficina { get; set; }
     }
 }

@@ -15,9 +15,9 @@ namespace StarStand
     public partial class Venda
     {
         public int IdVenda { get; set; }
-        public string Valor { get; set; }
+        public decimal Valor { get; set; }
         public string Estado { get; set; }
-        public string Data { get; set; }
+        public System.DateTime Data { get; set; }
         public int UtilizadoresIdUtilizador { get; set; }
     
         public virtual Utilizadores Utilizadores { get; set; }

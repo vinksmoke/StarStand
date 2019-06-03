@@ -15,7 +15,7 @@ namespace StarStand
     public partial class Parcela
     {
         public int IdParcela { get; set; }
-        public double Valor { get; set; }
+        public decimal Valor { get; set; }
         public string Descrição { get; set; }
         public int ServicoIdServicos { get; set; }
     

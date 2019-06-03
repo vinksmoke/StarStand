@@ -17,8 +17,8 @@ namespace StarStand
         public int IdAluguer { get; set; }
         public System.DateTime DataInicio { get; set; }
         public System.DateTime DataFim { get; set; }
-        public double Valor { get; set; }
-        public double Kms { get; set; }
+        public decimal Valor { get; set; }
+        public decimal Kms { get; set; }
         public int UtilizadoresIdUtilizador { get; set; }
     
         public virtual Utilizadores Utilizadores { get; set; }

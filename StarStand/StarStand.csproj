@@ -76,6 +76,8 @@
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Extends\ExtendCarroOficina.cs" />
+    <Compile Include="Extends\ExtendParcela.cs" />
+    <Compile Include="Extends\ExtendServicos.cs" />
     <Compile Include="Extends\ExtendUtilizador.cs" />
     <Compile Include="GerirAlugados.cs">
       <SubType>Form</SubType>

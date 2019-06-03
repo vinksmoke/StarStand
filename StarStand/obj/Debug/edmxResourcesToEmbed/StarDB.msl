@@ -83,6 +83,7 @@
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="DataEntrada" ColumnName="DataEntrada" />
           <ScalarProperty Name="DataSaida" ColumnName="DataSaida" />
+          <ScalarProperty Name="CarroIdCarro" ColumnName="CarroIdCarro" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -100,22 +101,6 @@
       </EndProperty>
       <EndProperty Name="Venda">
         <ScalarProperty Name="IdVenda" ColumnName="IdVenda" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="CarroOficinaServicos" TypeName="StarDB.CarroOficinaServicos" StoreEntitySet="ServicosSet">
-      <EndProperty Name="CarroOficina">
-        <ScalarProperty Name="IdCarro" ColumnName="CarroOficina_IdCarro" />
-      </EndProperty>
-      <EndProperty Name="Servicos">
-        <ScalarProperty Name="IdServicos" ColumnName="IdServicos" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="ServicosParcela" TypeName="StarDB.ServicosParcela" StoreEntitySet="ParcelaSet">
-      <EndProperty Name="Servicos">
-        <ScalarProperty Name="IdServicos" ColumnName="Servicos_IdServicos" />
-      </EndProperty>
-      <EndProperty Name="Parcela">
-        <ScalarProperty Name="IdParcela" ColumnName="IdParcela" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

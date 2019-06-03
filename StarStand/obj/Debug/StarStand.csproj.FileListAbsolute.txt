@@ -159,6 +159,7 @@ C:\Users\yaros\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.dll
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.xml
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirAlugados.resources
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.GerirClientes.resources
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.USaluguer.resources
@@ -177,4 +178,3 @@ C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.Core
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.csproj.CopyComplete
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.exe
 C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.pdb
-C:\Users\yaros\Desktop\StarStand-yar32\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
