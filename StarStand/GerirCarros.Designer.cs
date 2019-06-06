@@ -36,7 +36,7 @@
             this.TextBoxModelo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.TextboxMatricula = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnSubmeter = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.textboxCombustivel = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.comboboxCombustivel = new System.Windows.Forms.ComboBox();
             this.PanelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BtnClose)).BeginInit();
             this.SuspendLayout();
@@ -188,34 +188,28 @@
             this.btnSubmeter.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmeter.Click += new System.EventHandler(this.BtnSubmeter_Click);
             // 
-            // textboxCombustivel
+            // comboboxCombustivel
             // 
-            this.textboxCombustivel.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textboxCombustivel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textboxCombustivel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textboxCombustivel.HintForeColor = System.Drawing.Color.Empty;
-            this.textboxCombustivel.HintText = "";
-            this.textboxCombustivel.isPassword = false;
-            this.textboxCombustivel.LineFocusedColor = System.Drawing.Color.Blue;
-            this.textboxCombustivel.LineIdleColor = System.Drawing.Color.Gray;
-            this.textboxCombustivel.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.textboxCombustivel.LineThickness = 3;
-            this.textboxCombustivel.Location = new System.Drawing.Point(12, 207);
-            this.textboxCombustivel.Margin = new System.Windows.Forms.Padding(4);
-            this.textboxCombustivel.Name = "textboxCombustivel";
-            this.textboxCombustivel.Size = new System.Drawing.Size(259, 44);
-            this.textboxCombustivel.TabIndex = 5;
-            this.textboxCombustivel.Text = "Combustivel";
-            this.textboxCombustivel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textboxCombustivel.Enter += new System.EventHandler(this.TextboxCombustivel_Enter);
-            this.textboxCombustivel.Leave += new System.EventHandler(this.TextboxCombustivel_Leave);
+            this.comboboxCombustivel.BackColor = System.Drawing.Color.Silver;
+            this.comboboxCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboboxCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboboxCombustivel.FormattingEnabled = true;
+            this.comboboxCombustivel.Items.AddRange(new object[] {
+            "Gasolina",
+            "Diesel",
+            "GPL"});
+            this.comboboxCombustivel.Location = new System.Drawing.Point(12, 215);
+            this.comboboxCombustivel.Name = "comboboxCombustivel";
+            this.comboboxCombustivel.Size = new System.Drawing.Size(258, 24);
+            this.comboboxCombustivel.TabIndex = 25;
+            this.comboboxCombustivel.Text = "Combustível";
             // 
             // GerirCarros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 355);
-            this.Controls.Add(this.textboxCombustivel);
+            this.ClientSize = new System.Drawing.Size(284, 336);
+            this.Controls.Add(this.comboboxCombustivel);
             this.Controls.Add(this.btnSubmeter);
             this.Controls.Add(this.TextboxMatricula);
             this.Controls.Add(this.TextBoxModelo);
@@ -239,6 +233,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextBoxModelo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox TextboxMatricula;
         private Bunifu.Framework.UI.BunifuFlatButton btnSubmeter;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox textboxCombustivel;
+        private System.Windows.Forms.ComboBox comboboxCombustivel;
     }
 }

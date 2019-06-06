@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="IronPdf, Version=5.2.0.22321, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.5.2.0.1\lib\net40\IronPdf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -49,6 +52,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,17 +84,30 @@
     <Compile Include="Extends\ExtendParcela.cs" />
     <Compile Include="Extends\ExtendServicos.cs" />
     <Compile Include="Extends\ExtendUtilizador.cs" />
-    <Compile Include="GerirAlugados.cs">
+    <Compile Include="Extends\ExtendVendas.cs" />
+    <Compile Include="GerirAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerirAlugados.Designer.cs">
-      <DependentUpon>GerirAlugados.cs</DependentUpon>
+    <Compile Include="GerirAluguer.Designer.cs">
+      <DependentUpon>GerirAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirCarrosAlugados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirCarrosAlugados.Designer.cs">
+      <DependentUpon>GerirCarrosAlugados.cs</DependentUpon>
     </Compile>
     <Compile Include="GerirClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GerirClientes.Designer.cs">
       <DependentUpon>GerirClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerirVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerirVendas.Designer.cs">
+      <DependentUpon>GerirVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Parcela.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
@@ -172,11 +189,11 @@
     <Compile Include="USGerirCarros.Designer.cs">
       <DependentUpon>USGerirCarros.cs</DependentUpon>
     </Compile>
-    <Compile Include="USVenda.cs">
+    <Compile Include="USvenda.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="USVenda.Designer.cs">
-      <DependentUpon>USVenda.cs</DependentUpon>
+    <Compile Include="USvenda.Designer.cs">
+      <DependentUpon>USvenda.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilizadores.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
@@ -184,11 +201,17 @@
     <Compile Include="Venda.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GerirAlugados.resx">
-      <DependentUpon>GerirAlugados.cs</DependentUpon>
+    <EmbeddedResource Include="GerirAluguer.resx">
+      <DependentUpon>GerirAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirCarrosAlugados.resx">
+      <DependentUpon>GerirCarrosAlugados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GerirClientes.resx">
       <DependentUpon>GerirClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerirVendas.resx">
+      <DependentUpon>GerirVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="USaluguer.resx">
       <DependentUpon>USaluguer.cs</DependentUpon>
@@ -226,8 +249,8 @@
     <EmbeddedResource Include="USGerirCarros.resx">
       <DependentUpon>USGerirCarros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="USVenda.resx">
-      <DependentUpon>USVenda.cs</DependentUpon>
+    <EmbeddedResource Include="USvenda.resx">
+      <DependentUpon>USvenda.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="packages.config" />

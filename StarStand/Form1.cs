@@ -93,7 +93,8 @@ namespace StarStand
         }
         private void BtnVendas_Click(object sender, EventArgs e)
         {
-            setuserctr(venda1);
+            setuserctr(uSvenda1);
+            uSvenda1.lerdadosHistVenda();
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
             btnVendas.Normalcolor = Color.Maroon;
@@ -102,8 +103,8 @@ namespace StarStand
         private void BtnAluguer_Click(object sender, EventArgs e)
         {
             setuserctr(uSaluguer1);
-            uSaluguer1.lerdados();
-            uSaluguer1.lerdadosclientes();
+            uSaluguer1.lerdadosCarro();
+            uSaluguer1.lerdadosClientes();
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);

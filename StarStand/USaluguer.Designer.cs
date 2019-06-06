@@ -30,12 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(USaluguer));
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.labelMostraKms = new System.Windows.Forms.Label();
+            this.labelMostrarUser = new System.Windows.Forms.Label();
+            this.labelUser = new System.Windows.Forms.Label();
+            this.labelMostrarMatricula = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnSwitch = new Bunifu.Framework.UI.BunifuSwitch();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelMostrarModelo = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelMostraEstado = new System.Windows.Forms.Label();
             this.labelMostraValor = new System.Windows.Forms.Label();
             this.labelMostraMarca = new System.Windows.Forms.Label();
             this.labelEstado = new System.Windows.Forms.Label();
-            this.labelKms = new System.Windows.Forms.Label();
             this.labelValor = new System.Windows.Forms.Label();
             this.labelMarca = new System.Windows.Forms.Label();
             this.panelPeças = new System.Windows.Forms.Panel();
@@ -44,22 +50,22 @@
             this.btnAddCarros = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditCarros = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnRemoveCarros = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
             this.listboxCarros = new StarStand.ListBoxPersonal();
             this.listboxClientes = new StarStand.ListBoxPersonal();
             this.panelright = new System.Windows.Forms.Panel();
+            this.btnEditClientes = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnRemoveClientes = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAddClientes = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCards1.SuspendLayout();
             this.panelPeças.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCarros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditCarros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCarros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
             this.panelright.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -69,12 +75,18 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Maroon;
-            this.bunifuCards1.Controls.Add(this.labelMostraKms);
+            this.bunifuCards1.Controls.Add(this.labelMostrarUser);
+            this.bunifuCards1.Controls.Add(this.labelUser);
+            this.bunifuCards1.Controls.Add(this.labelMostrarMatricula);
+            this.bunifuCards1.Controls.Add(this.label5);
+            this.bunifuCards1.Controls.Add(this.btnSwitch);
+            this.bunifuCards1.Controls.Add(this.label3);
+            this.bunifuCards1.Controls.Add(this.labelMostrarModelo);
+            this.bunifuCards1.Controls.Add(this.label2);
             this.bunifuCards1.Controls.Add(this.labelMostraEstado);
             this.bunifuCards1.Controls.Add(this.labelMostraValor);
             this.bunifuCards1.Controls.Add(this.labelMostraMarca);
             this.bunifuCards1.Controls.Add(this.labelEstado);
-            this.bunifuCards1.Controls.Add(this.labelKms);
             this.bunifuCards1.Controls.Add(this.labelValor);
             this.bunifuCards1.Controls.Add(this.labelMarca);
             this.bunifuCards1.Controls.Add(this.panelPeças);
@@ -83,22 +95,95 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(420, 469);
+            this.bunifuCards1.Size = new System.Drawing.Size(420, 494);
             this.bunifuCards1.TabIndex = 4;
             // 
-            // labelMostraKms
+            // labelMostrarUser
             // 
-            this.labelMostraKms.AutoSize = true;
-            this.labelMostraKms.Location = new System.Drawing.Point(216, 64);
-            this.labelMostraKms.Name = "labelMostraKms";
-            this.labelMostraKms.Size = new System.Drawing.Size(95, 13);
-            this.labelMostraKms.TabIndex = 41;
-            this.labelMostraKms.Text = "Nada Selecionado";
+            this.labelMostrarUser.AutoSize = true;
+            this.labelMostrarUser.Location = new System.Drawing.Point(289, 118);
+            this.labelMostrarUser.Name = "labelMostrarUser";
+            this.labelMostrarUser.Size = new System.Drawing.Size(95, 13);
+            this.labelMostrarUser.TabIndex = 48;
+            this.labelMostrarUser.Text = "Nada Selecionado";
+            this.labelMostrarUser.Visible = false;
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Location = new System.Drawing.Point(230, 118);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(53, 13);
+            this.labelUser.TabIndex = 47;
+            this.labelUser.Text = "Utilizador:";
+            this.labelUser.Visible = false;
+            // 
+            // labelMostrarMatricula
+            // 
+            this.labelMostrarMatricula.AutoSize = true;
+            this.labelMostrarMatricula.Location = new System.Drawing.Point(70, 118);
+            this.labelMostrarMatricula.Name = "labelMostrarMatricula";
+            this.labelMostrarMatricula.Size = new System.Drawing.Size(95, 13);
+            this.labelMostrarMatricula.TabIndex = 46;
+            this.labelMostrarMatricula.Text = "Nada Selecionado";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Matricula:";
+            // 
+            // btnSwitch
+            // 
+            this.btnSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSwitch.BorderRadius = 0;
+            this.btnSwitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSwitch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSwitch.Location = new System.Drawing.Point(316, 18);
+            this.btnSwitch.Name = "btnSwitch";
+            this.btnSwitch.Oncolor = System.Drawing.Color.SeaGreen;
+            this.btnSwitch.Onoffcolor = System.Drawing.Color.DarkGray;
+            this.btnSwitch.Size = new System.Drawing.Size(51, 19);
+            this.btnSwitch.TabIndex = 44;
+            this.btnSwitch.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSwitch.Value = true;
+            this.btnSwitch.Click += new System.EventHandler(this.BtnSwitch_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(93, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(217, 22);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Disponibelidade do carro";
+            // 
+            // labelMostrarModelo
+            // 
+            this.labelMostrarModelo.AutoSize = true;
+            this.labelMostrarModelo.Location = new System.Drawing.Point(70, 83);
+            this.labelMostrarModelo.Name = "labelMostrarModelo";
+            this.labelMostrarModelo.Size = new System.Drawing.Size(95, 13);
+            this.labelMostrarModelo.TabIndex = 42;
+            this.labelMostrarModelo.Text = "Nada Selecionado";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Modelo:";
             // 
             // labelMostraEstado
             // 
             this.labelMostraEstado.AutoSize = true;
-            this.labelMostraEstado.Location = new System.Drawing.Point(229, 20);
+            this.labelMostraEstado.Location = new System.Drawing.Point(289, 51);
             this.labelMostraEstado.Name = "labelMostraEstado";
             this.labelMostraEstado.Size = new System.Drawing.Size(95, 13);
             this.labelMostraEstado.TabIndex = 40;
@@ -107,7 +192,7 @@
             // labelMostraValor
             // 
             this.labelMostraValor.AutoSize = true;
-            this.labelMostraValor.Location = new System.Drawing.Point(53, 64);
+            this.labelMostraValor.Location = new System.Drawing.Point(289, 83);
             this.labelMostraValor.Name = "labelMostraValor";
             this.labelMostraValor.Size = new System.Drawing.Size(95, 13);
             this.labelMostraValor.TabIndex = 39;
@@ -116,7 +201,7 @@
             // labelMostraMarca
             // 
             this.labelMostraMarca.AutoSize = true;
-            this.labelMostraMarca.Location = new System.Drawing.Point(53, 20);
+            this.labelMostraMarca.Location = new System.Drawing.Point(70, 51);
             this.labelMostraMarca.Name = "labelMostraMarca";
             this.labelMostraMarca.Size = new System.Drawing.Size(95, 13);
             this.labelMostraMarca.TabIndex = 0;
@@ -125,34 +210,25 @@
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(180, 20);
+            this.labelEstado.Location = new System.Drawing.Point(240, 51);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(43, 13);
             this.labelEstado.TabIndex = 38;
             this.labelEstado.Text = "Estado:";
             // 
-            // labelKms
-            // 
-            this.labelKms.AutoSize = true;
-            this.labelKms.Location = new System.Drawing.Point(180, 64);
-            this.labelKms.Name = "labelKms";
-            this.labelKms.Size = new System.Drawing.Size(30, 13);
-            this.labelKms.TabIndex = 37;
-            this.labelKms.Text = "Kms:";
-            // 
             // labelValor
             // 
             this.labelValor.AutoSize = true;
-            this.labelValor.Location = new System.Drawing.Point(13, 64);
+            this.labelValor.Location = new System.Drawing.Point(218, 83);
             this.labelValor.Name = "labelValor";
-            this.labelValor.Size = new System.Drawing.Size(34, 13);
+            this.labelValor.Size = new System.Drawing.Size(65, 13);
             this.labelValor.TabIndex = 36;
-            this.labelValor.Text = "Valor:";
+            this.labelValor.Text = "Valor p/ dia:";
             // 
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
-            this.labelMarca.Location = new System.Drawing.Point(13, 20);
+            this.labelMarca.Location = new System.Drawing.Point(24, 51);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(40, 13);
             this.labelMarca.TabIndex = 5;
@@ -163,9 +239,9 @@
             this.panelPeças.Controls.Add(this.buttonAlugar);
             this.panelPeças.Controls.Add(this.pictureBoxCarro);
             this.panelPeças.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPeças.Location = new System.Drawing.Point(0, 121);
+            this.panelPeças.Location = new System.Drawing.Point(0, 186);
             this.panelPeças.Name = "panelPeças";
-            this.panelPeças.Size = new System.Drawing.Size(420, 348);
+            this.panelPeças.Size = new System.Drawing.Size(420, 308);
             this.panelPeças.TabIndex = 35;
             // 
             // buttonAlugar
@@ -173,12 +249,13 @@
             this.buttonAlugar.BackColor = System.Drawing.Color.Maroon;
             this.buttonAlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAlugar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonAlugar.Location = new System.Drawing.Point(148, 291);
+            this.buttonAlugar.Location = new System.Drawing.Point(148, 253);
             this.buttonAlugar.Name = "buttonAlugar";
             this.buttonAlugar.Size = new System.Drawing.Size(125, 39);
             this.buttonAlugar.TabIndex = 1;
             this.buttonAlugar.Text = "Alugar";
             this.buttonAlugar.UseVisualStyleBackColor = false;
+            this.buttonAlugar.Click += new System.EventHandler(this.ButtonAlugar_Click);
             // 
             // pictureBoxCarro
             // 
@@ -187,7 +264,7 @@
             this.pictureBoxCarro.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCarro.InitialImage")));
             this.pictureBoxCarro.Location = new System.Drawing.Point(22, 21);
             this.pictureBoxCarro.Name = "pictureBoxCarro";
-            this.pictureBoxCarro.Size = new System.Drawing.Size(374, 252);
+            this.pictureBoxCarro.Size = new System.Drawing.Size(374, 214);
             this.pictureBoxCarro.TabIndex = 0;
             this.pictureBoxCarro.TabStop = false;
             // 
@@ -234,48 +311,6 @@
             this.btnRemoveCarros.TabStop = false;
             this.btnRemoveCarros.Zoom = 10;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(134, 47);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(31, 33);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 32;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(171, 47);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(31, 33);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 33;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton3
-            // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.bunifuImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton3.Image")));
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(208, 47);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(31, 33);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 34;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
-            // 
             // listboxCarros
             // 
             this.listboxCarros.bgColorHead = System.Drawing.Color.DarkSlateGray;
@@ -302,9 +337,9 @@
             // 
             // panelright
             // 
-            this.panelright.Controls.Add(this.bunifuImageButton3);
-            this.panelright.Controls.Add(this.bunifuImageButton1);
-            this.panelright.Controls.Add(this.bunifuImageButton2);
+            this.panelright.Controls.Add(this.btnEditClientes);
+            this.panelright.Controls.Add(this.btnRemoveClientes);
+            this.panelright.Controls.Add(this.btnAddClientes);
             this.panelright.Controls.Add(this.listboxClientes);
             this.panelright.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelright.Location = new System.Drawing.Point(741, 0);
@@ -312,6 +347,48 @@
             this.panelright.Size = new System.Drawing.Size(273, 621);
             this.panelright.TabIndex = 35;
             this.panelright.Visible = false;
+            // 
+            // btnEditClientes
+            // 
+            this.btnEditClientes.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnEditClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnEditClientes.Image")));
+            this.btnEditClientes.ImageActive = null;
+            this.btnEditClientes.Location = new System.Drawing.Point(186, 47);
+            this.btnEditClientes.Name = "btnEditClientes";
+            this.btnEditClientes.Size = new System.Drawing.Size(31, 33);
+            this.btnEditClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditClientes.TabIndex = 32;
+            this.btnEditClientes.TabStop = false;
+            this.btnEditClientes.Zoom = 10;
+            // 
+            // btnRemoveClientes
+            // 
+            this.btnRemoveClientes.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnRemoveClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemoveClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnRemoveClientes.Image")));
+            this.btnRemoveClientes.ImageActive = null;
+            this.btnRemoveClientes.Location = new System.Drawing.Point(223, 47);
+            this.btnRemoveClientes.Name = "btnRemoveClientes";
+            this.btnRemoveClientes.Size = new System.Drawing.Size(31, 33);
+            this.btnRemoveClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRemoveClientes.TabIndex = 31;
+            this.btnRemoveClientes.TabStop = false;
+            this.btnRemoveClientes.Zoom = 10;
+            // 
+            // btnAddClientes
+            // 
+            this.btnAddClientes.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnAddClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnAddClientes.Image")));
+            this.btnAddClientes.ImageActive = null;
+            this.btnAddClientes.Location = new System.Drawing.Point(149, 47);
+            this.btnAddClientes.Name = "btnAddClientes";
+            this.btnAddClientes.Size = new System.Drawing.Size(31, 33);
+            this.btnAddClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAddClientes.TabIndex = 30;
+            this.btnAddClientes.TabStop = false;
+            this.btnAddClientes.Zoom = 10;
             // 
             // USaluguer
             // 
@@ -333,10 +410,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAddCarros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditCarros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveCarros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
             this.panelright.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,11 +422,9 @@
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Label labelEstado;
-        private System.Windows.Forms.Label labelKms;
         private System.Windows.Forms.Label labelValor;
         private System.Windows.Forms.Label labelMarca;
         private System.Windows.Forms.Panel panelPeças;
-        private System.Windows.Forms.Label labelMostraKms;
         private System.Windows.Forms.Label labelMostraEstado;
         private System.Windows.Forms.Label labelMostraValor;
         private System.Windows.Forms.Label labelMostraMarca;
@@ -360,10 +435,18 @@
         private Bunifu.Framework.UI.BunifuImageButton btnAddCarros;
         private Bunifu.Framework.UI.BunifuImageButton btnEditCarros;
         private Bunifu.Framework.UI.BunifuImageButton btnRemoveCarros;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
         private System.Windows.Forms.BindingSource aluguerBindingSource;
         private System.Windows.Forms.Panel panelright;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditClientes;
+        private Bunifu.Framework.UI.BunifuImageButton btnRemoveClientes;
+        private Bunifu.Framework.UI.BunifuImageButton btnAddClientes;
+        private Bunifu.Framework.UI.BunifuSwitch btnSwitch;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelMostrarModelo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelMostrarMatricula;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelMostrarUser;
+        private System.Windows.Forms.Label labelUser;
     }
 }

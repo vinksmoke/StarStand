@@ -41,10 +41,10 @@
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panelBody = new System.Windows.Forms.Panel();
-            this.venda1 = new StarStand.USVenda();
+            this.uSaluguer1 = new StarStand.USaluguer();
             this.clientes1 = new StarStand.clientes();
             this.oficina1 = new StarStand.oficina();
-            this.uSaluguer1 = new StarStand.USaluguer();
+            this.uSvenda1 = new StarStand.USvenda();
             this.slidingpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -315,8 +315,8 @@
             // 
             // panelBody
             // 
+            this.panelBody.Controls.Add(this.uSvenda1);
             this.panelBody.Controls.Add(this.uSaluguer1);
-            this.panelBody.Controls.Add(this.venda1);
             this.panelBody.Controls.Add(this.clientes1);
             this.panelBody.Controls.Add(this.oficina1);
             this.panelBody.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -325,14 +325,14 @@
             this.panelBody.Size = new System.Drawing.Size(1007, 622);
             this.panelBody.TabIndex = 2;
             // 
-            // venda1
+            // uSaluguer1
             // 
-            this.venda1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("venda1.BackgroundImage")));
-            this.venda1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.venda1.Location = new System.Drawing.Point(0, 0);
-            this.venda1.Name = "venda1";
-            this.venda1.Size = new System.Drawing.Size(1007, 622);
-            this.venda1.TabIndex = 2;
+            this.uSaluguer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.uSaluguer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uSaluguer1.Location = new System.Drawing.Point(0, 0);
+            this.uSaluguer1.Name = "uSaluguer1";
+            this.uSaluguer1.Size = new System.Drawing.Size(1007, 622);
+            this.uSaluguer1.TabIndex = 3;
             // 
             // clientes1
             // 
@@ -352,14 +352,12 @@
             this.oficina1.Size = new System.Drawing.Size(1004, 616);
             this.oficina1.TabIndex = 0;
             // 
-            // uSaluguer1
+            // uSvenda1
             // 
-            this.uSaluguer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.uSaluguer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uSaluguer1.Location = new System.Drawing.Point(0, 0);
-            this.uSaluguer1.Name = "uSaluguer1";
-            this.uSaluguer1.Size = new System.Drawing.Size(1007, 622);
-            this.uSaluguer1.TabIndex = 3;
+            this.uSvenda1.Location = new System.Drawing.Point(0, 2);
+            this.uSvenda1.Name = "uSvenda1";
+            this.uSvenda1.Size = new System.Drawing.Size(956, 598);
+            this.uSvenda1.TabIndex = 4;
             // 
             // Form1
             // 
@@ -398,9 +396,9 @@
         private System.Windows.Forms.Label labelTitulo;
         private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private USVenda venda1;
         private Bunifu.Framework.UI.BunifuFlatButton btnGerirCarros;
         private USaluguer uSaluguer1;
+        private USvenda uSvenda1;
     }
 }
 

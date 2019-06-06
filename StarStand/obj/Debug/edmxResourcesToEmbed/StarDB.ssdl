@@ -81,7 +81,6 @@
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="UtilizadoresIdUtilizador" Type="int" Nullable="false" />
-    <Property Name="CarroVenda_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AluguerSet">
     <Key>
@@ -134,11 +133,14 @@
     <Key>
       <PropertyRef Name="IdCarro" />
     </Key>
-    <Property Name="Extras" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Extras" Type="nvarchar(max)" Nullable="true" />
     <Property Name="IdCarro" Type="int" Nullable="false" />
+    <Property Name="Venda_IdVenda" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="UtilizadoresVenda">
-    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1" />
+    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Venda" Type="StarDB.Store.VendaSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Utilizadores">
@@ -150,7 +152,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="UtilizadoresAluguer">
-    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1" />
+    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Aluguer" Type="StarDB.Store.AluguerSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Utilizadores">
@@ -162,7 +166,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="UtilizadoresCarroOficina">
-    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1" />
+    <End Role="Utilizadores" Type="StarDB.Store.UtilizadoresSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="CarroOficina" Type="StarDB.Store.CarrosSet_CarroOficina" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Utilizadores">
@@ -174,7 +180,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CarroAluguerAluguer">
-    <End Role="CarroAluguer" Type="StarDB.Store.CarrosSet_CarroAluguer" Multiplicity="1" />
+    <End Role="CarroAluguer" Type="StarDB.Store.CarrosSet_CarroAluguer" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Aluguer" Type="StarDB.Store.AluguerSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CarroAluguer">
@@ -186,19 +194,23 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VendaCarroVenda">
-    <End Role="Venda" Type="StarDB.Store.VendaSet" Multiplicity="*" />
-    <End Role="CarroVenda" Type="StarDB.Store.CarrosSet_CarroVenda" Multiplicity="1" />
+    <End Role="Venda" Type="StarDB.Store.VendaSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CarroVenda" Type="StarDB.Store.CarrosSet_CarroVenda" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CarroVenda">
-        <PropertyRef Name="IdCarro" />
+      <Principal Role="Venda">
+        <PropertyRef Name="IdVenda" />
       </Principal>
-      <Dependent Role="Venda">
-        <PropertyRef Name="CarroVenda_IdCarro" />
+      <Dependent Role="CarroVenda">
+        <PropertyRef Name="Venda_IdVenda" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="ServicosParcela">
-    <End Role="Servicos" Type="StarDB.Store.ServicosSet" Multiplicity="1" />
+    <End Role="Servicos" Type="StarDB.Store.ServicosSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Parcela" Type="StarDB.Store.ParcelaSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Servicos">
@@ -210,7 +222,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="CarroOficinaServicos">
-    <End Role="CarroOficina" Type="StarDB.Store.CarrosSet_CarroOficina" Multiplicity="1" />
+    <End Role="CarroOficina" Type="StarDB.Store.CarrosSet_CarroOficina" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Servicos" Type="StarDB.Store.ServicosSet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CarroOficina">

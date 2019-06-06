@@ -23,13 +23,9 @@ namespace StarStand
         {
             acessGerirClientes();
         }
-
         private void btnEditClientes_Click(object sender, EventArgs e)
         {
-            
-
-            int index = dgv_Clientes.CurrentCell.RowIndex;
-            DataGridViewRow selectedRow = dgv_Clientes.Rows[index];
+            DataGridViewRow selectedRow = dgv_selectedRow();
             Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
             acessGerirClientes(user);
         }
@@ -42,9 +38,29 @@ namespace StarStand
             bd.SaveChanges();
             lerdados();
         }
-        
+        private void Dgv_Clientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal totalOficina=0;
+            DataGridViewRow selectedRow = dgv_selectedRow();
+            Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
+            //carroOficina
+            labelValorNCarros.Text = user.CarroOficina.Count.ToString();
+            foreach(CarroOficina carro in user.CarroOficina)
+            {
+                foreach(Servicos servico in carro.Servicos)
+                {
+                    totalOficina+=servico.Parcela.Sum(v => v.Valor);
+                }
+            }
+            labelValorTotalGOficina.Text = totalOficina.ToString() + " €";
 
+            labelValorCarrosComprados.Text = user.Venda.Count.ToString();
+            labelTotalGastoVenda.Text = user.Venda.Sum(v => v.Valor).ToString();
+            labelValorCarrosAlugados.Text = user.Aluguer.Count.ToString();
+            labelTotalGastoAluguer.Text = user.Aluguer.Sum(v => v.Valor).ToString();
+        }
 
+        //Funções
         public void acessGerirClientes(Utilizadores user)
         {
             GerirClientes frm = new GerirClientes(user);
@@ -69,5 +85,13 @@ namespace StarStand
            (from Utilizadores in bd.UtilizadoresSet select Utilizadores).Load();
             utilizadoresBindingSource.DataSource = bd.UtilizadoresSet.Local.ToBindingList();
         }
+
+        public DataGridViewRow dgv_selectedRow()
+        {
+            int index = dgv_Clientes.CurrentCell.RowIndex;
+            return dgv_Clientes.Rows[index];
+        }
+
+     
     }
 }

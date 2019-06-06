@@ -1,0 +1,11 @@
+Fatura Nª:9999
+Data:04/06/2019 16:51:48
+Nome do Consumidor:Luis Fernandes
+NIF:N/A
+Produto| 	 Preco
+------------------------------------------------------
+limpeza| 	 25 €
+	-->interio	20
+	-->exterior	5
+-----------------------------------------------------
+Total:| 	 25 €

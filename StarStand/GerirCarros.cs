@@ -33,7 +33,7 @@ namespace StarStand
                 textBoxMarca.Text=carro.Marca;
                 TextBoxModelo.Text = carro.Modelo;
                 TextboxMatricula.Text= carro.Matricula;
-                textboxCombustivel.Text = carro.Combustivel;
+                comboboxCombustivel.SelectedText = carro.Combustivel;
                 btnSubmeter.Text = "Editar";
                 Globalcarro = carro;
             }
@@ -54,7 +54,7 @@ namespace StarStand
                 carro.Marca = textBoxMarca.Text.Trim();
                 carro.Modelo = TextBoxModelo.Text.Trim();
                 carro.Matricula = TextboxMatricula.Text.Trim();
-                carro.Combustivel = textboxCombustivel.Text.Trim();
+                carro.Combustivel = comboboxCombustivel.SelectedText.Trim();
                 bd.Entry(carro).State = EntityState.Modified;
             }
             else
@@ -64,7 +64,7 @@ namespace StarStand
                 carro.Marca = textBoxMarca.Text.Trim();
                 carro.Modelo = TextBoxModelo.Text.Trim();
                 carro.Matricula = TextboxMatricula.Text.Trim();
-                carro.Combustivel = textboxCombustivel.Text.Trim();
+                carro.Combustivel = comboboxCombustivel.SelectedText.Trim();
                 carro.Kms = 1;
                 carro.UtilizadoresIdUtilizador = idUtilizador;
                 bd.CarrosSet.Add(carro);
@@ -121,14 +121,7 @@ namespace StarStand
         {
             setplaceholder(TextboxMatricula, MATRICULA);
         }
-        private void TextboxCombustivel_Enter(object sender, EventArgs e)
-        {
-            removePlaceholder(textboxCombustivel, COMBUSTIVEL);
-        }
-        private void TextboxCombustivel_Leave(object sender, EventArgs e)
-        {
-            setplaceholder(textboxCombustivel, COMBUSTIVEL);
-        }
+      
 
         private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
         {

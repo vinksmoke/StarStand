@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clientes));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelClientes = new System.Windows.Forms.Label();
             this.panelRightClientes = new System.Windows.Forms.Panel();
             this.btnRemoveClientes = new Bunifu.Framework.UI.BunifuImageButton();
@@ -47,20 +47,20 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.utilizadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.labelValorCarrosAlugados = new System.Windows.Forms.Label();
+            this.labelValorCarrosComprados = new System.Windows.Forms.Label();
+            this.labelValorNCarros = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelNCarros = new System.Windows.Forms.Label();
-            this.labelValorNCarros = new System.Windows.Forms.Label();
-            this.labelValorCarrosVendidos = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelTotalGastoAluguer = new System.Windows.Forms.Label();
+            this.labelTotalGastoVenda = new System.Windows.Forms.Label();
+            this.labelValorTotalGOficina = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelRightClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditClientes)).BeginInit();
@@ -68,8 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Clientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utilizadoresBindingSource)).BeginInit();
             this.bunifuCards1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelClientes
@@ -151,14 +151,14 @@
             this.dgv_Clientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Clientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_Clientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Clientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idUtilizadorDataGridViewTextBoxColumn,
@@ -168,24 +168,25 @@
             this.telemovelDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
             this.dgv_Clientes.DataSource = this.utilizadoresBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Clientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Clientes.EnableHeadersVisualStyles = false;
             this.dgv_Clientes.GridColor = System.Drawing.Color.SlateGray;
             this.dgv_Clientes.Location = new System.Drawing.Point(24, 70);
             this.dgv_Clientes.Name = "dgv_Clientes";
             this.dgv_Clientes.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgv_Clientes.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgv_Clientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Clientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Clientes.Size = new System.Drawing.Size(728, 307);
             this.dgv_Clientes.TabIndex = 32;
+            this.dgv_Clientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_Clientes_CellClick);
             // 
             // idUtilizadorDataGridViewTextBoxColumn
             // 
@@ -234,8 +235,8 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.DarkSlateGray;
-            this.bunifuCards1.Controls.Add(this.label8);
-            this.bunifuCards1.Controls.Add(this.labelValorCarrosVendidos);
+            this.bunifuCards1.Controls.Add(this.labelValorCarrosAlugados);
+            this.bunifuCards1.Controls.Add(this.labelValorCarrosComprados);
             this.bunifuCards1.Controls.Add(this.labelValorNCarros);
             this.bunifuCards1.Controls.Add(this.label3);
             this.bunifuCards1.Controls.Add(this.label1);
@@ -248,6 +249,36 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(728, 174);
             this.bunifuCards1.TabIndex = 33;
+            // 
+            // labelValorCarrosAlugados
+            // 
+            this.labelValorCarrosAlugados.AutoSize = true;
+            this.labelValorCarrosAlugados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorCarrosAlugados.Location = new System.Drawing.Point(158, 135);
+            this.labelValorCarrosAlugados.Name = "labelValorCarrosAlugados";
+            this.labelValorCarrosAlugados.Size = new System.Drawing.Size(31, 16);
+            this.labelValorCarrosAlugados.TabIndex = 9;
+            this.labelValorCarrosAlugados.Text = "N/A";
+            // 
+            // labelValorCarrosComprados
+            // 
+            this.labelValorCarrosComprados.AutoSize = true;
+            this.labelValorCarrosComprados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorCarrosComprados.Location = new System.Drawing.Point(158, 81);
+            this.labelValorCarrosComprados.Name = "labelValorCarrosComprados";
+            this.labelValorCarrosComprados.Size = new System.Drawing.Size(31, 16);
+            this.labelValorCarrosComprados.TabIndex = 8;
+            this.labelValorCarrosComprados.Text = "N/A";
+            // 
+            // labelValorNCarros
+            // 
+            this.labelValorNCarros.AutoSize = true;
+            this.labelValorNCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorNCarros.Location = new System.Drawing.Point(158, 20);
+            this.labelValorNCarros.Name = "labelValorNCarros";
+            this.labelValorNCarros.Size = new System.Drawing.Size(31, 16);
+            this.labelValorNCarros.TabIndex = 7;
+            this.labelValorNCarros.Text = "N/A";
             // 
             // label3
             // 
@@ -265,9 +296,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(14, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 16);
+            this.label1.Size = new System.Drawing.Size(142, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Carros Vendidos:";
+            this.label1.Text = "Carros Comprados:";
             // 
             // labelNCarros
             // 
@@ -279,41 +310,20 @@
             this.labelNCarros.TabIndex = 1;
             this.labelNCarros.Text = "Numero de Carros:";
             // 
-            // labelValorNCarros
+            // panel2
             // 
-            this.labelValorNCarros.AutoSize = true;
-            this.labelValorNCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValorNCarros.Location = new System.Drawing.Point(158, 20);
-            this.labelValorNCarros.Name = "labelValorNCarros";
-            this.labelValorNCarros.Size = new System.Drawing.Size(31, 16);
-            this.labelValorNCarros.TabIndex = 7;
-            this.labelValorNCarros.Text = "N/A";
-            // 
-            // labelValorCarrosVendidos
-            // 
-            this.labelValorCarrosVendidos.AutoSize = true;
-            this.labelValorCarrosVendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValorCarrosVendidos.Location = new System.Drawing.Point(158, 81);
-            this.labelValorCarrosVendidos.Name = "labelValorCarrosVendidos";
-            this.labelValorCarrosVendidos.Size = new System.Drawing.Size(31, 16);
-            this.labelValorCarrosVendidos.TabIndex = 8;
-            this.labelValorCarrosVendidos.Text = "N/A";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(158, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 16);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "N/A";
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(728, 171);
+            this.panel2.TabIndex = 14;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.labelTotalGastoAluguer);
+            this.panel1.Controls.Add(this.labelTotalGastoVenda);
+            this.panel1.Controls.Add(this.labelValorTotalGOficina);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
@@ -323,35 +333,35 @@
             this.panel1.Size = new System.Drawing.Size(312, 171);
             this.panel1.TabIndex = 13;
             // 
-            // label11
+            // labelTotalGastoAluguer
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(27, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(31, 16);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "N/A";
+            this.labelTotalGastoAluguer.AutoSize = true;
+            this.labelTotalGastoAluguer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalGastoAluguer.Location = new System.Drawing.Point(27, 130);
+            this.labelTotalGastoAluguer.Name = "labelTotalGastoAluguer";
+            this.labelTotalGastoAluguer.Size = new System.Drawing.Size(31, 16);
+            this.labelTotalGastoAluguer.TabIndex = 18;
+            this.labelTotalGastoAluguer.Text = "N/A";
             // 
-            // label10
+            // labelTotalGastoVenda
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 76);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 16);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "N/A";
+            this.labelTotalGastoVenda.AutoSize = true;
+            this.labelTotalGastoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalGastoVenda.Location = new System.Drawing.Point(27, 76);
+            this.labelTotalGastoVenda.Name = "labelTotalGastoVenda";
+            this.labelTotalGastoVenda.Size = new System.Drawing.Size(31, 16);
+            this.labelTotalGastoVenda.TabIndex = 17;
+            this.labelTotalGastoVenda.Text = "N/A";
             // 
-            // label9
+            // labelValorTotalGOficina
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(31, 16);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "N/A";
+            this.labelValorTotalGOficina.AutoSize = true;
+            this.labelValorTotalGOficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValorTotalGOficina.Location = new System.Drawing.Point(27, 15);
+            this.labelValorTotalGOficina.Name = "labelValorTotalGOficina";
+            this.labelValorTotalGOficina.Size = new System.Drawing.Size(31, 16);
+            this.labelValorTotalGOficina.TabIndex = 16;
+            this.labelValorTotalGOficina.Text = "N/A";
             // 
             // label5
             // 
@@ -383,15 +393,6 @@
             this.label2.TabIndex = 13;
             this.label2.Text = ":Total Gasto na Oficina";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 171);
-            this.panel2.TabIndex = 14;
-            // 
             // clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,9 +412,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.utilizadoresBindingSource)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,13 +442,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelNCarros;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelValorCarrosVendidos;
+        private System.Windows.Forms.Label labelValorCarrosAlugados;
+        private System.Windows.Forms.Label labelValorCarrosComprados;
         private System.Windows.Forms.Label labelValorNCarros;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelTotalGastoAluguer;
+        private System.Windows.Forms.Label labelTotalGastoVenda;
+        private System.Windows.Forms.Label labelValorTotalGOficina;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
