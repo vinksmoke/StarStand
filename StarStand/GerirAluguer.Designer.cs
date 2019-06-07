@@ -108,7 +108,7 @@
             this.DatepickerSaida.ForeColor = System.Drawing.Color.White;
             this.DatepickerSaida.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DatepickerSaida.FormatCustom = null;
-            this.DatepickerSaida.Location = new System.Drawing.Point(19, 150);
+            this.DatepickerSaida.Location = new System.Drawing.Point(26, 165);
             this.DatepickerSaida.Name = "DatepickerSaida";
             this.DatepickerSaida.Size = new System.Drawing.Size(303, 36);
             this.DatepickerSaida.TabIndex = 20;

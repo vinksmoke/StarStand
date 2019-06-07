@@ -140,7 +140,6 @@ C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\EntityFramework.dll
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\EntityFramework.xml
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirAlugados.resources
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirClientes.resources
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.USaluguer.resources
 C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.clientes.resources
@@ -188,3 +187,9 @@ C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\St
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\bin\Debug\IronPdf.xml
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.GerirAluguer.resources
 C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\obj\Debug\StarStand.GerirCarrosAlugados.resources
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\IronPdf.dll
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\bin\Debug\IronPdf.xml
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirAluguer.resources
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirCarrosAlugados.resources
+C:\Users\ASUS\Desktop\DA\StarStand\StarStand\obj\Debug\StarStand.GerirVendas.resources

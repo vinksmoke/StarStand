@@ -136,5 +136,51 @@ namespace StarStand
             bd.Entry(carroAluguer).State = EntityState.Modified;
             bd.SaveChanges();
         }
+
+        private void btnAddClientes_Click(object sender, EventArgs e)
+        {
+            GerirClientes frm = new GerirClientes(null);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                lerdadosClientes();
+            }
+        }
+
+        private void btnEditClientes_Click(object sender, EventArgs e)
+        {
+            if (listboxClientes.list.SelectedIndex != -1)
+            {
+                Utilizadores user = listboxClientes.list.SelectedItem as Utilizadores;
+                GerirClientes frm = new GerirClientes(user);
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    lerdadosClientes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tem de selecionar um cliente");
+            }
+        }
+
+        private void btnRemoveClientes_Click(object sender, EventArgs e)
+        {
+            if (listboxClientes.list.SelectedIndex != -1)
+            {
+                DialogResult dialog = MessageBox.Show("Tem a certeza que quere eliminar", "Comfimação", MessageBoxButtons.YesNo);
+                if (dialog == DialogResult.Yes)
+                {
+                    Utilizadores user = listboxClientes.list.SelectedItem as Utilizadores;
+                    Utilizadores user_apagar = (Utilizadores)bd.UtilizadoresSet.Find(user.IdUtilizador);
+                    bd.UtilizadoresSet.Remove(user_apagar);
+                    bd.SaveChanges();
+                    lerdadosClientes();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tem de selecionar um cliente");
+            }
+        }
     }
 }

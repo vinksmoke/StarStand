@@ -46,8 +46,51 @@ namespace StarStand
         }
         private void BtnSubmeter_Click(object sender, EventArgs e)
         {
-            
-            if(Globalcarro!= null)
+            //Campos Obrigatórios
+            if (textBoxMarca.Text.Equals(""))
+            {
+                MessageBox.Show("Marca: Campo Obrigatório!");
+                return;
+            }
+
+            if (textBoxMarca.Text.Equals("Marca"))
+            {
+                MessageBox.Show("Marca: Campo Obrigatório!");
+                return;
+            }
+
+            if (TextBoxModelo.Text.Equals(""))
+            {
+                MessageBox.Show("Modelo: Campo Obrigatório!");
+                return;
+            }
+
+            if (TextBoxModelo.Text.Equals("Modelo"))
+            {
+                MessageBox.Show("Marca: Campo Obrigatório!");
+                return;
+            }
+
+            if (TextboxMatricula.Text.Equals(""))
+            {
+                MessageBox.Show("Matricula: Campo Obrigatório!");
+                return;
+            }
+
+            if (TextboxMatricula.Text.Equals("Matricula"))
+            {
+                MessageBox.Show("Matricula: Campo Obrigatório!");
+                return;
+            }
+
+            //Validações
+            if (comboboxCombustivel.Text.Equals("Combustível"))
+            {
+                MessageBox.Show("Comustível: Selecione um tipo de combustível!");
+                return;
+            }
+
+            if (Globalcarro!= null)
             {
                 Utilizadores user = bd.UtilizadoresSet.Single(Utilizadores => Utilizadores.IdUtilizador == idUtilizador);
                 CarroOficina carro = user.CarroOficina.Single(carros => carros.IdCarro == Globalcarro.IdCarro);

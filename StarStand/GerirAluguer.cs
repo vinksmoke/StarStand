@@ -43,7 +43,32 @@ namespace StarStand
         private void BtnInserir_Click(object sender, EventArgs e)
         {
             bd = new StarDBContainer();
-            if(globalUser!=null)
+
+            if (textboxKms.Text.Equals(""))
+            {
+                MessageBox.Show("KMS: Campo Obrigatório!");
+                return;
+            }
+
+            if (textboxKms.Text.Equals("KMS"))
+            {
+                MessageBox.Show("KMS: Campo Obrigatório!");
+                return;
+            }
+
+            if (textboxKms.Text.Count(c => char.IsLetter(c)) > 0)
+            {
+                MessageBox.Show("KMS: Este campo não permite letras!");
+                return;
+            }
+
+            if (textboxKms.Text.Count(c => !char.IsSymbol(c)) == 0)
+            {
+                MessageBox.Show("KMS: Este campo não permite letras!");
+                return;
+            }
+
+            if (globalUser!=null)
             {
                 Aluguer aluguer = new Aluguer();
                 aluguer.DataInicio = DatepickerEntrada.Value;

@@ -361,6 +361,7 @@
             this.btnEditClientes.TabIndex = 32;
             this.btnEditClientes.TabStop = false;
             this.btnEditClientes.Zoom = 10;
+            this.btnEditClientes.Click += new System.EventHandler(this.btnEditClientes_Click);
             // 
             // btnRemoveClientes
             // 
@@ -375,6 +376,7 @@
             this.btnRemoveClientes.TabIndex = 31;
             this.btnRemoveClientes.TabStop = false;
             this.btnRemoveClientes.Zoom = 10;
+            this.btnRemoveClientes.Click += new System.EventHandler(this.btnRemoveClientes_Click);
             // 
             // btnAddClientes
             // 
@@ -389,6 +391,7 @@
             this.btnAddClientes.TabIndex = 30;
             this.btnAddClientes.TabStop = false;
             this.btnAddClientes.Zoom = 10;
+            this.btnAddClientes.Click += new System.EventHandler(this.btnAddClientes_Click);
             // 
             // USaluguer
             // 

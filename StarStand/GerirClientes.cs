@@ -84,26 +84,26 @@ namespace StarStand
                 MessageBox.Show("Email: Campo incorreto!");
                 return;
             }
-
-            //Campos para preencher obrigatóriamente!
-            if (textboxTelemovel.Text.Count(c=>char.IsDigit(c))==0)
+            if (textboxTelemovel.Text.Count(c=>char.IsDigit(c)) == 0)
             {
                 MessageBox.Show("Telemóvel: Obrigatório digitos!");
                 return;
             }
 
-            if (textboxTelemovel.Text.Count(c=>char.IsLetter(c))>0)
+            if (textboxTelemovel.Text.Count(c=>char.IsLetter(c)) > 0)
             {
                 MessageBox.Show("Telemóvel: Este campo não permite letras!");
                 return;
             }
 
-            if (textboxTelemovel.Text.Count(c=>!char.IsSymbol(c))==0)
+            if (textboxTelemovel.Text.Count(c=>!char.IsSymbol(c)) == 0)
             {
                 MessageBox.Show("Telemóvel: Este campo não permite letras!");
                 return;
             }
 
+
+            //Campos para preencher obrigatóriamente!
             if (textboxNome.Text.Equals(""))
             {
                 MessageBox.Show("Nome: Campo Obrigatório!");
