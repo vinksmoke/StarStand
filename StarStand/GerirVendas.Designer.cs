@@ -108,6 +108,8 @@
             this.TextboxMatricula.TabIndex = 9;
             this.TextboxMatricula.Text = "Matricula";
             this.TextboxMatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextboxMatricula.Enter += new System.EventHandler(this.TextboxMatricula_Enter);
+            this.TextboxMatricula.Leave += new System.EventHandler(this.TextboxMatricula_Leave);
             // 
             // TextBoxModelo
             // 
@@ -128,6 +130,8 @@
             this.TextBoxModelo.TabIndex = 8;
             this.TextBoxModelo.Text = "Modelo";
             this.TextBoxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TextBoxModelo.Enter += new System.EventHandler(this.TextBoxModelo_Enter);
+            this.TextBoxModelo.Leave += new System.EventHandler(this.TextBoxModelo_Leave);
             // 
             // textBoxMarca
             // 
@@ -148,6 +152,8 @@
             this.textBoxMarca.TabIndex = 7;
             this.textBoxMarca.Text = "Marca";
             this.textBoxMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxMarca.Enter += new System.EventHandler(this.TextBoxMarca_Enter);
+            this.textBoxMarca.Leave += new System.EventHandler(this.TextBoxMarca_Leave);
             // 
             // PanelHeader
             // 
@@ -165,6 +171,9 @@
             this.PanelHeader.Quality = 10;
             this.PanelHeader.Size = new System.Drawing.Size(685, 44);
             this.PanelHeader.TabIndex = 6;
+            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
+            this.PanelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
+            this.PanelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
             // BtnClose
             // 
@@ -227,6 +236,8 @@
             this.textBoxExtras.TabIndex = 25;
             this.textBoxExtras.Text = "Extra";
             this.textBoxExtras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxExtras.Enter += new System.EventHandler(this.TextBoxExtras_Enter);
+            this.textBoxExtras.Leave += new System.EventHandler(this.TextBoxExtras_Leave);
             // 
             // bunifuSeparator1
             // 
@@ -259,6 +270,8 @@
             this.textboxValor.TabIndex = 27;
             this.textboxValor.Text = "Valor";
             this.textboxValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxValor.Enter += new System.EventHandler(this.TextboxValor_Enter);
+            this.textboxValor.Leave += new System.EventHandler(this.TextboxValor_Leave);
             // 
             // comboBoxEstado
             // 

@@ -14,9 +14,16 @@ namespace StarStand
 {
     public partial class GerirAluguer : Form
     {
+        const string KMS = "KMS";
+
+        bool togMoveForm;
+        int MvalX;
+        int MvalY;
+
         StarDBContainer bd;
         Utilizadores globalUser;
         CarroAluguer globalCarro;
+
         public GerirAluguer(Utilizadores user, CarroAluguer carro)
         {
             InitializeComponent();
@@ -44,29 +51,12 @@ namespace StarStand
         {
             bd = new StarDBContainer();
 
-            if (textboxKms.Text.Equals(""))
+            if (textboxKms.Text.Equals("") || textboxKms.Text.Equals("KMS") && textboxKms.Enabled==true)
             {
                 MessageBox.Show("KMS: Campo Obrigatório!");
                 return;
             }
-
-            if (textboxKms.Text.Equals("KMS"))
-            {
-                MessageBox.Show("KMS: Campo Obrigatório!");
-                return;
-            }
-
-            if (textboxKms.Text.Count(c => char.IsLetter(c)) > 0)
-            {
-                MessageBox.Show("KMS: Este campo não permite letras!");
-                return;
-            }
-
-            if (textboxKms.Text.Count(c => !char.IsSymbol(c)) == 0)
-            {
-                MessageBox.Show("KMS: Este campo não permite letras!");
-                return;
-            }
+     
 
             if (globalUser!=null)
             {
@@ -93,7 +83,7 @@ namespace StarStand
                 bd.SaveChanges();
 
                 CarroAluguer carroAluguer = bd.CarrosSet.OfType<CarroAluguer>().Single(a => a.IdCarro == globalCarro.IdCarro);
-                carroAluguer.Estado = "Disponivel";
+                carroAluguer.Estado = "Disponível";
                 bd.Entry(carroAluguer).State = EntityState.Modified;
                 bd.SaveChanges();
                 DialogResult result=MessageBox.Show("Deseja fatura?", "Faturação", MessageBoxButtons.YesNo);
@@ -102,7 +92,7 @@ namespace StarStand
                     faturacao(aluguer);
                 }
             }
-           
+            this.Close();   
         }
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -113,12 +103,22 @@ namespace StarStand
         {
             verificarDatas();
         }
-
         private void DatepickerEntrada_onValueChanged(object sender, EventArgs e)
         {
             verificarDatas();
         }
 
+        private void TextboxKms_OnValueChanged(object sender, EventArgs e)
+        {
+            if (textboxKms.Text.Count(c => !char.IsDigit(c)) > 0)
+            {
+                MessageBox.Show("O kms so pode conter numeros");
+                textboxKms.Text = textboxKms.Text.Substring(0, textboxKms.Text.Length - 1);
+            }
+        }
+
+       
+        //Funçoes
         private void verificarDatas()
         {
             if (DatepickerEntrada.Value > DatepickerSaida.Value)
@@ -138,6 +138,7 @@ namespace StarStand
             string textoFatura;
             textoFatura = "<h1>StarStand</h1>";
             textoFatura += "<hr>";
+            textoFatura += "<<h2>Dados do Cliente</h2>";
             textoFatura += "<span>" + aluguer.Utilizadores.Nome + "</span><br>";
             textoFatura += "<span>" + aluguer.Utilizadores.NIF + "</span><br>";
             textoFatura += "<span>" + aluguer.Utilizadores.Morada + "</span><br>";
@@ -158,6 +159,53 @@ namespace StarStand
             IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
             Renderer.RenderHtmlAsPdf(textoFatura).SaveAs(Directory.GetCurrentDirectory() + "\\FaturaAluguer\\" + aluguer.IdAluguer + "_" + aluguer.Utilizadores.Nome + ".pdf");
 
+        }
+        private void setplaceholder(Bunifu.Framework.UI.BunifuMaterialTextbox texbox, string texto)
+        {
+            if (texbox.Text == "")
+            {
+                texbox.Text = texto;
+                texbox.TextAlign = HorizontalAlignment.Center;
+
+            }
+        }
+        private void removeplaceholder(Bunifu.Framework.UI.BunifuMaterialTextbox texbox, string texto)
+        {
+            if (texbox.Text == texto)
+            {
+                texbox.Text = "";
+                texbox.TextAlign = HorizontalAlignment.Left;
+
+            }
+        }
+        
+        //Placeholder
+        private void TextboxKms_Enter(object sender, EventArgs e)
+        {
+            removeplaceholder(textboxKms, KMS);
+        }
+        private void TextboxKms_Leave(object sender, EventArgs e)
+        {
+            setplaceholder(textboxKms, KMS);
+        }
+
+        //Mover form
+        private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            togMoveForm = true;
+            MvalX = e.X;
+            MvalY = e.Y;
+        }
+        private void PanelHeader_MouseUp(object sender, MouseEventArgs e)
+        {
+            togMoveForm = false;
+        }
+        private void PanelHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (togMoveForm == true)
+            {
+                SetDesktopLocation(MousePosition.X - MvalX, MousePosition.Y - MvalY);
+            }
         }
 
     }

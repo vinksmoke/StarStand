@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/04/2019 16:15:43
--- Generated from EDMX file: C:\Users\yaros\Desktop\Trabalhos\1º ano\S2\Projeto DA MD\StarStand\StarStand\StarStand\StarDB.edmx
+-- Date Created: 06/08/2019 14:20:09
+-- Generated from EDMX file: C:\Users\yaros\Desktop\StarStand-yar32\StarStand\StarDB.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -30,7 +30,7 @@ IF OBJECT_ID(N'[dbo].[FK_CarroAluguerAluguer]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[AluguerSet] DROP CONSTRAINT [FK_CarroAluguerAluguer];
 GO
 IF OBJECT_ID(N'[dbo].[FK_VendaCarroVenda]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[VendaSet] DROP CONSTRAINT [FK_VendaCarroVenda];
+    ALTER TABLE [dbo].[CarrosSet_CarroVenda] DROP CONSTRAINT [FK_VendaCarroVenda];
 GO
 IF OBJECT_ID(N'[dbo].[FK_ServicosParcela]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ParcelaSet] DROP CONSTRAINT [FK_ServicosParcela];
@@ -108,7 +108,7 @@ GO
 -- Creating table 'VendaSet'
 CREATE TABLE [dbo].[VendaSet] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
-    [Valor] decimal(18,0)  NOT NULL,
+    [Valor] decimal(18,2)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Data] datetime  NOT NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL
@@ -120,8 +120,8 @@ CREATE TABLE [dbo].[AluguerSet] (
     [IdAluguer] int IDENTITY(1,1) NOT NULL,
     [DataInicio] datetime  NOT NULL,
     [DataFim] datetime  NULL,
-    [Valor] decimal(18,0)  NULL,
-    [Kms] decimal(18,0)  NULL,
+    [Valor] decimal(18,2)  NULL,
+    [Kms] decimal(18,2)  NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL,
     [CarroAluguerId] int  NOT NULL
 );
@@ -130,7 +130,7 @@ GO
 -- Creating table 'ParcelaSet'
 CREATE TABLE [dbo].[ParcelaSet] (
     [IdParcela] int IDENTITY(1,1) NOT NULL,
-    [Valor] decimal(18,0)  NOT NULL,
+    [Valor] decimal(18,2)  NOT NULL,
     [Descrição] nvarchar(max)  NOT NULL,
     [ServicoIdServicos] int  NOT NULL
 );
@@ -148,7 +148,7 @@ GO
 
 -- Creating table 'CarrosSet_CarroOficina'
 CREATE TABLE [dbo].[CarrosSet_CarroOficina] (
-    [Kms] decimal(18,0)  NOT NULL,
+    [Kms] decimal(18,2)  NOT NULL,
     [UtilizadoresIdUtilizador] int  NOT NULL,
     [IdCarro] int  NOT NULL
 );
@@ -157,7 +157,7 @@ GO
 -- Creating table 'CarrosSet_CarroAluguer'
 CREATE TABLE [dbo].[CarrosSet_CarroAluguer] (
     [Estado] nvarchar(max)  NOT NULL,
-    [ValorBase] decimal(18,0)  NOT NULL,
+    [ValorBase] decimal(18,2)  NOT NULL,
     [IdCarro] int  NOT NULL
 );
 GO

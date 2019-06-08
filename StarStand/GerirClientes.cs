@@ -265,17 +265,20 @@ namespace StarStand
         //NIF
         private void textboxNIF_OnValueChanged(object sender, EventArgs e)
         {
-            string tString = textboxNIF.Text;
-            if (tString.Trim() == "") return;
-            for (int i = 0; i < tString.Length; i++)
+            if(textboxNIF.Text.Count(c=>!char.IsDigit(c))>0)
             {
-                if (!char.IsNumber(tString[i]))
+                MessageBox.Show("O nif so pode conter numeros");
+                textboxNIF.Text = textboxNIF.Text.Substring(0, textboxNIF.Text.Length - 1);
+            }
+            else
+            {
+                if (textboxNIF.Text.Count() >9)
                 {
-                    MessageBox.Show("Só é permitido números neste campo!");
-                    textboxNIF.Text = "";
-                    return;
+                    MessageBox.Show("O nif so pode conter 10 numeros");
+                    textboxNIF.Text = textboxNIF.Text.Substring(0, textboxNIF.Text.Length - 1);
                 }
             }
+           
             
         }
       

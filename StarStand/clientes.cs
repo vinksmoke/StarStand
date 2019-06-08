@@ -38,7 +38,7 @@ namespace StarStand
             bd.SaveChanges();
             lerdados();
         }
-        private void Dgv_Clientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        public void Dgv_Clientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             decimal totalOficina=0;
             DataGridViewRow selectedRow = dgv_selectedRow();
@@ -55,9 +55,9 @@ namespace StarStand
             labelValorTotalGOficina.Text = totalOficina.ToString() + " €";
 
             labelValorCarrosComprados.Text = user.Venda.Count.ToString();
-            labelTotalGastoVenda.Text = user.Venda.Sum(v => v.Valor).ToString();
+            labelTotalGastoVenda.Text = user.Venda.Sum(v => v.Valor) + " €";
             labelValorCarrosAlugados.Text = user.Aluguer.Count.ToString();
-            labelTotalGastoAluguer.Text = user.Aluguer.Sum(v => v.Valor).ToString();
+            labelTotalGastoAluguer.Text = user.Aluguer.Sum(v => v.Valor)+ " €";
         }
 
         //Funções

@@ -18,6 +18,7 @@ namespace StarStand
         const string ALUGADO = "Finalizar";
         const string Disponivel = "Alugar";
 
+
         StarDBContainer bd;
         public USaluguer()
         {
@@ -26,65 +27,50 @@ namespace StarStand
 
         private void btnAddCarros_Click(object sender, EventArgs e)
         {
-            GerirCarrosAlugados aluguerfrm = new GerirCarrosAlugados();
+            GerirCarrosAlugados aluguerfrm = new GerirCarrosAlugados(null);
 
             if (aluguerfrm.ShowDialog() == DialogResult.OK)
             {
                 lerdadosCarro();
             }
         }
-
-     
-        private void listboxCarros_ChangeSeletedIndex(object sender, EventArgs e)
+        private void BtnEditCarros_Click(object sender, EventArgs e)
         {
-            if(listboxCarros.list.SelectedIndex != -1)
+            if(listboxCarros.list.SelectedIndex!=-1)
             {
-                CarroAluguer carroAluguer = listboxCarros.list.SelectedItem as CarroAluguer;
-                labelMostraMarca.Text = carroAluguer.Marca;
-                labelMostraEstado.Text = carroAluguer.Estado;
-                labelMostraValor.Text = carroAluguer.ValorBase + " €";
-                labelMostrarModelo.Text = carroAluguer.Modelo;
-                labelMostrarMatricula.Text = carroAluguer.Matricula;
+                GerirCarrosAlugados aluguerfrm = new GerirCarrosAlugados(listboxCarros.list.SelectedItem as CarroAluguer);
 
-                panelright.Visible = true;
-                lerdadosClientes();
-                if(carroAluguer.Estado=="Alugado")
+                if (aluguerfrm.ShowDialog() == DialogResult.OK)
                 {
-                    int id = carroAluguer.Aluguer.OrderByDescending(a => a.IdAluguer).Select(a => a.IdAluguer).First();
-                    Aluguer aluguer = bd.AluguerSet.Single(a => a.IdAluguer == id);
-                    buttonAlugar.Text =ALUGADO;
-                    labelMostrarUser.Text = aluguer.Utilizadores.Nome;
-                    labelUser.Visible = true;
-                    labelMostrarUser.Visible = true;
-                    btnSwitch.Enabled = false;
-                    btnSwitch.Value = true;
-
+                    lerdadosCarro();
                 }
-                else
+            }
+        }
+        private void BtnRemoveCarros_Click(object sender, EventArgs e)
+        {
+            if(listboxCarros.list.SelectedIndex!=-1)
+            {
+                DialogResult result = MessageBox.Show("Tem a certeza que quere eliminar", "Confirmação", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    buttonAlugar.Text = Disponivel;
-                    labelUser.Visible = false;
-                    labelMostrarUser.Visible = false;
-                    btnSwitch.Enabled = true;
-                    if(carroAluguer.Estado=="Disponivel")
-                    {
-                        btnSwitch.Value = true;
-                        buttonAlugar.Enabled = true;
-                    }
-                    else
-                    {
-                        btnSwitch.Value = false;
-                        buttonAlugar.Enabled = false;
-                    }
+                    CarroAluguer carro = listboxCarros.list.SelectedItem as CarroAluguer;
+                    carro=(CarroAluguer)bd.CarrosSet.Single(o => o.IdCarro == carro.IdCarro);
+
+                    bd.CarrosSet.Remove(carro);
+                    bd.SaveChanges();
+                    lerdadosCarro();
                 }
             }
             else
             {
-                labelMostraMarca.Text = NOSELECT;
-                labelMostraEstado.Text = NOSELECT;
-                labelMostraValor.Text = NOSELECT;
-                panelright.Visible = false;
-                listboxClientes.list.SelectedIndex = -1;
+                MessageBox.Show("Tem de selecionar um carro");
+            }
+        }
+        private void listboxCarros_ChangeSeletedIndex(object sender, EventArgs e)
+        {
+            if (listboxCarros.list.SelectedIndex != -1)
+            {
+                mostrarDado();
             }
         }
 
@@ -104,29 +90,14 @@ namespace StarStand
            
         }
 
-
-        //Funçoes
-        public void lerdadosCarro()
-        {
-            bd = new StarDBContainer();
-            listboxCarros.list.DataSource = bd.CarrosSet.OfType<CarroAluguer>().ToList();
-        }
-
-        public void lerdadosClientes()
-        {
-            bd = new StarDBContainer();
-
-            listboxClientes.list.DataSource = bd.UtilizadoresSet.ToList();
-        }
-
         private void BtnSwitch_Click(object sender, EventArgs e)
         {
             CarroAluguer carroAluguer = listboxCarros.list.SelectedItem as CarroAluguer;
-            carroAluguer =(CarroAluguer)bd.CarrosSet.Single(id => id.IdCarro == carroAluguer.IdCarro);
+            carroAluguer = (CarroAluguer)bd.CarrosSet.Single(id => id.IdCarro == carroAluguer.IdCarro);
 
-            if (btnSwitch.Value==true)
+            if (btnSwitch.Value == true)
             {
-                carroAluguer.Estado = "Disponivel";
+                carroAluguer.Estado = "Disponível";
             }
             else
             {
@@ -135,8 +106,11 @@ namespace StarStand
 
             bd.Entry(carroAluguer).State = EntityState.Modified;
             bd.SaveChanges();
+            lerdadosClientes();
+            lerdadosCarro();
+            mostrarDado();
         }
-
+        //Clientes
         private void btnAddClientes_Click(object sender, EventArgs e)
         {
             GerirClientes frm = new GerirClientes(null);
@@ -145,7 +119,6 @@ namespace StarStand
                 lerdadosClientes();
             }
         }
-
         private void btnEditClientes_Click(object sender, EventArgs e)
         {
             if (listboxClientes.list.SelectedIndex != -1)
@@ -162,7 +135,6 @@ namespace StarStand
                 MessageBox.Show("Tem de selecionar um cliente");
             }
         }
-
         private void btnRemoveClientes_Click(object sender, EventArgs e)
         {
             if (listboxClientes.list.SelectedIndex != -1)
@@ -182,5 +154,68 @@ namespace StarStand
                 MessageBox.Show("Tem de selecionar um cliente");
             }
         }
+
+        private void BtnVerHistorico_Click(object sender, EventArgs e)
+        {
+            HistoricoAluguer frm = new HistoricoAluguer();
+            frm.ShowDialog();
+        }
+
+        //Funçoes
+        public void lerdadosCarro()
+        {
+            bd = new StarDBContainer();
+            listboxCarros.list.DataSource = bd.CarrosSet.OfType<CarroAluguer>().ToList();
+        }
+        public void lerdadosClientes()
+        {
+            bd = new StarDBContainer();
+
+            listboxClientes.list.DataSource = bd.UtilizadoresSet.ToList();
+        }
+        public void mostrarDado()
+        {
+            CarroAluguer carroAluguer = listboxCarros.list.SelectedItem as CarroAluguer;
+            labelMostraMarca.Text = carroAluguer.Marca;
+            labelMostraEstado.Text = carroAluguer.Estado;
+            labelMostraValor.Text = carroAluguer.ValorBase + " €";
+            labelMostrarModelo.Text = carroAluguer.Modelo;
+            labelMostrarMatricula.Text = carroAluguer.Matricula;
+
+            panelright.Visible = true;
+            lerdadosClientes();
+            if (carroAluguer.Estado == "Alugado")
+            {
+                int id = carroAluguer.Aluguer.OrderByDescending(a => a.IdAluguer).Select(a => a.IdAluguer).First();
+                Aluguer aluguer = bd.AluguerSet.Single(a => a.IdAluguer == id);
+                buttonAlugar.Text = ALUGADO;
+                buttonAlugar.Enabled = true;
+                labelMostrarUser.Text = aluguer.Utilizadores.Nome;
+                labelUser.Visible = true;
+                labelMostrarUser.Visible = true;
+                btnSwitch.Enabled = false;
+                btnSwitch.Value = true;
+
+            }
+            else
+            {
+                buttonAlugar.Text = Disponivel;
+                labelUser.Visible = false;
+                labelMostrarUser.Visible = false;
+                btnSwitch.Enabled = true;
+                if (carroAluguer.Estado == "Disponível")
+                {
+                    btnSwitch.Value = true;
+                    buttonAlugar.Enabled = true;
+                }
+                else
+                {
+                    btnSwitch.Value = false;
+                    buttonAlugar.Enabled = false;
+                }
+            }
+        }
+
+       
     }
 }

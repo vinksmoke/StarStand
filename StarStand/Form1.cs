@@ -19,8 +19,9 @@ namespace StarStand
         public Form1()
         {
             InitializeComponent();
-            setuserctr(clientes1);
-            clientes1.lerdados();      
+            this.panelBody.Controls.Clear();
+            setuserctr(home1);
+                
         }
         // Moving form
         private void PanelHeader_MouseDown(object sender, MouseEventArgs e)
@@ -44,7 +45,15 @@ namespace StarStand
         //Close/Minimize
         private void BtnMinimize_Click_1(object sender, EventArgs e)
         {
+            
+            this.panelBody.Controls.Clear();
             this.WindowState = FormWindowState.Minimized;
+            setuserctr(home1);
+            btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnCliente.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
+            btnAluguer.Normalcolor = Color.FromArgb(14, 25, 32);
+
         }
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -77,6 +86,7 @@ namespace StarStand
         {
             setuserctr(clientes1);
             clientes1.lerdados();
+            clientes1.Dgv_Clientes_CellClick(null, null);
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.Maroon;
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);

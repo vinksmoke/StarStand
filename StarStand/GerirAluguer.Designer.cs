@@ -60,6 +60,9 @@
             this.PanelHeader.Quality = 10;
             this.PanelHeader.Size = new System.Drawing.Size(358, 44);
             this.PanelHeader.TabIndex = 18;
+            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
+            this.PanelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
+            this.PanelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
             // BtnClose
             // 
@@ -108,7 +111,7 @@
             this.DatepickerSaida.ForeColor = System.Drawing.Color.White;
             this.DatepickerSaida.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DatepickerSaida.FormatCustom = null;
-            this.DatepickerSaida.Location = new System.Drawing.Point(26, 165);
+            this.DatepickerSaida.Location = new System.Drawing.Point(19, 165);
             this.DatepickerSaida.Name = "DatepickerSaida";
             this.DatepickerSaida.Size = new System.Drawing.Size(303, 36);
             this.DatepickerSaida.TabIndex = 20;
@@ -134,6 +137,9 @@
             this.textboxKms.TabIndex = 22;
             this.textboxKms.Text = "KMS";
             this.textboxKms.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxKms.OnValueChanged += new System.EventHandler(this.TextboxKms_OnValueChanged);
+            this.textboxKms.Enter += new System.EventHandler(this.TextboxKms_Enter);
+            this.textboxKms.Leave += new System.EventHandler(this.TextboxKms_Leave);
             // 
             // textboxTotal
             // 

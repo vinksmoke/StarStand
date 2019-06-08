@@ -23,9 +23,19 @@ namespace StarStand
         int MvalX;
         int MvalY;
 
-        public GerirCarrosAlugados()
+        CarroAluguer globalCarro;
+        public GerirCarrosAlugados(CarroAluguer aluguer)
         {
             InitializeComponent();
+            globalCarro = aluguer;
+            if(aluguer!=null)
+            {
+                btnInserir.Text = "Editar";
+                textboxMarca.Text = aluguer.Marca;
+                textboxModelo.Text = aluguer.Modelo;
+                textboxValorBase.Text = aluguer.ValorBase.ToString();
+                comboboxCombustivel.Text = aluguer.Combustivel;
+            }
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -36,37 +46,20 @@ namespace StarStand
         private void btnInserir_Click(object sender, EventArgs e)
         {
             //Campos Obrigatórios
-            if (textboxMarca.Text.Equals(""))
+            if (textboxMarca.Text.Equals("")|| textboxMarca.Text.Equals("Marca"))
             {
                 MessageBox.Show("Marca: Campo Obrigatório!");
                 return;
             }
 
-            if (textboxMarca.Text.Equals("Marca"))
-            {
-                MessageBox.Show("Marca: Campo Obrigatório!");
-                return;
-            }
 
-            if (textboxModelo.Text.Equals(""))
+            if (textboxModelo.Text.Equals("") || textboxModelo.Text.Equals("Modelo"))
             {
                 MessageBox.Show("Modelo: Campo Obrigatório!");
                 return;
             }
 
-            if (textboxModelo.Text.Equals("Modelo"))
-            {
-                MessageBox.Show("Modelo: Campo Obrigatório!");
-                return;
-            }
-
-            if (textboxValorBase.Text.Equals(""))
-            {
-                MessageBox.Show("Valor Base: Campo Obrigatório!");
-                return;
-            }
-
-            if (textboxValorBase.Text.Equals("Valor Base"))
+            if (textboxValorBase.Text.Equals("") || textboxValorBase.Text.Equals("Valor Base"))
             {
                 MessageBox.Show("Valor Base: Campo Obrigatório!");
                 return;
@@ -79,35 +72,48 @@ namespace StarStand
                 return;
             }
 
-            if (textboxValorBase.Text.Count(c => char.IsLetter(c)) > 0)
-            {
-                MessageBox.Show("Valor Base: Este campo não permite letras!");
-                return;
-            }
 
-            if (textboxValorBase.Text.Count(c => !char.IsSymbol(c)) == 0)
-            {
-                MessageBox.Show("Valor Base: Este campo não permite letras!");
-                return;
-            }
-
-            if (btnInserir.Text == "Inserir")
+            if (globalCarro==null)
             {
                 CarroAluguer aluguer = new CarroAluguer();
                 aluguer.Marca = textboxMarca.Text.Trim();
                 aluguer.Modelo = textboxModelo.Text.Trim();
-                aluguer.ValorBase = decimal.Parse(textboxValorBase.Text.Trim());
+                try
+                {
+                    aluguer.ValorBase = decimal.Parse(textboxValorBase.Text.Replace(".",","));
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("So pode inserir numeros e '.' ou ','");
+                    textboxValorBase.Text = "";
+
+                    setplaceholder(textboxValorBase, VALBASE);
+                    return;
+                }
+                
                 aluguer.Matricula = "StarStand";
-                aluguer.Combustivel = comboboxCombustivel.SelectedText;
+                aluguer.Combustivel = comboboxCombustivel.Text;
                 aluguer.Estado = "Disponível";
                 bd.CarrosSet.Add(aluguer);                
             }
             else
             {
-               CarroAluguer aluguer = (CarroAluguer)bd.CarrosSet.OfType<CarroAluguer>();
+                CarroAluguer aluguer = (CarroAluguer)bd.CarrosSet.OfType<CarroAluguer>().Where(id=>id.IdCarro==globalCarro.IdCarro).First();
                 aluguer.Marca = textboxMarca.Text.Trim();
                 aluguer.Modelo = textboxModelo.Text.Trim();
-                aluguer.ValorBase = decimal.Parse(textboxValorBase.Text.Trim());
+                try
+                {
+                    aluguer.ValorBase = decimal.Parse(textboxValorBase.Text.Replace(".", ","));
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("So pode inserir numeros e '.' ou ','");
+                    textboxValorBase.Text = "";
+
+                    setplaceholder(textboxValorBase, VALBASE);
+                    return;
+                }
+                aluguer.Combustivel = comboboxCombustivel.Text;
                 bd.Entry(aluguer).State = EntityState.Modified;
             }
 
@@ -163,7 +169,6 @@ namespace StarStand
         {
             removeplaceholder(textboxMarca, MARCA);
         }
-
         private void textboxMarca_Leave(object sender, EventArgs e)
         {
             setplaceholder(textboxMarca, MARCA);
@@ -174,7 +179,6 @@ namespace StarStand
         {
             removeplaceholder(textboxModelo, MODELO);
         }
-
         private void textboxModelo_Leave(object sender, EventArgs e)
         {
             setplaceholder(textboxModelo, MODELO);
@@ -185,7 +189,6 @@ namespace StarStand
         {
             removeplaceholder(textboxValorBase, VALBASE);
         }
-
         private void textboxValorBase_Leave(object sender, EventArgs e)
         {
             setplaceholder(textboxValorBase, VALBASE);

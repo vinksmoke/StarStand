@@ -252,33 +252,33 @@
             // 
             // labelValorCarrosAlugados
             // 
-            this.labelValorCarrosAlugados.AutoSize = true;
             this.labelValorCarrosAlugados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValorCarrosAlugados.Location = new System.Drawing.Point(158, 135);
             this.labelValorCarrosAlugados.Name = "labelValorCarrosAlugados";
-            this.labelValorCarrosAlugados.Size = new System.Drawing.Size(31, 16);
+            this.labelValorCarrosAlugados.Size = new System.Drawing.Size(147, 16);
             this.labelValorCarrosAlugados.TabIndex = 9;
             this.labelValorCarrosAlugados.Text = "N/A";
+            this.labelValorCarrosAlugados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelValorCarrosComprados
             // 
-            this.labelValorCarrosComprados.AutoSize = true;
             this.labelValorCarrosComprados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValorCarrosComprados.Location = new System.Drawing.Point(158, 81);
             this.labelValorCarrosComprados.Name = "labelValorCarrosComprados";
-            this.labelValorCarrosComprados.Size = new System.Drawing.Size(31, 16);
+            this.labelValorCarrosComprados.Size = new System.Drawing.Size(147, 16);
             this.labelValorCarrosComprados.TabIndex = 8;
             this.labelValorCarrosComprados.Text = "N/A";
+            this.labelValorCarrosComprados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelValorNCarros
             // 
-            this.labelValorNCarros.AutoSize = true;
             this.labelValorNCarros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValorNCarros.Location = new System.Drawing.Point(158, 20);
             this.labelValorNCarros.Name = "labelValorNCarros";
-            this.labelValorNCarros.Size = new System.Drawing.Size(31, 16);
+            this.labelValorNCarros.Size = new System.Drawing.Size(147, 16);
             this.labelValorNCarros.TabIndex = 7;
             this.labelValorNCarros.Text = "N/A";
+            this.labelValorNCarros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
@@ -328,46 +328,46 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(416, 0);
+            this.panel1.Location = new System.Drawing.Point(323, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 171);
+            this.panel1.Size = new System.Drawing.Size(405, 171);
             this.panel1.TabIndex = 13;
             // 
             // labelTotalGastoAluguer
             // 
-            this.labelTotalGastoAluguer.AutoSize = true;
             this.labelTotalGastoAluguer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalGastoAluguer.Location = new System.Drawing.Point(27, 130);
+            this.labelTotalGastoAluguer.Location = new System.Drawing.Point(41, 132);
             this.labelTotalGastoAluguer.Name = "labelTotalGastoAluguer";
-            this.labelTotalGastoAluguer.Size = new System.Drawing.Size(31, 16);
+            this.labelTotalGastoAluguer.Size = new System.Drawing.Size(150, 16);
             this.labelTotalGastoAluguer.TabIndex = 18;
             this.labelTotalGastoAluguer.Text = "N/A";
+            this.labelTotalGastoAluguer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelTotalGastoVenda
             // 
-            this.labelTotalGastoVenda.AutoSize = true;
             this.labelTotalGastoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotalGastoVenda.Location = new System.Drawing.Point(27, 76);
+            this.labelTotalGastoVenda.Location = new System.Drawing.Point(41, 78);
             this.labelTotalGastoVenda.Name = "labelTotalGastoVenda";
-            this.labelTotalGastoVenda.Size = new System.Drawing.Size(31, 16);
+            this.labelTotalGastoVenda.Size = new System.Drawing.Size(150, 16);
             this.labelTotalGastoVenda.TabIndex = 17;
             this.labelTotalGastoVenda.Text = "N/A";
+            this.labelTotalGastoVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelValorTotalGOficina
             // 
-            this.labelValorTotalGOficina.AutoSize = true;
             this.labelValorTotalGOficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelValorTotalGOficina.Location = new System.Drawing.Point(27, 15);
+            this.labelValorTotalGOficina.Location = new System.Drawing.Point(41, 17);
             this.labelValorTotalGOficina.Name = "labelValorTotalGOficina";
-            this.labelValorTotalGOficina.Size = new System.Drawing.Size(31, 16);
+            this.labelValorTotalGOficina.Size = new System.Drawing.Size(150, 16);
             this.labelValorTotalGOficina.TabIndex = 16;
             this.labelValorTotalGOficina.Text = "N/A";
+            this.labelValorTotalGOficina.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 76);
+            this.label5.Location = new System.Drawing.Point(197, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 16);
             this.label5.TabIndex = 15;
@@ -377,7 +377,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 130);
+            this.label4.Location = new System.Drawing.Point(205, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(171, 16);
             this.label4.TabIndex = 14;
@@ -387,7 +387,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 15);
+            this.label2.Location = new System.Drawing.Point(210, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 16);
             this.label2.TabIndex = 13;

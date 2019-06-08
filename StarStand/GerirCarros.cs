@@ -33,7 +33,7 @@ namespace StarStand
                 textBoxMarca.Text=carro.Marca;
                 TextBoxModelo.Text = carro.Modelo;
                 TextboxMatricula.Text= carro.Matricula;
-                comboboxCombustivel.SelectedText = carro.Combustivel;
+                comboboxCombustivel.Text = carro.Combustivel;
                 btnSubmeter.Text = "Editar";
                 Globalcarro = carro;
             }
@@ -47,37 +47,19 @@ namespace StarStand
         private void BtnSubmeter_Click(object sender, EventArgs e)
         {
             //Campos Obrigatórios
-            if (textBoxMarca.Text.Equals(""))
+            if (textBoxMarca.Text.Equals("") || textBoxMarca.Text.Equals("Marca"))
             {
                 MessageBox.Show("Marca: Campo Obrigatório!");
                 return;
             }
 
-            if (textBoxMarca.Text.Equals("Marca"))
-            {
-                MessageBox.Show("Marca: Campo Obrigatório!");
-                return;
-            }
-
-            if (TextBoxModelo.Text.Equals(""))
+            if (TextBoxModelo.Text.Equals("") || TextBoxModelo.Text.Equals("Modelo"))
             {
                 MessageBox.Show("Modelo: Campo Obrigatório!");
                 return;
             }
 
-            if (TextBoxModelo.Text.Equals("Modelo"))
-            {
-                MessageBox.Show("Marca: Campo Obrigatório!");
-                return;
-            }
-
-            if (TextboxMatricula.Text.Equals(""))
-            {
-                MessageBox.Show("Matricula: Campo Obrigatório!");
-                return;
-            }
-
-            if (TextboxMatricula.Text.Equals("Matricula"))
+            if (TextboxMatricula.Text.Equals("") || TextboxMatricula.Text.Equals("Matricula"))
             {
                 MessageBox.Show("Matricula: Campo Obrigatório!");
                 return;

@@ -55,8 +55,9 @@
             this.buttonVender = new System.Windows.Forms.Button();
             this.pictureBoxCarro = new System.Windows.Forms.PictureBox();
             this.labelTitulo = new System.Windows.Forms.Label();
-            this.listBoxHistVenda = new StarStand.ListBoxPersonal();
             this.btnFaturar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.listBoxHistVenda = new StarStand.ListBoxPersonal();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteVendas)).BeginInit();
             this.bunifuCards1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,6 +65,7 @@
             this.panelPeças.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFaturar)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDeleteVendas
@@ -101,7 +103,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.label);
             this.panel1.Controls.Add(this.labelMostrarlUtilizador);
             this.panel1.Controls.Add(this.label1);
@@ -123,16 +125,17 @@
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(227, 89);
+            this.label.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(237, 87);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(53, 13);
+            this.label.Size = new System.Drawing.Size(79, 19);
             this.label.TabIndex = 49;
             this.label.Text = "Utilizador:";
             // 
             // labelMostrarlUtilizador
             // 
             this.labelMostrarlUtilizador.AutoSize = true;
-            this.labelMostrarlUtilizador.Location = new System.Drawing.Point(304, 89);
+            this.labelMostrarlUtilizador.Location = new System.Drawing.Point(322, 91);
             this.labelMostrarlUtilizador.Name = "labelMostrarlUtilizador";
             this.labelMostrarlUtilizador.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarlUtilizador.TabIndex = 50;
@@ -141,16 +144,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 89);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(44, 19);
             this.label1.TabIndex = 47;
             this.label1.Text = "Data:";
             // 
             // labelMostrarData
             // 
             this.labelMostrarData.AutoSize = true;
-            this.labelMostrarData.Location = new System.Drawing.Point(78, 89);
+            this.labelMostrarData.Location = new System.Drawing.Point(93, 89);
             this.labelMostrarData.Name = "labelMostrarData";
             this.labelMostrarData.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarData.TabIndex = 48;
@@ -163,7 +167,7 @@
             this.bunifuSeparator1.LineThickness = 5;
             this.bunifuSeparator1.Location = new System.Drawing.Point(194, 3);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(27, 99);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(27, 118);
             this.bunifuSeparator1.TabIndex = 46;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
@@ -171,7 +175,7 @@
             // labelMostrarCombustivel
             // 
             this.labelMostrarCombustivel.AutoSize = true;
-            this.labelMostrarCombustivel.Location = new System.Drawing.Point(304, 54);
+            this.labelMostrarCombustivel.Location = new System.Drawing.Point(322, 54);
             this.labelMostrarCombustivel.Name = "labelMostrarCombustivel";
             this.labelMostrarCombustivel.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarCombustivel.TabIndex = 45;
@@ -180,16 +184,17 @@
             // labelKms
             // 
             this.labelKms.AutoSize = true;
-            this.labelKms.Location = new System.Drawing.Point(227, 54);
+            this.labelKms.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKms.Location = new System.Drawing.Point(220, 50);
             this.labelKms.Name = "labelKms";
-            this.labelKms.Size = new System.Drawing.Size(64, 13);
+            this.labelKms.Size = new System.Drawing.Size(96, 19);
             this.labelKms.TabIndex = 44;
-            this.labelKms.Text = "Combustivel";
+            this.labelKms.Text = "Combustivel:";
             // 
             // labelMostrarModelo
             // 
             this.labelMostrarModelo.AutoSize = true;
-            this.labelMostrarModelo.Location = new System.Drawing.Point(304, 15);
+            this.labelMostrarModelo.Location = new System.Drawing.Point(322, 21);
             this.labelMostrarModelo.Name = "labelMostrarModelo";
             this.labelMostrarModelo.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarModelo.TabIndex = 40;
@@ -198,16 +203,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(227, 15);
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(251, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(65, 19);
             this.label4.TabIndex = 41;
             this.label4.Text = "Modelo:";
             // 
             // labelMostraMarca
             // 
             this.labelMostraMarca.AutoSize = true;
-            this.labelMostraMarca.Location = new System.Drawing.Point(78, 15);
+            this.labelMostraMarca.Location = new System.Drawing.Point(93, 21);
             this.labelMostraMarca.Name = "labelMostraMarca";
             this.labelMostraMarca.Size = new System.Drawing.Size(95, 13);
             this.labelMostraMarca.TabIndex = 0;
@@ -216,25 +222,27 @@
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
-            this.labelMarca.Location = new System.Drawing.Point(19, 15);
+            this.labelMarca.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMarca.Location = new System.Drawing.Point(32, 17);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(40, 13);
+            this.labelMarca.Size = new System.Drawing.Size(55, 19);
             this.labelMarca.TabIndex = 5;
             this.labelMarca.Text = "Marca:";
             // 
             // labelValor
             // 
             this.labelValor.AutoSize = true;
-            this.labelValor.Location = new System.Drawing.Point(19, 54);
+            this.labelValor.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValor.Location = new System.Drawing.Point(11, 50);
             this.labelValor.Name = "labelValor";
-            this.labelValor.Size = new System.Drawing.Size(53, 13);
+            this.labelValor.Size = new System.Drawing.Size(76, 19);
             this.labelValor.TabIndex = 36;
             this.labelValor.Text = "Matricula:";
             // 
             // labelMostraMatricula
             // 
             this.labelMostraMatricula.AutoSize = true;
-            this.labelMostraMatricula.Location = new System.Drawing.Point(78, 54);
+            this.labelMostraMatricula.Location = new System.Drawing.Point(93, 56);
             this.labelMostraMatricula.Name = "labelMostraMatricula";
             this.labelMostraMatricula.Size = new System.Drawing.Size(95, 13);
             this.labelMostraMatricula.TabIndex = 39;
@@ -260,7 +268,7 @@
             this.bunifuSeparator2.LineThickness = 5;
             this.bunifuSeparator2.Location = new System.Drawing.Point(0, 3);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(27, 99);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(27, 118);
             this.bunifuSeparator2.TabIndex = 47;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = true;
@@ -268,25 +276,27 @@
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
-            this.labelEstado.Location = new System.Drawing.Point(145, 15);
+            this.labelEstado.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstado.Location = new System.Drawing.Point(25, 17);
             this.labelEstado.Name = "labelEstado";
-            this.labelEstado.Size = new System.Drawing.Size(43, 13);
+            this.labelEstado.Size = new System.Drawing.Size(57, 19);
             this.labelEstado.TabIndex = 38;
             this.labelEstado.Text = "Estado:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(145, 54);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(33, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(49, 19);
             this.label5.TabIndex = 42;
             this.label5.Text = "Valor:";
             // 
             // labelMostrarEstado
             // 
             this.labelMostrarEstado.AutoSize = true;
-            this.labelMostrarEstado.Location = new System.Drawing.Point(44, 15);
+            this.labelMostrarEstado.Location = new System.Drawing.Point(88, 21);
             this.labelMostrarEstado.Name = "labelMostrarEstado";
             this.labelMostrarEstado.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarEstado.TabIndex = 42;
@@ -295,7 +305,7 @@
             // labelMostrarValor
             // 
             this.labelMostrarValor.AutoSize = true;
-            this.labelMostrarValor.Location = new System.Drawing.Point(44, 54);
+            this.labelMostrarValor.Location = new System.Drawing.Point(88, 58);
             this.labelMostrarValor.Name = "labelMostrarValor";
             this.labelMostrarValor.Size = new System.Drawing.Size(95, 13);
             this.labelMostrarValor.TabIndex = 43;
@@ -303,7 +313,7 @@
             // 
             // panelPeças
             // 
-            this.panelPeças.Controls.Add(this.buttonVender);
+            this.panelPeças.Controls.Add(this.panel3);
             this.panelPeças.Controls.Add(this.pictureBoxCarro);
             this.panelPeças.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPeças.Location = new System.Drawing.Point(0, 121);
@@ -316,7 +326,7 @@
             this.buttonVender.BackColor = System.Drawing.Color.Maroon;
             this.buttonVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVender.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVender.Location = new System.Drawing.Point(274, 289);
+            this.buttonVender.Location = new System.Drawing.Point(282, 14);
             this.buttonVender.Name = "buttonVender";
             this.buttonVender.Size = new System.Drawing.Size(125, 39);
             this.buttonVender.TabIndex = 1;
@@ -326,6 +336,7 @@
             // 
             // pictureBoxCarro
             // 
+            this.pictureBoxCarro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxCarro.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCarro.ErrorImage")));
             this.pictureBoxCarro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCarro.Image")));
             this.pictureBoxCarro.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxCarro.InitialImage")));
@@ -348,18 +359,6 @@
             this.labelTitulo.TabIndex = 52;
             this.labelTitulo.Text = "VENDA";
             // 
-            // listBoxHistVenda
-            // 
-            this.listBoxHistVenda.bgColorHead = System.Drawing.Color.DarkSlateGray;
-            this.listBoxHistVenda.bgcolorList = System.Drawing.Color.LightCyan;
-            this.listBoxHistVenda.Location = new System.Drawing.Point(29, 10);
-            this.listBoxHistVenda.Name = "listBoxHistVenda";
-            this.listBoxHistVenda.Size = new System.Drawing.Size(241, 568);
-            this.listBoxHistVenda.TabIndex = 51;
-            this.listBoxHistVenda.titleColor = System.Drawing.Color.White;
-            this.listBoxHistVenda.titulo = "Historico de vendas";
-            this.listBoxHistVenda.ChangeSeletedIndex += new System.EventHandler(this.ListBoxHistVenda_ChangeSeletedIndex);
-            // 
             // btnFaturar
             // 
             this.btnFaturar.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -374,6 +373,27 @@
             this.btnFaturar.TabStop = false;
             this.btnFaturar.Zoom = 10;
             this.btnFaturar.Click += new System.EventHandler(this.BtnFaturar_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonVender);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 279);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(625, 69);
+            this.panel3.TabIndex = 2;
+            // 
+            // listBoxHistVenda
+            // 
+            this.listBoxHistVenda.bgColorHead = System.Drawing.Color.DarkSlateGray;
+            this.listBoxHistVenda.bgcolorList = System.Drawing.Color.LightCyan;
+            this.listBoxHistVenda.Location = new System.Drawing.Point(29, 10);
+            this.listBoxHistVenda.Name = "listBoxHistVenda";
+            this.listBoxHistVenda.Size = new System.Drawing.Size(241, 568);
+            this.listBoxHistVenda.TabIndex = 51;
+            this.listBoxHistVenda.titleColor = System.Drawing.Color.White;
+            this.listBoxHistVenda.titulo = "Historico de vendas";
+            this.listBoxHistVenda.ChangeSeletedIndex += new System.EventHandler(this.ListBoxHistVenda_ChangeSeletedIndex);
             // 
             // USvenda
             // 
@@ -395,6 +415,7 @@
             this.panelPeças.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCarro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFaturar)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -430,5 +451,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelMostrarData;
         private Bunifu.Framework.UI.BunifuImageButton btnFaturar;
+        private System.Windows.Forms.Panel panel3;
     }
 }

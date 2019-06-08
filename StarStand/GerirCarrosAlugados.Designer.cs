@@ -55,7 +55,7 @@
             this.PanelHeader.Location = new System.Drawing.Point(0, 0);
             this.PanelHeader.Name = "PanelHeader";
             this.PanelHeader.Quality = 10;
-            this.PanelHeader.Size = new System.Drawing.Size(361, 44);
+            this.PanelHeader.Size = new System.Drawing.Size(300, 44);
             this.PanelHeader.TabIndex = 17;
             this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseDown);
             this.PanelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
@@ -66,7 +66,7 @@
             this.BtnClose.BackColor = System.Drawing.Color.Transparent;
             this.BtnClose.Image = ((System.Drawing.Image)(resources.GetObject("BtnClose.Image")));
             this.BtnClose.ImageActive = null;
-            this.BtnClose.Location = new System.Drawing.Point(314, 6);
+            this.BtnClose.Location = new System.Drawing.Point(250, 7);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(45, 34);
             this.BtnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,13 +99,15 @@
             this.textboxModelo.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxModelo.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.textboxModelo.LineThickness = 3;
-            this.textboxModelo.Location = new System.Drawing.Point(45, 144);
+            this.textboxModelo.Location = new System.Drawing.Point(40, 121);
             this.textboxModelo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textboxModelo.Name = "textboxModelo";
-            this.textboxModelo.Size = new System.Drawing.Size(275, 44);
+            this.textboxModelo.Size = new System.Drawing.Size(222, 44);
             this.textboxModelo.TabIndex = 20;
             this.textboxModelo.Text = "Modelo";
             this.textboxModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxModelo.Enter += new System.EventHandler(this.textboxModelo_Enter);
+            this.textboxModelo.Leave += new System.EventHandler(this.textboxModelo_Leave);
             // 
             // textboxMarca
             // 
@@ -119,13 +121,15 @@
             this.textboxMarca.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxMarca.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.textboxMarca.LineThickness = 3;
-            this.textboxMarca.Location = new System.Drawing.Point(45, 92);
+            this.textboxMarca.Location = new System.Drawing.Point(40, 69);
             this.textboxMarca.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textboxMarca.Name = "textboxMarca";
-            this.textboxMarca.Size = new System.Drawing.Size(275, 44);
+            this.textboxMarca.Size = new System.Drawing.Size(222, 44);
             this.textboxMarca.TabIndex = 21;
             this.textboxMarca.Text = "Marca";
             this.textboxMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxMarca.Enter += new System.EventHandler(this.textboxMarca_Enter);
+            this.textboxMarca.Leave += new System.EventHandler(this.textboxMarca_Leave);
             // 
             // btnInserir
             // 
@@ -148,13 +152,13 @@
             this.btnInserir.IconVisible = true;
             this.btnInserir.IconZoom = 90D;
             this.btnInserir.IsTab = false;
-            this.btnInserir.Location = new System.Drawing.Point(41, 303);
+            this.btnInserir.Location = new System.Drawing.Point(36, 280);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Normalcolor = System.Drawing.Color.ForestGreen;
             this.btnInserir.OnHovercolor = System.Drawing.Color.Green;
             this.btnInserir.OnHoverTextColor = System.Drawing.Color.White;
             this.btnInserir.selected = false;
-            this.btnInserir.Size = new System.Drawing.Size(276, 48);
+            this.btnInserir.Size = new System.Drawing.Size(223, 48);
             this.btnInserir.TabIndex = 22;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,6 +168,7 @@
             // 
             // comboboxCombustivel
             // 
+            this.comboboxCombustivel.BackColor = System.Drawing.Color.Silver;
             this.comboboxCombustivel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboboxCombustivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboboxCombustivel.FormattingEnabled = true;
@@ -171,9 +176,9 @@
             "Gasolina",
             "Diesel",
             "GPL"});
-            this.comboboxCombustivel.Location = new System.Drawing.Point(45, 258);
+            this.comboboxCombustivel.Location = new System.Drawing.Point(40, 235);
             this.comboboxCombustivel.Name = "comboboxCombustivel";
-            this.comboboxCombustivel.Size = new System.Drawing.Size(274, 24);
+            this.comboboxCombustivel.Size = new System.Drawing.Size(221, 24);
             this.comboboxCombustivel.TabIndex = 23;
             this.comboboxCombustivel.Text = "Combustível";
             // 
@@ -189,19 +194,21 @@
             this.textboxValorBase.LineIdleColor = System.Drawing.Color.Gray;
             this.textboxValorBase.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.textboxValorBase.LineThickness = 3;
-            this.textboxValorBase.Location = new System.Drawing.Point(45, 196);
+            this.textboxValorBase.Location = new System.Drawing.Point(40, 173);
             this.textboxValorBase.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textboxValorBase.Name = "textboxValorBase";
-            this.textboxValorBase.Size = new System.Drawing.Size(272, 44);
+            this.textboxValorBase.Size = new System.Drawing.Size(219, 44);
             this.textboxValorBase.TabIndex = 24;
             this.textboxValorBase.Text = "Valor Base";
             this.textboxValorBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textboxValorBase.Enter += new System.EventHandler(this.textboxValorBase_Enter);
+            this.textboxValorBase.Leave += new System.EventHandler(this.textboxValorBase_Leave);
             // 
             // GerirCarrosAlugados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 363);
+            this.ClientSize = new System.Drawing.Size(300, 352);
             this.Controls.Add(this.textboxValorBase);
             this.Controls.Add(this.comboboxCombustivel);
             this.Controls.Add(this.btnInserir);

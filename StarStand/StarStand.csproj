@@ -32,6 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Desktop\Projeto Stand\Stand\StarStand\Bunifu_UI_v1.52.dll</HintPath>
@@ -79,6 +85,7 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Extends\ExtendAluguer.cs" />
     <Compile Include="Extends\ExtendCarroAluguer.cs" />
     <Compile Include="Extends\ExtendCarroOficina.cs" />
     <Compile Include="Extends\ExtendParcela.cs" />
@@ -108,6 +115,18 @@
     </Compile>
     <Compile Include="GerirVendas.Designer.cs">
       <DependentUpon>GerirVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoricoAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoricoAluguer.Designer.cs">
+      <DependentUpon>HistoricoAluguer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="Parcela.cs">
       <DependentUpon>StarDB.tt</DependentUpon>
@@ -213,6 +232,12 @@
     <EmbeddedResource Include="GerirVendas.resx">
       <DependentUpon>GerirVendas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HistoricoAluguer.resx">
+      <DependentUpon>HistoricoAluguer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="USaluguer.resx">
       <DependentUpon>USaluguer.cs</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +302,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="StarDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>StarDB.Context.cs</LastGenOutput>

@@ -27,10 +27,22 @@ namespace StarStand
         }
         private void BtnDeleteVendas_Click(object sender, EventArgs e)
         {
-            Venda venda = listBoxHistVenda.list.SelectedItem as Venda;
-            bd.VendaSet.Remove(venda);
-            bd.SaveChanges();
-            lerdadosHistVenda();
+            if(listBoxHistVenda.list.SelectedIndex!=-1)
+            {
+                DialogResult result = MessageBox.Show("Tem a certeza que quere eliminar", "Confirmação", MessageBoxButtons.YesNo);
+                if(result==DialogResult.Yes)
+                {
+                    Venda venda = listBoxHistVenda.list.SelectedItem as Venda;
+                    bd.VendaSet.Remove(venda);
+                    bd.SaveChanges();
+                    lerdadosHistVenda();
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Tem de seleconar a venda");
+            }
+           
         }
         public void lerdadosHistVenda()
         {
@@ -47,7 +59,7 @@ namespace StarStand
                 labelMostrarModelo.Text = venda.CarroVenda.Modelo;
                 labelMostraMatricula.Text = venda.CarroVenda.Matricula;
                 labelMostrarCombustivel.Text = venda.CarroVenda.Combustivel;
-                labelMostrarValor.Text = venda.Valor.ToString();
+                labelMostrarValor.Text = venda.Valor +" €";
                 labelMostrarData.Text = venda.Data.ToString();
                 labelMostrarEstado.Text = venda.Estado;
                 labelMostrarlUtilizador.Text = venda.Utilizadores.Nome;
@@ -68,32 +80,42 @@ namespace StarStand
 
         private void BtnFaturar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Deseja fatura", "Faturação", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if(listBoxHistVenda.list.SelectedIndex!=-1)
             {
+                DialogResult result = MessageBox.Show("Deseja fatura", "Faturação", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
 
-                Venda venda = listBoxHistVenda.list.SelectedItem as Venda;
-                string textoFatura;
-                textoFatura = "<img src='" + pictureBoxCarro.ImageLocation + "'><h3>StarStand</h3>";
-                textoFatura += "<hr>";
-                textoFatura += "<span>" + venda.Utilizadores.Nome + "</span><br>";
-                textoFatura += "<span>" + venda.Utilizadores.NIF + "</span><br>";
-                textoFatura += "<span>" + venda.Utilizadores.Morada + "</span><br>";
-                textoFatura += "<hr>";
-                textoFatura += "<h2>Dados do Carro</h2>";
-                textoFatura += "<span><b>Marca:</b>" + venda.CarroVenda.Marca + "</span><br>";
-                textoFatura += "<span><b>Modelo:</b>" + venda.CarroVenda.Modelo + "</span><br>";
-                textoFatura += "<span><b>Matricula:</b>" + venda.CarroVenda.Matricula + "</span><br>";
-                textoFatura += "<span><b>Combustivel:</b>" + venda.CarroVenda.Combustivel + "</span><br>";
-                textoFatura += "<span><b>Extra:</b>" + venda.CarroVenda.Extras + "</span><br>";
-                textoFatura += "<hr>";
-                textoFatura += "<h2>Dados da Compra</h2>";
-                textoFatura += "<span>Efetuada a:" + venda.Data + "</span><br>";
-                textoFatura += "<span>Valor final :" + venda.Valor + " €</span><br>";
-                IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
-                Renderer.RenderHtmlAsPdf(textoFatura).SaveAs(Directory.GetCurrentDirectory() + "\\FaturaVenda\\" + venda.IdVenda+ "_" + venda.Utilizadores.Nome+".pdf");
+                    Venda venda = listBoxHistVenda.list.SelectedItem as Venda;
+                    string textoFatura;
+                    textoFatura = "<h1>StarStand</h1>";
+                    textoFatura += "Fatura nº999"; 
+                    textoFatura += "<hr>";
+                    textoFatura += "<h2>Dados do cliente</h2>";
+                    textoFatura += "<span>" + venda.Utilizadores.Nome + "</span><br>";
+                    textoFatura += "<span>" + venda.Utilizadores.NIF + "</span><br>";
+                    textoFatura += "<span>" + venda.Utilizadores.Morada + "</span><br>";
+                    textoFatura += "<hr>";
+                    textoFatura += "<h2>Dados do Carro</h2>";
+                    textoFatura += "<span><b>Marca:</b>" + venda.CarroVenda.Marca + "</span><br>";
+                    textoFatura += "<span><b>Modelo:</b>" + venda.CarroVenda.Modelo + "</span><br>";
+                    textoFatura += "<span><b>Matricula:</b>" + venda.CarroVenda.Matricula + "</span><br>";
+                    textoFatura += "<span><b>Combustivel:</b>" + venda.CarroVenda.Combustivel + "</span><br>";
+                    textoFatura += "<span><b>Extra:</b>" + venda.CarroVenda.Extras + "</span><br>";
+                    textoFatura += "<hr>";
+                    textoFatura += "<h2>Dados da Compra</h2>";
+                    textoFatura += "<span>Efetuada a:" + venda.Data + "</span><br>";
+                    textoFatura += "<span><b>Valor final :</b>" + venda.Valor + " €</span><br>";
+                    IronPdf.HtmlToPdf Renderer = new IronPdf.HtmlToPdf();
+                    Renderer.RenderHtmlAsPdf(textoFatura).SaveAs(Directory.GetCurrentDirectory() + "\\FaturaVenda\\" + venda.IdVenda + "_" + venda.Utilizadores.Nome + ".pdf");
 
+                }
             }
+            else
+            {
+                MessageBox.Show("Tem de selecionar uma venda");
+            }
+            
         }
     }
 }

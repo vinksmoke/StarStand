@@ -32,21 +32,22 @@
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.labelData = new System.Windows.Forms.Label();
-            this.btnEliminarParcela = new Bunifu.Framework.UI.BunifuImageButton();
-            this.textBoxValorParcela = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.textBoxDescricao = new System.Windows.Forms.TextBox();
-            this.listBoxParcela = new StarStand.ListBoxPersonal();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnServico = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Datapicker = new Bunifu.Framework.UI.BunifuDatepicker();
             this.textBoxNomeServico = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelParcela = new System.Windows.Forms.Panel();
+            this.textBoxValorParcela = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnEliminarParcela = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.textBoxTotalParcela = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnAdicionarParcela = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxParcela = new StarStand.ListBoxPersonal();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxDescricao = new System.Windows.Forms.TextBox();
             this.btnAddClientes = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnRemoveClientes = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditClientes = new Bunifu.Framework.UI.BunifuImageButton();
@@ -58,14 +59,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ButtonGerirSeviços = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnFaturar = new Bunifu.Framework.UI.BunifuImageButton();
             this.textboxFiltrarClientes = new Bunifu.Framework.UI.BunifuTextbox();
             this.listBoxCarros = new StarStand.ListBoxPersonal();
             this.listBoxServicos = new StarStand.ListBoxPersonal();
             this.listBoxClientes = new StarStand.ListBoxPersonal();
-            this.panelParcela = new System.Windows.Forms.Panel();
             this.bunifuCards1.SuspendLayout();
+            this.panelParcela.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarParcela)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -81,7 +81,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFaturar)).BeginInit();
-            this.panelParcela.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -145,77 +144,6 @@
             this.labelData.TabIndex = 47;
             this.labelData.Text = "Data de Entrada";
             // 
-            // btnEliminarParcela
-            // 
-            this.btnEliminarParcela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.btnEliminarParcela.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarParcela.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarParcela.Image")));
-            this.btnEliminarParcela.ImageActive = null;
-            this.btnEliminarParcela.Location = new System.Drawing.Point(242, 35);
-            this.btnEliminarParcela.Name = "btnEliminarParcela";
-            this.btnEliminarParcela.Size = new System.Drawing.Size(31, 33);
-            this.btnEliminarParcela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminarParcela.TabIndex = 43;
-            this.btnEliminarParcela.TabStop = false;
-            this.btnEliminarParcela.Zoom = 10;
-            this.btnEliminarParcela.Click += new System.EventHandler(this.BtnEliminarParcela_Click);
-            // 
-            // textBoxValorParcela
-            // 
-            this.textBoxValorParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxValorParcela.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxValorParcela.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textBoxValorParcela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxValorParcela.HintForeColor = System.Drawing.Color.Empty;
-            this.textBoxValorParcela.HintText = "";
-            this.textBoxValorParcela.isPassword = false;
-            this.textBoxValorParcela.LineFocusedColor = System.Drawing.Color.Blue;
-            this.textBoxValorParcela.LineIdleColor = System.Drawing.Color.Gray;
-            this.textBoxValorParcela.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.textBoxValorParcela.LineThickness = 3;
-            this.textBoxValorParcela.Location = new System.Drawing.Point(185, 209);
-            this.textBoxValorParcela.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxValorParcela.Name = "textBoxValorParcela";
-            this.textBoxValorParcela.Size = new System.Drawing.Size(117, 47);
-            this.textBoxValorParcela.TabIndex = 44;
-            this.textBoxValorParcela.Text = "Valor";
-            this.textBoxValorParcela.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxValorParcela.Enter += new System.EventHandler(this.TextBoxValorParcela_Enter);
-            this.textBoxValorParcela.Leave += new System.EventHandler(this.TextBoxValorParcela_Leave);
-            // 
-            // textBoxDescricao
-            // 
-            this.textBoxDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxDescricao.Location = new System.Drawing.Point(2, 204);
-            this.textBoxDescricao.Multiline = true;
-            this.textBoxDescricao.Name = "textBoxDescricao";
-            this.textBoxDescricao.Size = new System.Drawing.Size(176, 52);
-            this.textBoxDescricao.TabIndex = 43;
-            // 
-            // listBoxParcela
-            // 
-            this.listBoxParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxParcela.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
-            this.listBoxParcela.bgcolorList = System.Drawing.Color.Silver;
-            this.listBoxParcela.Location = new System.Drawing.Point(3, 26);
-            this.listBoxParcela.Name = "listBoxParcela";
-            this.listBoxParcela.Size = new System.Drawing.Size(290, 172);
-            this.listBoxParcela.TabIndex = 42;
-            this.listBoxParcela.titleColor = System.Drawing.SystemColors.ControlText;
-            this.listBoxParcela.titulo = "Parcelas";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(304, 23);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "Parcela";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnServico
             // 
             this.btnServico.ActiveBorderThickness = 1;
@@ -277,6 +205,84 @@
             this.textBoxNomeServico.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBoxNomeServico.Enter += new System.EventHandler(this.TextBoxNomeServico_Enter);
             this.textBoxNomeServico.Leave += new System.EventHandler(this.TextBoxNomeServico_Leave);
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuSeparator1.LineThickness = 4;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(2, 237);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(303, 12);
+            this.bunifuSeparator1.TabIndex = 3;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            this.bunifuSeparator1.Load += new System.EventHandler(this.BunifuSeparator1_Load);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Serviços";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelParcela
+            // 
+            this.panelParcela.Controls.Add(this.textBoxValorParcela);
+            this.panelParcela.Controls.Add(this.btnEliminarParcela);
+            this.panelParcela.Controls.Add(this.bunifuGradientPanel1);
+            this.panelParcela.Controls.Add(this.listBoxParcela);
+            this.panelParcela.Controls.Add(this.label2);
+            this.panelParcela.Controls.Add(this.textBoxDescricao);
+            this.panelParcela.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelParcela.Location = new System.Drawing.Point(0, 247);
+            this.panelParcela.Name = "panelParcela";
+            this.panelParcela.Size = new System.Drawing.Size(309, 310);
+            this.panelParcela.TabIndex = 49;
+            this.panelParcela.Visible = false;
+            // 
+            // textBoxValorParcela
+            // 
+            this.textBoxValorParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxValorParcela.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxValorParcela.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBoxValorParcela.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxValorParcela.HintForeColor = System.Drawing.Color.Empty;
+            this.textBoxValorParcela.HintText = "";
+            this.textBoxValorParcela.isPassword = false;
+            this.textBoxValorParcela.LineFocusedColor = System.Drawing.Color.Blue;
+            this.textBoxValorParcela.LineIdleColor = System.Drawing.Color.Gray;
+            this.textBoxValorParcela.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.textBoxValorParcela.LineThickness = 3;
+            this.textBoxValorParcela.Location = new System.Drawing.Point(185, 209);
+            this.textBoxValorParcela.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxValorParcela.Name = "textBoxValorParcela";
+            this.textBoxValorParcela.Size = new System.Drawing.Size(117, 47);
+            this.textBoxValorParcela.TabIndex = 44;
+            this.textBoxValorParcela.Text = "Valor";
+            this.textBoxValorParcela.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxValorParcela.Enter += new System.EventHandler(this.TextBoxValorParcela_Enter);
+            this.textBoxValorParcela.Leave += new System.EventHandler(this.TextBoxValorParcela_Leave);
+            // 
+            // btnEliminarParcela
+            // 
+            this.btnEliminarParcela.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.btnEliminarParcela.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminarParcela.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminarParcela.Image")));
+            this.btnEliminarParcela.ImageActive = null;
+            this.btnEliminarParcela.Location = new System.Drawing.Point(242, 35);
+            this.btnEliminarParcela.Name = "btnEliminarParcela";
+            this.btnEliminarParcela.Size = new System.Drawing.Size(31, 33);
+            this.btnEliminarParcela.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminarParcela.TabIndex = 43;
+            this.btnEliminarParcela.TabStop = false;
+            this.btnEliminarParcela.Zoom = 10;
+            this.btnEliminarParcela.Click += new System.EventHandler(this.BtnEliminarParcela_Click);
             // 
             // bunifuGradientPanel1
             // 
@@ -357,30 +363,38 @@
             this.btnAdicionarParcela.Zoom = 10;
             this.btnAdicionarParcela.Click += new System.EventHandler(this.BtnAdicionarParcela_Click);
             // 
-            // bunifuSeparator1
+            // listBoxParcela
             // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 4;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(2, 237);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(303, 12);
-            this.bunifuSeparator1.TabIndex = 3;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            this.bunifuSeparator1.Load += new System.EventHandler(this.BunifuSeparator1_Load);
+            this.listBoxParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxParcela.bgColorHead = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(191)))), ((int)(((byte)(255)))));
+            this.listBoxParcela.bgcolorList = System.Drawing.Color.Silver;
+            this.listBoxParcela.Location = new System.Drawing.Point(3, 26);
+            this.listBoxParcela.Name = "listBoxParcela";
+            this.listBoxParcela.Size = new System.Drawing.Size(290, 172);
+            this.listBoxParcela.TabIndex = 42;
+            this.listBoxParcela.titleColor = System.Drawing.SystemColors.ControlText;
+            this.listBoxParcela.titulo = "Parcelas";
             // 
-            // label1
+            // label2
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Serviços";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(304, 23);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Parcela";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxDescricao
+            // 
+            this.textBoxDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBoxDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxDescricao.Location = new System.Drawing.Point(2, 204);
+            this.textBoxDescricao.Multiline = true;
+            this.textBoxDescricao.Name = "textBoxDescricao";
+            this.textBoxDescricao.Size = new System.Drawing.Size(176, 52);
+            this.textBoxDescricao.TabIndex = 43;
             // 
             // btnAddClientes
             // 
@@ -526,40 +540,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.ButtonGerirSeviços);
             this.panel2.Controls.Add(this.btnFaturar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(700, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(307, 45);
             this.panel2.TabIndex = 40;
-            // 
-            // ButtonGerirSeviços
-            // 
-            this.ButtonGerirSeviços.ActiveBorderThickness = 1;
-            this.ButtonGerirSeviços.ActiveCornerRadius = 20;
-            this.ButtonGerirSeviços.ActiveFillColor = System.Drawing.Color.LightSkyBlue;
-            this.ButtonGerirSeviços.ActiveForecolor = System.Drawing.Color.White;
-            this.ButtonGerirSeviços.ActiveLineColor = System.Drawing.Color.Aqua;
-            this.ButtonGerirSeviços.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.ButtonGerirSeviços.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonGerirSeviços.BackgroundImage")));
-            this.ButtonGerirSeviços.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ButtonGerirSeviços.ButtonText = "Gerir serviços";
-            this.ButtonGerirSeviços.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ButtonGerirSeviços.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonGerirSeviços.ForeColor = System.Drawing.Color.SeaGreen;
-            this.ButtonGerirSeviços.IdleBorderThickness = 1;
-            this.ButtonGerirSeviços.IdleCornerRadius = 20;
-            this.ButtonGerirSeviços.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.ButtonGerirSeviços.IdleForecolor = System.Drawing.Color.White;
-            this.ButtonGerirSeviços.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.ButtonGerirSeviços.Location = new System.Drawing.Point(43, 2);
-            this.ButtonGerirSeviços.Margin = new System.Windows.Forms.Padding(5);
-            this.ButtonGerirSeviços.Name = "ButtonGerirSeviços";
-            this.ButtonGerirSeviços.Size = new System.Drawing.Size(181, 41);
-            this.ButtonGerirSeviços.TabIndex = 1;
-            this.ButtonGerirSeviços.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ButtonGerirSeviços.Click += new System.EventHandler(this.ButtonGerirSeviços_Click);
             // 
             // btnFaturar
             // 
@@ -628,21 +614,6 @@
             this.listBoxClientes.titulo = "Clientes";
             this.listBoxClientes.ChangeSeletedIndex += new System.EventHandler(this.ListBoxClientes_ChangeSeletedIndex);
             // 
-            // panelParcela
-            // 
-            this.panelParcela.Controls.Add(this.textBoxValorParcela);
-            this.panelParcela.Controls.Add(this.btnEliminarParcela);
-            this.panelParcela.Controls.Add(this.bunifuGradientPanel1);
-            this.panelParcela.Controls.Add(this.listBoxParcela);
-            this.panelParcela.Controls.Add(this.label2);
-            this.panelParcela.Controls.Add(this.textBoxDescricao);
-            this.panelParcela.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelParcela.Location = new System.Drawing.Point(0, 247);
-            this.panelParcela.Name = "panelParcela";
-            this.panelParcela.Size = new System.Drawing.Size(309, 310);
-            this.panelParcela.TabIndex = 49;
-            this.panelParcela.Visible = false;
-            // 
             // oficina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,6 +637,8 @@
             this.Size = new System.Drawing.Size(1007, 622);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            this.panelParcela.ResumeLayout(false);
+            this.panelParcela.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminarParcela)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
@@ -683,8 +656,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFaturar)).EndInit();
-            this.panelParcela.ResumeLayout(false);
-            this.panelParcela.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -707,7 +678,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btnEditarServico;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuThinButton2 ButtonGerirSeviços;
         private Bunifu.Framework.UI.BunifuImageButton btnFaturar;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
