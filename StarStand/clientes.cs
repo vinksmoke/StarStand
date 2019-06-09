@@ -40,24 +40,29 @@ namespace StarStand
         }
         public void Dgv_Clientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             decimal totalOficina=0;
             DataGridViewRow selectedRow = dgv_selectedRow();
             Utilizadores user = (Utilizadores)selectedRow.DataBoundItem;
             //carroOficina
-            labelValorNCarros.Text = user.CarroOficina.Count.ToString();
-            foreach(CarroOficina carro in user.CarroOficina)
+            if(user!= null)
             {
-                foreach(Servicos servico in carro.Servicos)
+                labelValorNCarros.Text = user.CarroOficina.Count.ToString();
+                foreach (CarroOficina carro in user.CarroOficina)
                 {
-                    totalOficina+=servico.Parcela.Sum(v => v.Valor);
+                    foreach (Servicos servico in carro.Servicos)
+                    {
+                        totalOficina += servico.Parcela.Sum(v => v.Valor);
+                    }
                 }
-            }
-            labelValorTotalGOficina.Text = totalOficina.ToString() + " €";
+                labelValorTotalGOficina.Text = totalOficina.ToString() + " €";
 
-            labelValorCarrosComprados.Text = user.Venda.Count.ToString();
-            labelTotalGastoVenda.Text = user.Venda.Sum(v => v.Valor) + " €";
-            labelValorCarrosAlugados.Text = user.Aluguer.Count.ToString();
-            labelTotalGastoAluguer.Text = user.Aluguer.Sum(v => v.Valor)+ " €";
+                labelValorCarrosComprados.Text = user.Venda.Count.ToString();
+                labelTotalGastoVenda.Text = user.Venda.Sum(v => v.Valor) + " €";
+                labelValorCarrosAlugados.Text = user.Aluguer.Count.ToString();
+                labelTotalGastoAluguer.Text = user.Aluguer.Sum(v => v.Valor) + " €";
+            }
+         
         }
 
         //Funções

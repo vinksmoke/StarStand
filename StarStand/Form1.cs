@@ -13,6 +13,8 @@ namespace StarStand
 {
     public partial class Form1 : Form
     {
+        StarDBContainer bd;
+
         bool togMoveForm;
         int MvalX;
         int MvalY;
@@ -84,9 +86,11 @@ namespace StarStand
         //Menus
         private void btnCliente_Click(object sender, EventArgs e)
         {
+            bd = new StarDBContainer();
             setuserctr(clientes1);
             clientes1.lerdados();
-            clientes1.Dgv_Clientes_CellClick(null, null);
+            if(bd.UtilizadoresSet.Count()>0 )
+                clientes1.Dgv_Clientes_CellClick(null, null);
             btnOficina.Normalcolor = Color.FromArgb(14, 25, 32);
             btnCliente.Normalcolor = Color.Maroon;
             btnVendas.Normalcolor = Color.FromArgb(14, 25, 32);
